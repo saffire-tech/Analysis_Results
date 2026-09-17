@@ -1,0 +1,1732 @@
+2026-02-11 14:24:44,597 - ERROR - Dataset not found at /content/enhanced_hpi_dataset.csv
+2026-02-11 14:27:28,990 - INFO - ================================================================================
+2026-02-11 14:27:28,990 - INFO - ================================================================================
+2026-02-11 14:27:28,992 - INFO - PHD-LEVEL ENHANCED MODEL PIPELINE V2
+2026-02-11 14:27:28,992 - INFO - PHD-LEVEL ENHANCED MODEL PIPELINE V2
+2026-02-11 14:27:28,996 - INFO - ================================================================================
+2026-02-11 14:27:28,996 - INFO - ================================================================================
+2026-02-11 14:27:29,001 - INFO - Preprocessing data. Target: HPI_Reported
+2026-02-11 14:27:29,001 - INFO - Preprocessing data. Target: HPI_Reported
+2026-02-11 14:27:29,286 - INFO - --- Performing Ensemble Feature Selection (Top 10) ---
+2026-02-11 14:27:29,286 - INFO - --- Performing Ensemble Feature Selection (Top 10) ---
+2026-02-11 14:27:29,777 - INFO - Selected Top Features: ['Dominant_Root_Cause', 'Dominant_Incident_Type', 'Primary_Location', 'Dominant_Causal_Factor', 'Worker_Category_Most_Affected', 'Composite_Risk_Score', 'Daily_Production_tons', 'Geological_Condition', 'Dominant_Task', 'Days_Since_Last_Same_Location']
+2026-02-11 14:27:29,777 - INFO - Selected Top Features: ['Dominant_Root_Cause', 'Dominant_Incident_Type', 'Primary_Location', 'Dominant_Causal_Factor', 'Worker_Category_Most_Affected', 'Composite_Risk_Score', 'Daily_Production_tons', 'Geological_Condition', 'Dominant_Task', 'Days_Since_Last_Same_Location']
+2026-02-11 14:27:30,182 - INFO - Saved feature selection plot to feature_selection_ranks.png
+2026-02-11 14:27:30,182 - INFO - Saved feature selection plot to feature_selection_ranks.png
+2026-02-11 14:27:30,197 - INFO - --- Training Base Model: XGBoost ---
+2026-02-11 14:27:30,197 - INFO - --- Training Base Model: XGBoost ---
+2026-02-11 14:27:30,638 - INFO - [XGBoost] Test Metrics: Acc: 0.5839, F1: 0.6667, Prec: 0.6264, Rec: 0.7125, AUC: 0.6232
+2026-02-11 14:27:30,638 - INFO - [XGBoost] Test Metrics: Acc: 0.5839, F1: 0.6667, Prec: 0.6264, Rec: 0.7125, AUC: 0.6232
+2026-02-11 14:27:30,642 - INFO - --- Training Base Model: RandomForest ---
+2026-02-11 14:27:30,642 - INFO - --- Training Base Model: RandomForest ---
+2026-02-11 14:27:30,852 - INFO - [RandomForest] Test Metrics: Acc: 0.6350, F1: 0.7093, Prec: 0.6630, Rec: 0.7625, AUC: 0.6853
+2026-02-11 14:27:30,852 - INFO - [RandomForest] Test Metrics: Acc: 0.6350, F1: 0.7093, Prec: 0.6630, Rec: 0.7625, AUC: 0.6853
+2026-02-11 14:27:30,855 - INFO - --- Training Base Model: GradientBoosting ---
+2026-02-11 14:27:30,855 - INFO - --- Training Base Model: GradientBoosting ---
+2026-02-11 14:27:31,058 - INFO - [GradientBoosting] Test Metrics: Acc: 0.6131, F1: 0.6788, Prec: 0.6588, Rec: 0.7000, AUC: 0.6616
+2026-02-11 14:27:31,058 - INFO - [GradientBoosting] Test Metrics: Acc: 0.6131, F1: 0.6788, Prec: 0.6588, Rec: 0.7000, AUC: 0.6616
+2026-02-11 14:27:31,062 - INFO - --- Training Base Model: SVM ---
+2026-02-11 14:27:31,062 - INFO - --- Training Base Model: SVM ---
+2026-02-11 14:27:31,156 - INFO - [SVM] Test Metrics: Acc: 0.6350, F1: 0.7368, Prec: 0.6364, Rec: 0.8750, AUC: 0.6439
+2026-02-11 14:27:31,156 - INFO - [SVM] Test Metrics: Acc: 0.6350, F1: 0.7368, Prec: 0.6364, Rec: 0.8750, AUC: 0.6439
+2026-02-11 14:27:31,159 - INFO - --- Training Base Model: MLP ---
+2026-02-11 14:27:31,159 - INFO - --- Training Base Model: MLP ---
+2026-02-11 14:27:31,696 - INFO - [MLP] Test Metrics: Acc: 0.6569, F1: 0.7219, Prec: 0.6854, Rec: 0.7625, AUC: 0.7064
+2026-02-11 14:27:31,696 - INFO - [MLP] Test Metrics: Acc: 0.6569, F1: 0.7219, Prec: 0.6854, Rec: 0.7625, AUC: 0.7064
+2026-02-11 14:27:31,699 - INFO - --- Training Base Model: LSTM ---
+2026-02-11 14:27:31,699 - INFO - --- Training Base Model: LSTM ---
+2026-02-11 14:27:43,379 - INFO - [LSTM] Test Metrics: Acc: 0.6277, F1: 0.7018, Prec: 0.6593, Rec: 0.7500, AUC: 0.6851
+2026-02-11 14:27:43,379 - INFO - [LSTM] Test Metrics: Acc: 0.6277, F1: 0.7018, Prec: 0.6593, Rec: 0.7500, AUC: 0.6851
+2026-02-11 14:27:43,383 - INFO - --- Training Base Model: BiLSTM ---
+2026-02-11 14:27:43,383 - INFO - --- Training Base Model: BiLSTM ---
+2026-02-11 14:27:50,243 - INFO - [BiLSTM] Test Metrics: Acc: 0.6934, F1: 0.7470, Prec: 0.7209, Rec: 0.7750, AUC: 0.7099
+2026-02-11 14:27:50,243 - INFO - [BiLSTM] Test Metrics: Acc: 0.6934, F1: 0.7470, Prec: 0.7209, Rec: 0.7750, AUC: 0.7099
+2026-02-11 14:27:50,245 - INFO - --- Training Base Model: GRU ---
+2026-02-11 14:27:50,245 - INFO - --- Training Base Model: GRU ---
+2026-02-11 14:27:55,199 - INFO - [GRU] Test Metrics: Acc: 0.6642, F1: 0.7356, Prec: 0.6809, Rec: 0.8000, AUC: 0.7180
+2026-02-11 14:27:55,199 - INFO - [GRU] Test Metrics: Acc: 0.6642, F1: 0.7356, Prec: 0.6809, Rec: 0.8000, AUC: 0.7180
+2026-02-11 14:27:55,202 - INFO - --- Training Base Model: CNN-LSTM ---
+2026-02-11 14:27:55,202 - INFO - --- Training Base Model: CNN-LSTM ---
+2026-02-11 14:28:00,627 - INFO - [CNN-LSTM] Test Metrics: Acc: 0.6423, F1: 0.7101, Prec: 0.6742, Rec: 0.7500, AUC: 0.7031
+2026-02-11 14:28:00,627 - INFO - [CNN-LSTM] Test Metrics: Acc: 0.6423, F1: 0.7101, Prec: 0.6742, Rec: 0.7500, AUC: 0.7031
+2026-02-11 14:28:00,631 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Normal ---
+2026-02-11 14:28:00,631 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Normal ---
+2026-02-11 14:28:00,636 - INFO - Training Hybrid: XGBoost-LSTM-Normal (normal)
+2026-02-11 14:28:00,636 - INFO - Training Hybrid: XGBoost-LSTM-Normal (normal)
+2026-02-11 14:28:07,353 - INFO - [XGBoost-LSTM-Normal] Test Metrics: Acc: 0.5766, F1: 0.6588, Prec: 0.6222, Rec: 0.7000, AUC: 0.6371
+2026-02-11 14:28:07,353 - INFO - [XGBoost-LSTM-Normal] Test Metrics: Acc: 0.5766, F1: 0.6588, Prec: 0.6222, Rec: 0.7000, AUC: 0.6371
+2026-02-11 14:28:07,356 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Absolute ---
+2026-02-11 14:28:07,356 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Absolute ---
+2026-02-11 14:28:07,357 - INFO - Training Hybrid: XGBoost-LSTM-Absolute (absolute)
+2026-02-11 14:28:07,357 - INFO - Training Hybrid: XGBoost-LSTM-Absolute (absolute)
+2026-02-11 14:28:12,617 - INFO - [XGBoost-LSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7228, Prec: 0.5984, Rec: 0.9125, AUC: 0.6043
+2026-02-11 14:28:12,617 - INFO - [XGBoost-LSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7228, Prec: 0.5984, Rec: 0.9125, AUC: 0.6043
+2026-02-11 14:28:12,621 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Squared ---
+2026-02-11 14:28:12,621 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Squared ---
+2026-02-11 14:28:12,623 - INFO - Training Hybrid: XGBoost-LSTM-Squared (squared)
+2026-02-11 14:28:12,623 - INFO - Training Hybrid: XGBoost-LSTM-Squared (squared)
+2026-02-11 14:29:20,807 - INFO - ================================================================================
+2026-02-11 14:29:20,807 - INFO - ================================================================================
+2026-02-11 14:29:20,807 - INFO - ================================================================================
+2026-02-11 14:29:20,817 - INFO - PHD-LEVEL ENHANCED MODEL PIPELINE V2
+2026-02-11 14:29:20,817 - INFO - PHD-LEVEL ENHANCED MODEL PIPELINE V2
+2026-02-11 14:29:20,817 - INFO - PHD-LEVEL ENHANCED MODEL PIPELINE V2
+2026-02-11 14:29:20,820 - INFO - ================================================================================
+2026-02-11 14:29:20,820 - INFO - ================================================================================
+2026-02-11 14:29:20,820 - INFO - ================================================================================
+2026-02-11 14:29:20,823 - INFO - Preprocessing data. Target: HPI_Reported
+2026-02-11 14:29:20,823 - INFO - Preprocessing data. Target: HPI_Reported
+2026-02-11 14:29:20,823 - INFO - Preprocessing data. Target: HPI_Reported
+2026-02-11 14:29:21,330 - INFO - --- Performing Ensemble Feature Selection (Top 15) ---
+2026-02-11 14:29:21,330 - INFO - --- Performing Ensemble Feature Selection (Top 15) ---
+2026-02-11 14:29:21,330 - INFO - --- Performing Ensemble Feature Selection (Top 15) ---
+2026-02-11 14:29:22,183 - INFO - Selected Top Features: ['Dominant_Root_Cause', 'Dominant_Incident_Type', 'Primary_Location', 'Dominant_Causal_Factor', 'Worker_Category_Most_Affected', 'Composite_Risk_Score', 'Daily_Production_tons', 'Geological_Condition', 'Dominant_Task', 'Days_Since_Last_Same_Location', 'Composite_Safety_Index', 'Report_Date_day', 'Location_Incident_Count', 'Year', 'Days_Since_Last_Incident']
+2026-02-11 14:29:22,183 - INFO - Selected Top Features: ['Dominant_Root_Cause', 'Dominant_Incident_Type', 'Primary_Location', 'Dominant_Causal_Factor', 'Worker_Category_Most_Affected', 'Composite_Risk_Score', 'Daily_Production_tons', 'Geological_Condition', 'Dominant_Task', 'Days_Since_Last_Same_Location', 'Composite_Safety_Index', 'Report_Date_day', 'Location_Incident_Count', 'Year', 'Days_Since_Last_Incident']
+2026-02-11 14:29:22,183 - INFO - Selected Top Features: ['Dominant_Root_Cause', 'Dominant_Incident_Type', 'Primary_Location', 'Dominant_Causal_Factor', 'Worker_Category_Most_Affected', 'Composite_Risk_Score', 'Daily_Production_tons', 'Geological_Condition', 'Dominant_Task', 'Days_Since_Last_Same_Location', 'Composite_Safety_Index', 'Report_Date_day', 'Location_Incident_Count', 'Year', 'Days_Since_Last_Incident']
+2026-02-11 14:29:22,834 - INFO - Saved feature selection plot to feature_selection_ranks.png
+2026-02-11 14:29:22,834 - INFO - Saved feature selection plot to feature_selection_ranks.png
+2026-02-11 14:29:22,834 - INFO - Saved feature selection plot to feature_selection_ranks.png
+2026-02-11 14:29:22,853 - INFO - --- Training Base Model: XGBoost ---
+2026-02-11 14:29:22,853 - INFO - --- Training Base Model: XGBoost ---
+2026-02-11 14:29:22,853 - INFO - --- Training Base Model: XGBoost ---
+2026-02-11 14:29:23,037 - INFO - [XGBoost] Test Metrics: Acc: 0.5912, F1: 0.6585, Prec: 0.6429, Rec: 0.6750, AUC: 0.6329
+2026-02-11 14:29:23,037 - INFO - [XGBoost] Test Metrics: Acc: 0.5912, F1: 0.6585, Prec: 0.6429, Rec: 0.6750, AUC: 0.6329
+2026-02-11 14:29:23,037 - INFO - [XGBoost] Test Metrics: Acc: 0.5912, F1: 0.6585, Prec: 0.6429, Rec: 0.6750, AUC: 0.6329
+2026-02-11 14:29:23,043 - INFO - --- Training Base Model: RandomForest ---
+2026-02-11 14:29:23,043 - INFO - --- Training Base Model: RandomForest ---
+2026-02-11 14:29:23,043 - INFO - --- Training Base Model: RandomForest ---
+2026-02-11 14:29:23,402 - INFO - [RandomForest] Test Metrics: Acc: 0.5839, F1: 0.6816, Prec: 0.6162, Rec: 0.7625, AUC: 0.6476
+2026-02-11 14:29:23,402 - INFO - [RandomForest] Test Metrics: Acc: 0.5839, F1: 0.6816, Prec: 0.6162, Rec: 0.7625, AUC: 0.6476
+2026-02-11 14:29:23,402 - INFO - [RandomForest] Test Metrics: Acc: 0.5839, F1: 0.6816, Prec: 0.6162, Rec: 0.7625, AUC: 0.6476
+2026-02-11 14:29:23,410 - INFO - --- Training Base Model: GradientBoosting ---
+2026-02-11 14:29:23,410 - INFO - --- Training Base Model: GradientBoosting ---
+2026-02-11 14:29:23,410 - INFO - --- Training Base Model: GradientBoosting ---
+2026-02-11 14:29:23,779 - INFO - [GradientBoosting] Test Metrics: Acc: 0.6204, F1: 0.6941, Prec: 0.6556, Rec: 0.7375, AUC: 0.6322
+2026-02-11 14:29:23,779 - INFO - [GradientBoosting] Test Metrics: Acc: 0.6204, F1: 0.6941, Prec: 0.6556, Rec: 0.7375, AUC: 0.6322
+2026-02-11 14:29:23,779 - INFO - [GradientBoosting] Test Metrics: Acc: 0.6204, F1: 0.6941, Prec: 0.6556, Rec: 0.7375, AUC: 0.6322
+2026-02-11 14:29:23,787 - INFO - --- Training Base Model: SVM ---
+2026-02-11 14:29:23,787 - INFO - --- Training Base Model: SVM ---
+2026-02-11 14:29:23,787 - INFO - --- Training Base Model: SVM ---
+2026-02-11 14:29:23,977 - INFO - [SVM] Test Metrics: Acc: 0.5839, F1: 0.7077, Prec: 0.6000, Rec: 0.8625, AUC: 0.5857
+2026-02-11 14:29:23,977 - INFO - [SVM] Test Metrics: Acc: 0.5839, F1: 0.7077, Prec: 0.6000, Rec: 0.8625, AUC: 0.5857
+2026-02-11 14:29:23,977 - INFO - [SVM] Test Metrics: Acc: 0.5839, F1: 0.7077, Prec: 0.6000, Rec: 0.8625, AUC: 0.5857
+2026-02-11 14:29:23,985 - INFO - --- Training Base Model: MLP ---
+2026-02-11 14:29:23,985 - INFO - --- Training Base Model: MLP ---
+2026-02-11 14:29:23,985 - INFO - --- Training Base Model: MLP ---
+2026-02-11 14:29:24,916 - INFO - [MLP] Test Metrics: Acc: 0.5912, F1: 0.6543, Prec: 0.6463, Rec: 0.6625, AUC: 0.6421
+2026-02-11 14:29:24,916 - INFO - [MLP] Test Metrics: Acc: 0.5912, F1: 0.6543, Prec: 0.6463, Rec: 0.6625, AUC: 0.6421
+2026-02-11 14:29:24,916 - INFO - [MLP] Test Metrics: Acc: 0.5912, F1: 0.6543, Prec: 0.6463, Rec: 0.6625, AUC: 0.6421
+2026-02-11 14:29:24,925 - INFO - --- Training Base Model: LSTM ---
+2026-02-11 14:29:24,925 - INFO - --- Training Base Model: LSTM ---
+2026-02-11 14:29:24,925 - INFO - --- Training Base Model: LSTM ---
+2026-02-11 14:29:32,332 - INFO - [LSTM] Test Metrics: Acc: 0.5839, F1: 0.6667, Prec: 0.6264, Rec: 0.7125, AUC: 0.6340
+2026-02-11 14:29:32,332 - INFO - [LSTM] Test Metrics: Acc: 0.5839, F1: 0.6667, Prec: 0.6264, Rec: 0.7125, AUC: 0.6340
+2026-02-11 14:29:32,332 - INFO - [LSTM] Test Metrics: Acc: 0.5839, F1: 0.6667, Prec: 0.6264, Rec: 0.7125, AUC: 0.6340
+2026-02-11 14:29:32,336 - INFO - --- Training Base Model: BiLSTM ---
+2026-02-11 14:29:32,336 - INFO - --- Training Base Model: BiLSTM ---
+2026-02-11 14:29:32,336 - INFO - --- Training Base Model: BiLSTM ---
+2026-02-11 14:29:39,072 - INFO - [BiLSTM] Test Metrics: Acc: 0.6204, F1: 0.7045, Prec: 0.6458, Rec: 0.7750, AUC: 0.6318
+2026-02-11 14:29:39,072 - INFO - [BiLSTM] Test Metrics: Acc: 0.6204, F1: 0.7045, Prec: 0.6458, Rec: 0.7750, AUC: 0.6318
+2026-02-11 14:29:39,072 - INFO - [BiLSTM] Test Metrics: Acc: 0.6204, F1: 0.7045, Prec: 0.6458, Rec: 0.7750, AUC: 0.6318
+2026-02-11 14:29:39,075 - INFO - --- Training Base Model: GRU ---
+2026-02-11 14:29:39,075 - INFO - --- Training Base Model: GRU ---
+2026-02-11 14:29:39,075 - INFO - --- Training Base Model: GRU ---
+2026-02-11 14:29:44,505 - INFO - [GRU] Test Metrics: Acc: 0.5912, F1: 0.6818, Prec: 0.6250, Rec: 0.7500, AUC: 0.6366
+2026-02-11 14:29:44,505 - INFO - [GRU] Test Metrics: Acc: 0.5912, F1: 0.6818, Prec: 0.6250, Rec: 0.7500, AUC: 0.6366
+2026-02-11 14:29:44,505 - INFO - [GRU] Test Metrics: Acc: 0.5912, F1: 0.6818, Prec: 0.6250, Rec: 0.7500, AUC: 0.6366
+2026-02-11 14:29:44,511 - INFO - --- Training Base Model: CNN-LSTM ---
+2026-02-11 14:29:44,511 - INFO - --- Training Base Model: CNN-LSTM ---
+2026-02-11 14:29:44,511 - INFO - --- Training Base Model: CNN-LSTM ---
+2026-02-11 14:29:48,519 - INFO - [CNN-LSTM] Test Metrics: Acc: 0.5401, F1: 0.6441, Prec: 0.5876, Rec: 0.7125, AUC: 0.6160
+2026-02-11 14:29:48,519 - INFO - [CNN-LSTM] Test Metrics: Acc: 0.5401, F1: 0.6441, Prec: 0.5876, Rec: 0.7125, AUC: 0.6160
+2026-02-11 14:29:48,519 - INFO - [CNN-LSTM] Test Metrics: Acc: 0.5401, F1: 0.6441, Prec: 0.5876, Rec: 0.7125, AUC: 0.6160
+2026-02-11 14:29:48,521 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Normal ---
+2026-02-11 14:29:48,521 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Normal ---
+2026-02-11 14:29:48,521 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Normal ---
+2026-02-11 14:29:48,524 - INFO - Training Hybrid: XGBoost-LSTM-Normal (normal)
+2026-02-11 14:29:48,524 - INFO - Training Hybrid: XGBoost-LSTM-Normal (normal)
+2026-02-11 14:29:48,524 - INFO - Training Hybrid: XGBoost-LSTM-Normal (normal)
+2026-02-11 14:29:55,718 - INFO - [XGBoost-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6584, Prec: 0.6543, Rec: 0.6625, AUC: 0.6366
+2026-02-11 14:29:55,718 - INFO - [XGBoost-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6584, Prec: 0.6543, Rec: 0.6625, AUC: 0.6366
+2026-02-11 14:29:55,718 - INFO - [XGBoost-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6584, Prec: 0.6543, Rec: 0.6625, AUC: 0.6366
+2026-02-11 14:29:55,723 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Absolute ---
+2026-02-11 14:29:55,723 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Absolute ---
+2026-02-11 14:29:55,723 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Absolute ---
+2026-02-11 14:29:55,727 - INFO - Training Hybrid: XGBoost-LSTM-Absolute (absolute)
+2026-02-11 14:29:55,727 - INFO - Training Hybrid: XGBoost-LSTM-Absolute (absolute)
+2026-02-11 14:29:55,727 - INFO - Training Hybrid: XGBoost-LSTM-Absolute (absolute)
+2026-02-11 14:30:00,678 - INFO - [XGBoost-LSTM-Absolute] Test Metrics: Acc: 0.6131, F1: 0.7225, Prec: 0.6216, Rec: 0.8625, AUC: 0.6057
+2026-02-11 14:30:00,678 - INFO - [XGBoost-LSTM-Absolute] Test Metrics: Acc: 0.6131, F1: 0.7225, Prec: 0.6216, Rec: 0.8625, AUC: 0.6057
+2026-02-11 14:30:00,678 - INFO - [XGBoost-LSTM-Absolute] Test Metrics: Acc: 0.6131, F1: 0.7225, Prec: 0.6216, Rec: 0.8625, AUC: 0.6057
+2026-02-11 14:30:00,683 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Squared ---
+2026-02-11 14:30:00,683 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Squared ---
+2026-02-11 14:30:00,683 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Squared ---
+2026-02-11 14:30:00,688 - INFO - Training Hybrid: XGBoost-LSTM-Squared (squared)
+2026-02-11 14:30:00,688 - INFO - Training Hybrid: XGBoost-LSTM-Squared (squared)
+2026-02-11 14:30:00,688 - INFO - Training Hybrid: XGBoost-LSTM-Squared (squared)
+2026-02-11 14:30:09,564 - INFO - [XGBoost-LSTM-Squared] Test Metrics: Acc: 0.6204, F1: 0.7292, Prec: 0.6250, Rec: 0.8750, AUC: 0.6257
+2026-02-11 14:30:09,564 - INFO - [XGBoost-LSTM-Squared] Test Metrics: Acc: 0.6204, F1: 0.7292, Prec: 0.6250, Rec: 0.8750, AUC: 0.6257
+2026-02-11 14:30:09,564 - INFO - [XGBoost-LSTM-Squared] Test Metrics: Acc: 0.6204, F1: 0.7292, Prec: 0.6250, Rec: 0.8750, AUC: 0.6257
+2026-02-11 14:30:09,567 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Log ---
+2026-02-11 14:30:09,567 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Log ---
+2026-02-11 14:30:09,567 - INFO - --- Training Hybrid Model: XGBoost-LSTM-Log ---
+2026-02-11 14:30:09,570 - INFO - Training Hybrid: XGBoost-LSTM-Log (log)
+2026-02-11 14:30:09,570 - INFO - Training Hybrid: XGBoost-LSTM-Log (log)
+2026-02-11 14:30:09,570 - INFO - Training Hybrid: XGBoost-LSTM-Log (log)
+2026-02-11 14:30:16,257 - INFO - [XGBoost-LSTM-Log] Test Metrics: Acc: 0.6131, F1: 0.7337, Prec: 0.6134, Rec: 0.9125, AUC: 0.6123
+2026-02-11 14:30:16,257 - INFO - [XGBoost-LSTM-Log] Test Metrics: Acc: 0.6131, F1: 0.7337, Prec: 0.6134, Rec: 0.9125, AUC: 0.6123
+2026-02-11 14:30:16,257 - INFO - [XGBoost-LSTM-Log] Test Metrics: Acc: 0.6131, F1: 0.7337, Prec: 0.6134, Rec: 0.9125, AUC: 0.6123
+2026-02-11 14:30:16,262 - INFO - --- Training Hybrid Model: XGBoost-BiLSTM-Normal ---
+2026-02-11 14:30:16,262 - INFO - --- Training Hybrid Model: XGBoost-BiLSTM-Normal ---
+2026-02-11 14:30:16,262 - INFO - --- Training Hybrid Model: XGBoost-BiLSTM-Normal ---
+2026-02-11 14:30:16,267 - INFO - Training Hybrid: XGBoost-BiLSTM-Normal (normal)
+2026-02-11 14:30:16,267 - INFO - Training Hybrid: XGBoost-BiLSTM-Normal (normal)
+2026-02-11 14:30:16,267 - INFO - Training Hybrid: XGBoost-BiLSTM-Normal (normal)
+2026-02-11 14:30:29,299 - INFO - [XGBoost-BiLSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6627, Prec: 0.6395, Rec: 0.6875, AUC: 0.6314
+2026-02-11 14:30:29,299 - INFO - [XGBoost-BiLSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6627, Prec: 0.6395, Rec: 0.6875, AUC: 0.6314
+2026-02-11 14:30:29,299 - INFO - [XGBoost-BiLSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6627, Prec: 0.6395, Rec: 0.6875, AUC: 0.6314
+2026-02-11 14:30:29,302 - INFO - --- Training Hybrid Model: XGBoost-BiLSTM-Absolute ---
+2026-02-11 14:30:29,302 - INFO - --- Training Hybrid Model: XGBoost-BiLSTM-Absolute ---
+2026-02-11 14:30:29,302 - INFO - --- Training Hybrid Model: XGBoost-BiLSTM-Absolute ---
+2026-02-11 14:30:29,304 - INFO - Training Hybrid: XGBoost-BiLSTM-Absolute (absolute)
+2026-02-11 14:30:29,304 - INFO - Training Hybrid: XGBoost-BiLSTM-Absolute (absolute)
+2026-02-11 14:30:29,304 - INFO - Training Hybrid: XGBoost-BiLSTM-Absolute (absolute)
+2026-02-11 14:30:36,226 - INFO - [XGBoost-BiLSTM-Absolute] Test Metrics: Acc: 0.6350, F1: 0.7340, Prec: 0.6389, Rec: 0.8625, AUC: 0.6270
+2026-02-11 14:30:36,226 - INFO - [XGBoost-BiLSTM-Absolute] Test Metrics: Acc: 0.6350, F1: 0.7340, Prec: 0.6389, Rec: 0.8625, AUC: 0.6270
+2026-02-11 14:30:36,226 - INFO - [XGBoost-BiLSTM-Absolute] Test Metrics: Acc: 0.6350, F1: 0.7340, Prec: 0.6389, Rec: 0.8625, AUC: 0.6270
+2026-02-11 14:30:36,230 - INFO - --- Training Hybrid Model: XGBoost-BiLSTM-Squared ---
+2026-02-11 14:30:36,230 - INFO - --- Training Hybrid Model: XGBoost-BiLSTM-Squared ---
+2026-02-11 14:30:36,230 - INFO - --- Training Hybrid Model: XGBoost-BiLSTM-Squared ---
+2026-02-11 14:30:36,234 - INFO - Training Hybrid: XGBoost-BiLSTM-Squared (squared)
+2026-02-11 14:30:36,234 - INFO - Training Hybrid: XGBoost-BiLSTM-Squared (squared)
+2026-02-11 14:30:36,234 - INFO - Training Hybrid: XGBoost-BiLSTM-Squared (squared)
+2026-02-11 14:30:44,007 - INFO - [XGBoost-BiLSTM-Squared] Test Metrics: Acc: 0.6131, F1: 0.7225, Prec: 0.6216, Rec: 0.8625, AUC: 0.6326
+2026-02-11 14:30:44,007 - INFO - [XGBoost-BiLSTM-Squared] Test Metrics: Acc: 0.6131, F1: 0.7225, Prec: 0.6216, Rec: 0.8625, AUC: 0.6326
+2026-02-11 14:30:44,007 - INFO - [XGBoost-BiLSTM-Squared] Test Metrics: Acc: 0.6131, F1: 0.7225, Prec: 0.6216, Rec: 0.8625, AUC: 0.6326
+2026-02-11 14:30:44,010 - INFO - --- Training Hybrid Model: XGBoost-BiLSTM-Log ---
+2026-02-11 14:30:44,010 - INFO - --- Training Hybrid Model: XGBoost-BiLSTM-Log ---
+2026-02-11 14:30:44,010 - INFO - --- Training Hybrid Model: XGBoost-BiLSTM-Log ---
+2026-02-11 14:30:44,013 - INFO - Training Hybrid: XGBoost-BiLSTM-Log (log)
+2026-02-11 14:30:44,013 - INFO - Training Hybrid: XGBoost-BiLSTM-Log (log)
+2026-02-11 14:30:44,013 - INFO - Training Hybrid: XGBoost-BiLSTM-Log (log)
+2026-02-11 14:30:50,783 - INFO - [XGBoost-BiLSTM-Log] Test Metrics: Acc: 0.6204, F1: 0.7292, Prec: 0.6250, Rec: 0.8750, AUC: 0.6230
+2026-02-11 14:30:50,783 - INFO - [XGBoost-BiLSTM-Log] Test Metrics: Acc: 0.6204, F1: 0.7292, Prec: 0.6250, Rec: 0.8750, AUC: 0.6230
+2026-02-11 14:30:50,783 - INFO - [XGBoost-BiLSTM-Log] Test Metrics: Acc: 0.6204, F1: 0.7292, Prec: 0.6250, Rec: 0.8750, AUC: 0.6230
+2026-02-11 14:30:50,787 - INFO - --- Training Hybrid Model: XGBoost-GRU-Normal ---
+2026-02-11 14:30:50,787 - INFO - --- Training Hybrid Model: XGBoost-GRU-Normal ---
+2026-02-11 14:30:50,787 - INFO - --- Training Hybrid Model: XGBoost-GRU-Normal ---
+2026-02-11 14:30:50,790 - INFO - Training Hybrid: XGBoost-GRU-Normal (normal)
+2026-02-11 14:30:50,790 - INFO - Training Hybrid: XGBoost-GRU-Normal (normal)
+2026-02-11 14:30:50,790 - INFO - Training Hybrid: XGBoost-GRU-Normal (normal)
+2026-02-11 14:30:57,577 - INFO - [XGBoost-GRU-Normal] Test Metrics: Acc: 0.5693, F1: 0.6667, Prec: 0.6082, Rec: 0.7375, AUC: 0.6123
+2026-02-11 14:30:57,577 - INFO - [XGBoost-GRU-Normal] Test Metrics: Acc: 0.5693, F1: 0.6667, Prec: 0.6082, Rec: 0.7375, AUC: 0.6123
+2026-02-11 14:30:57,577 - INFO - [XGBoost-GRU-Normal] Test Metrics: Acc: 0.5693, F1: 0.6667, Prec: 0.6082, Rec: 0.7375, AUC: 0.6123
+2026-02-11 14:30:57,581 - INFO - --- Training Hybrid Model: XGBoost-GRU-Absolute ---
+2026-02-11 14:30:57,581 - INFO - --- Training Hybrid Model: XGBoost-GRU-Absolute ---
+2026-02-11 14:30:57,581 - INFO - --- Training Hybrid Model: XGBoost-GRU-Absolute ---
+2026-02-11 14:30:57,585 - INFO - Training Hybrid: XGBoost-GRU-Absolute (absolute)
+2026-02-11 14:30:57,585 - INFO - Training Hybrid: XGBoost-GRU-Absolute (absolute)
+2026-02-11 14:30:57,585 - INFO - Training Hybrid: XGBoost-GRU-Absolute (absolute)
+2026-02-11 14:31:03,030 - INFO - [XGBoost-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.6919, Prec: 0.6095, Rec: 0.8000, AUC: 0.6008
+2026-02-11 14:31:03,030 - INFO - [XGBoost-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.6919, Prec: 0.6095, Rec: 0.8000, AUC: 0.6008
+2026-02-11 14:31:03,030 - INFO - [XGBoost-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.6919, Prec: 0.6095, Rec: 0.8000, AUC: 0.6008
+2026-02-11 14:31:03,035 - INFO - --- Training Hybrid Model: XGBoost-GRU-Squared ---
+2026-02-11 14:31:03,035 - INFO - --- Training Hybrid Model: XGBoost-GRU-Squared ---
+2026-02-11 14:31:03,035 - INFO - --- Training Hybrid Model: XGBoost-GRU-Squared ---
+2026-02-11 14:31:03,039 - INFO - Training Hybrid: XGBoost-GRU-Squared (squared)
+2026-02-11 14:31:03,039 - INFO - Training Hybrid: XGBoost-GRU-Squared (squared)
+2026-02-11 14:31:03,039 - INFO - Training Hybrid: XGBoost-GRU-Squared (squared)
+2026-02-11 14:31:09,652 - INFO - [XGBoost-GRU-Squared] Test Metrics: Acc: 0.5620, F1: 0.6939, Prec: 0.5862, Rec: 0.8500, AUC: 0.5925
+2026-02-11 14:31:09,652 - INFO - [XGBoost-GRU-Squared] Test Metrics: Acc: 0.5620, F1: 0.6939, Prec: 0.5862, Rec: 0.8500, AUC: 0.5925
+2026-02-11 14:31:09,652 - INFO - [XGBoost-GRU-Squared] Test Metrics: Acc: 0.5620, F1: 0.6939, Prec: 0.5862, Rec: 0.8500, AUC: 0.5925
+2026-02-11 14:31:09,656 - INFO - --- Training Hybrid Model: XGBoost-GRU-Log ---
+2026-02-11 14:31:09,656 - INFO - --- Training Hybrid Model: XGBoost-GRU-Log ---
+2026-02-11 14:31:09,656 - INFO - --- Training Hybrid Model: XGBoost-GRU-Log ---
+2026-02-11 14:31:09,662 - INFO - Training Hybrid: XGBoost-GRU-Log (log)
+2026-02-11 14:31:09,662 - INFO - Training Hybrid: XGBoost-GRU-Log (log)
+2026-02-11 14:31:09,662 - INFO - Training Hybrid: XGBoost-GRU-Log (log)
+2026-02-11 14:31:13,960 - INFO - [XGBoost-GRU-Log] Test Metrics: Acc: 0.6423, F1: 0.7435, Prec: 0.6396, Rec: 0.8875, AUC: 0.6152
+2026-02-11 14:31:13,960 - INFO - [XGBoost-GRU-Log] Test Metrics: Acc: 0.6423, F1: 0.7435, Prec: 0.6396, Rec: 0.8875, AUC: 0.6152
+2026-02-11 14:31:13,960 - INFO - [XGBoost-GRU-Log] Test Metrics: Acc: 0.6423, F1: 0.7435, Prec: 0.6396, Rec: 0.8875, AUC: 0.6152
+2026-02-11 14:31:13,967 - INFO - --- Training Hybrid Model: XGBoost-CNN-LSTM-Normal ---
+2026-02-11 14:31:13,967 - INFO - --- Training Hybrid Model: XGBoost-CNN-LSTM-Normal ---
+2026-02-11 14:31:13,967 - INFO - --- Training Hybrid Model: XGBoost-CNN-LSTM-Normal ---
+2026-02-11 14:31:13,971 - INFO - Training Hybrid: XGBoost-CNN-LSTM-Normal (normal)
+2026-02-11 14:31:13,971 - INFO - Training Hybrid: XGBoost-CNN-LSTM-Normal (normal)
+2026-02-11 14:31:13,971 - INFO - Training Hybrid: XGBoost-CNN-LSTM-Normal (normal)
+2026-02-11 14:31:18,710 - INFO - [XGBoost-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6627, Prec: 0.6395, Rec: 0.6875, AUC: 0.6118
+2026-02-11 14:31:18,710 - INFO - [XGBoost-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6627, Prec: 0.6395, Rec: 0.6875, AUC: 0.6118
+2026-02-11 14:31:18,710 - INFO - [XGBoost-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6627, Prec: 0.6395, Rec: 0.6875, AUC: 0.6118
+2026-02-11 14:31:18,713 - INFO - --- Training Hybrid Model: XGBoost-CNN-LSTM-Absolute ---
+2026-02-11 14:31:18,713 - INFO - --- Training Hybrid Model: XGBoost-CNN-LSTM-Absolute ---
+2026-02-11 14:31:18,713 - INFO - --- Training Hybrid Model: XGBoost-CNN-LSTM-Absolute ---
+2026-02-11 14:31:18,720 - INFO - Training Hybrid: XGBoost-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:31:18,720 - INFO - Training Hybrid: XGBoost-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:31:18,720 - INFO - Training Hybrid: XGBoost-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:31:23,826 - INFO - [XGBoost-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7090, Prec: 0.6147, Rec: 0.8375, AUC: 0.6247
+2026-02-11 14:31:23,826 - INFO - [XGBoost-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7090, Prec: 0.6147, Rec: 0.8375, AUC: 0.6247
+2026-02-11 14:31:23,826 - INFO - [XGBoost-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7090, Prec: 0.6147, Rec: 0.8375, AUC: 0.6247
+2026-02-11 14:31:23,832 - INFO - --- Training Hybrid Model: XGBoost-CNN-LSTM-Squared ---
+2026-02-11 14:31:23,832 - INFO - --- Training Hybrid Model: XGBoost-CNN-LSTM-Squared ---
+2026-02-11 14:31:23,832 - INFO - --- Training Hybrid Model: XGBoost-CNN-LSTM-Squared ---
+2026-02-11 14:31:23,836 - INFO - Training Hybrid: XGBoost-CNN-LSTM-Squared (squared)
+2026-02-11 14:31:23,836 - INFO - Training Hybrid: XGBoost-CNN-LSTM-Squared (squared)
+2026-02-11 14:31:23,836 - INFO - Training Hybrid: XGBoost-CNN-LSTM-Squared (squared)
+2026-02-11 14:31:28,768 - INFO - [XGBoost-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7136, Prec: 0.5966, Rec: 0.8875, AUC: 0.5837
+2026-02-11 14:31:28,768 - INFO - [XGBoost-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7136, Prec: 0.5966, Rec: 0.8875, AUC: 0.5837
+2026-02-11 14:31:28,768 - INFO - [XGBoost-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7136, Prec: 0.5966, Rec: 0.8875, AUC: 0.5837
+2026-02-11 14:31:28,774 - INFO - --- Training Hybrid Model: XGBoost-CNN-LSTM-Log ---
+2026-02-11 14:31:28,774 - INFO - --- Training Hybrid Model: XGBoost-CNN-LSTM-Log ---
+2026-02-11 14:31:28,774 - INFO - --- Training Hybrid Model: XGBoost-CNN-LSTM-Log ---
+2026-02-11 14:31:28,778 - INFO - Training Hybrid: XGBoost-CNN-LSTM-Log (log)
+2026-02-11 14:31:28,778 - INFO - Training Hybrid: XGBoost-CNN-LSTM-Log (log)
+2026-02-11 14:31:28,778 - INFO - Training Hybrid: XGBoost-CNN-LSTM-Log (log)
+2026-02-11 14:31:36,370 - INFO - [XGBoost-CNN-LSTM-Log] Test Metrics: Acc: 0.6058, F1: 0.7273, Prec: 0.6102, Rec: 0.9000, AUC: 0.6227
+2026-02-11 14:31:36,370 - INFO - [XGBoost-CNN-LSTM-Log] Test Metrics: Acc: 0.6058, F1: 0.7273, Prec: 0.6102, Rec: 0.9000, AUC: 0.6227
+2026-02-11 14:31:36,370 - INFO - [XGBoost-CNN-LSTM-Log] Test Metrics: Acc: 0.6058, F1: 0.7273, Prec: 0.6102, Rec: 0.9000, AUC: 0.6227
+2026-02-11 14:31:36,373 - INFO - --- Training Hybrid Model: RandomForest-LSTM-Normal ---
+2026-02-11 14:31:36,373 - INFO - --- Training Hybrid Model: RandomForest-LSTM-Normal ---
+2026-02-11 14:31:36,373 - INFO - --- Training Hybrid Model: RandomForest-LSTM-Normal ---
+2026-02-11 14:31:36,376 - INFO - Training Hybrid: RandomForest-LSTM-Normal (normal)
+2026-02-11 14:31:36,376 - INFO - Training Hybrid: RandomForest-LSTM-Normal (normal)
+2026-02-11 14:31:36,376 - INFO - Training Hybrid: RandomForest-LSTM-Normal (normal)
+2026-02-11 14:31:42,938 - INFO - [RandomForest-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6818, Prec: 0.6250, Rec: 0.7500, AUC: 0.6643
+2026-02-11 14:31:42,938 - INFO - [RandomForest-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6818, Prec: 0.6250, Rec: 0.7500, AUC: 0.6643
+2026-02-11 14:31:42,938 - INFO - [RandomForest-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6818, Prec: 0.6250, Rec: 0.7500, AUC: 0.6643
+2026-02-11 14:31:42,941 - INFO - --- Training Hybrid Model: RandomForest-LSTM-Absolute ---
+2026-02-11 14:31:42,941 - INFO - --- Training Hybrid Model: RandomForest-LSTM-Absolute ---
+2026-02-11 14:31:42,941 - INFO - --- Training Hybrid Model: RandomForest-LSTM-Absolute ---
+2026-02-11 14:31:42,943 - INFO - Training Hybrid: RandomForest-LSTM-Absolute (absolute)
+2026-02-11 14:31:42,943 - INFO - Training Hybrid: RandomForest-LSTM-Absolute (absolute)
+2026-02-11 14:31:42,943 - INFO - Training Hybrid: RandomForest-LSTM-Absolute (absolute)
+2026-02-11 14:31:48,872 - INFO - [RandomForest-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6250
+2026-02-11 14:31:48,872 - INFO - [RandomForest-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6250
+2026-02-11 14:31:48,872 - INFO - [RandomForest-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6250
+2026-02-11 14:31:48,877 - INFO - --- Training Hybrid Model: RandomForest-LSTM-Squared ---
+2026-02-11 14:31:48,877 - INFO - --- Training Hybrid Model: RandomForest-LSTM-Squared ---
+2026-02-11 14:31:48,877 - INFO - --- Training Hybrid Model: RandomForest-LSTM-Squared ---
+2026-02-11 14:31:48,880 - INFO - Training Hybrid: RandomForest-LSTM-Squared (squared)
+2026-02-11 14:31:48,880 - INFO - Training Hybrid: RandomForest-LSTM-Squared (squared)
+2026-02-11 14:31:48,880 - INFO - Training Hybrid: RandomForest-LSTM-Squared (squared)
+2026-02-11 14:31:54,017 - INFO - [RandomForest-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6077
+2026-02-11 14:31:54,017 - INFO - [RandomForest-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6077
+2026-02-11 14:31:54,017 - INFO - [RandomForest-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6077
+2026-02-11 14:31:54,023 - INFO - --- Training Hybrid Model: RandomForest-LSTM-Log ---
+2026-02-11 14:31:54,023 - INFO - --- Training Hybrid Model: RandomForest-LSTM-Log ---
+2026-02-11 14:31:54,023 - INFO - --- Training Hybrid Model: RandomForest-LSTM-Log ---
+2026-02-11 14:31:54,029 - INFO - Training Hybrid: RandomForest-LSTM-Log (log)
+2026-02-11 14:31:54,029 - INFO - Training Hybrid: RandomForest-LSTM-Log (log)
+2026-02-11 14:31:54,029 - INFO - Training Hybrid: RandomForest-LSTM-Log (log)
+2026-02-11 14:32:00,059 - INFO - [RandomForest-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5932
+2026-02-11 14:32:00,059 - INFO - [RandomForest-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5932
+2026-02-11 14:32:00,059 - INFO - [RandomForest-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5932
+2026-02-11 14:32:00,063 - INFO - --- Training Hybrid Model: RandomForest-BiLSTM-Normal ---
+2026-02-11 14:32:00,063 - INFO - --- Training Hybrid Model: RandomForest-BiLSTM-Normal ---
+2026-02-11 14:32:00,063 - INFO - --- Training Hybrid Model: RandomForest-BiLSTM-Normal ---
+2026-02-11 14:32:00,066 - INFO - Training Hybrid: RandomForest-BiLSTM-Normal (normal)
+2026-02-11 14:32:00,066 - INFO - Training Hybrid: RandomForest-BiLSTM-Normal (normal)
+2026-02-11 14:32:00,066 - INFO - Training Hybrid: RandomForest-BiLSTM-Normal (normal)
+2026-02-11 14:32:09,275 - INFO - [RandomForest-BiLSTM-Normal] Test Metrics: Acc: 0.5839, F1: 0.6587, Prec: 0.6322, Rec: 0.6875, AUC: 0.6579
+2026-02-11 14:32:09,275 - INFO - [RandomForest-BiLSTM-Normal] Test Metrics: Acc: 0.5839, F1: 0.6587, Prec: 0.6322, Rec: 0.6875, AUC: 0.6579
+2026-02-11 14:32:09,275 - INFO - [RandomForest-BiLSTM-Normal] Test Metrics: Acc: 0.5839, F1: 0.6587, Prec: 0.6322, Rec: 0.6875, AUC: 0.6579
+2026-02-11 14:32:09,279 - INFO - --- Training Hybrid Model: RandomForest-BiLSTM-Absolute ---
+2026-02-11 14:32:09,279 - INFO - --- Training Hybrid Model: RandomForest-BiLSTM-Absolute ---
+2026-02-11 14:32:09,279 - INFO - --- Training Hybrid Model: RandomForest-BiLSTM-Absolute ---
+2026-02-11 14:32:09,286 - INFO - Training Hybrid: RandomForest-BiLSTM-Absolute (absolute)
+2026-02-11 14:32:09,286 - INFO - Training Hybrid: RandomForest-BiLSTM-Absolute (absolute)
+2026-02-11 14:32:09,286 - INFO - Training Hybrid: RandomForest-BiLSTM-Absolute (absolute)
+2026-02-11 14:32:16,340 - INFO - [RandomForest-BiLSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6638
+2026-02-11 14:32:16,340 - INFO - [RandomForest-BiLSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6638
+2026-02-11 14:32:16,340 - INFO - [RandomForest-BiLSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6638
+2026-02-11 14:32:16,344 - INFO - --- Training Hybrid Model: RandomForest-BiLSTM-Squared ---
+2026-02-11 14:32:16,344 - INFO - --- Training Hybrid Model: RandomForest-BiLSTM-Squared ---
+2026-02-11 14:32:16,344 - INFO - --- Training Hybrid Model: RandomForest-BiLSTM-Squared ---
+2026-02-11 14:32:16,348 - INFO - Training Hybrid: RandomForest-BiLSTM-Squared (squared)
+2026-02-11 14:32:16,348 - INFO - Training Hybrid: RandomForest-BiLSTM-Squared (squared)
+2026-02-11 14:32:16,348 - INFO - Training Hybrid: RandomForest-BiLSTM-Squared (squared)
+2026-02-11 14:32:27,499 - INFO - [RandomForest-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6340
+2026-02-11 14:32:27,499 - INFO - [RandomForest-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6340
+2026-02-11 14:32:27,499 - INFO - [RandomForest-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6340
+2026-02-11 14:32:27,502 - INFO - --- Training Hybrid Model: RandomForest-BiLSTM-Log ---
+2026-02-11 14:32:27,502 - INFO - --- Training Hybrid Model: RandomForest-BiLSTM-Log ---
+2026-02-11 14:32:27,502 - INFO - --- Training Hybrid Model: RandomForest-BiLSTM-Log ---
+2026-02-11 14:32:27,508 - INFO - Training Hybrid: RandomForest-BiLSTM-Log (log)
+2026-02-11 14:32:27,508 - INFO - Training Hybrid: RandomForest-BiLSTM-Log (log)
+2026-02-11 14:32:27,508 - INFO - Training Hybrid: RandomForest-BiLSTM-Log (log)
+2026-02-11 14:32:35,133 - INFO - [RandomForest-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5996
+2026-02-11 14:32:35,133 - INFO - [RandomForest-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5996
+2026-02-11 14:32:35,133 - INFO - [RandomForest-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5996
+2026-02-11 14:32:35,137 - INFO - --- Training Hybrid Model: RandomForest-GRU-Normal ---
+2026-02-11 14:32:35,137 - INFO - --- Training Hybrid Model: RandomForest-GRU-Normal ---
+2026-02-11 14:32:35,137 - INFO - --- Training Hybrid Model: RandomForest-GRU-Normal ---
+2026-02-11 14:32:35,143 - INFO - Training Hybrid: RandomForest-GRU-Normal (normal)
+2026-02-11 14:32:35,143 - INFO - Training Hybrid: RandomForest-GRU-Normal (normal)
+2026-02-11 14:32:35,143 - INFO - Training Hybrid: RandomForest-GRU-Normal (normal)
+2026-02-11 14:32:41,659 - INFO - [RandomForest-GRU-Normal] Test Metrics: Acc: 0.5839, F1: 0.6885, Prec: 0.6117, Rec: 0.7875, AUC: 0.6507
+2026-02-11 14:32:41,659 - INFO - [RandomForest-GRU-Normal] Test Metrics: Acc: 0.5839, F1: 0.6885, Prec: 0.6117, Rec: 0.7875, AUC: 0.6507
+2026-02-11 14:32:41,659 - INFO - [RandomForest-GRU-Normal] Test Metrics: Acc: 0.5839, F1: 0.6885, Prec: 0.6117, Rec: 0.7875, AUC: 0.6507
+2026-02-11 14:32:41,663 - INFO - --- Training Hybrid Model: RandomForest-GRU-Absolute ---
+2026-02-11 14:32:41,663 - INFO - --- Training Hybrid Model: RandomForest-GRU-Absolute ---
+2026-02-11 14:32:41,663 - INFO - --- Training Hybrid Model: RandomForest-GRU-Absolute ---
+2026-02-11 14:32:41,667 - INFO - Training Hybrid: RandomForest-GRU-Absolute (absolute)
+2026-02-11 14:32:41,667 - INFO - Training Hybrid: RandomForest-GRU-Absolute (absolute)
+2026-02-11 14:32:41,667 - INFO - Training Hybrid: RandomForest-GRU-Absolute (absolute)
+2026-02-11 14:32:48,013 - INFO - [RandomForest-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6368
+2026-02-11 14:32:48,013 - INFO - [RandomForest-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6368
+2026-02-11 14:32:48,013 - INFO - [RandomForest-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6368
+2026-02-11 14:32:48,019 - INFO - --- Training Hybrid Model: RandomForest-GRU-Squared ---
+2026-02-11 14:32:48,019 - INFO - --- Training Hybrid Model: RandomForest-GRU-Squared ---
+2026-02-11 14:32:48,019 - INFO - --- Training Hybrid Model: RandomForest-GRU-Squared ---
+2026-02-11 14:32:48,021 - INFO - Training Hybrid: RandomForest-GRU-Squared (squared)
+2026-02-11 14:32:48,021 - INFO - Training Hybrid: RandomForest-GRU-Squared (squared)
+2026-02-11 14:32:48,021 - INFO - Training Hybrid: RandomForest-GRU-Squared (squared)
+2026-02-11 14:32:53,648 - INFO - [RandomForest-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6020
+2026-02-11 14:32:53,648 - INFO - [RandomForest-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6020
+2026-02-11 14:32:53,648 - INFO - [RandomForest-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6020
+2026-02-11 14:32:53,652 - INFO - --- Training Hybrid Model: RandomForest-GRU-Log ---
+2026-02-11 14:32:53,652 - INFO - --- Training Hybrid Model: RandomForest-GRU-Log ---
+2026-02-11 14:32:53,652 - INFO - --- Training Hybrid Model: RandomForest-GRU-Log ---
+2026-02-11 14:32:53,655 - INFO - Training Hybrid: RandomForest-GRU-Log (log)
+2026-02-11 14:32:53,655 - INFO - Training Hybrid: RandomForest-GRU-Log (log)
+2026-02-11 14:32:53,655 - INFO - Training Hybrid: RandomForest-GRU-Log (log)
+2026-02-11 14:32:59,555 - INFO - [RandomForest-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6276
+2026-02-11 14:32:59,555 - INFO - [RandomForest-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6276
+2026-02-11 14:32:59,555 - INFO - [RandomForest-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6276
+2026-02-11 14:32:59,560 - INFO - --- Training Hybrid Model: RandomForest-CNN-LSTM-Normal ---
+2026-02-11 14:32:59,560 - INFO - --- Training Hybrid Model: RandomForest-CNN-LSTM-Normal ---
+2026-02-11 14:32:59,560 - INFO - --- Training Hybrid Model: RandomForest-CNN-LSTM-Normal ---
+2026-02-11 14:32:59,566 - INFO - Training Hybrid: RandomForest-CNN-LSTM-Normal (normal)
+2026-02-11 14:32:59,566 - INFO - Training Hybrid: RandomForest-CNN-LSTM-Normal (normal)
+2026-02-11 14:32:59,566 - INFO - Training Hybrid: RandomForest-CNN-LSTM-Normal (normal)
+2026-02-11 14:33:04,192 - INFO - [RandomForest-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6706, Prec: 0.6333, Rec: 0.7125, AUC: 0.6684
+2026-02-11 14:33:04,192 - INFO - [RandomForest-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6706, Prec: 0.6333, Rec: 0.7125, AUC: 0.6684
+2026-02-11 14:33:04,192 - INFO - [RandomForest-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6706, Prec: 0.6333, Rec: 0.7125, AUC: 0.6684
+2026-02-11 14:33:04,194 - INFO - --- Training Hybrid Model: RandomForest-CNN-LSTM-Absolute ---
+2026-02-11 14:33:04,194 - INFO - --- Training Hybrid Model: RandomForest-CNN-LSTM-Absolute ---
+2026-02-11 14:33:04,194 - INFO - --- Training Hybrid Model: RandomForest-CNN-LSTM-Absolute ---
+2026-02-11 14:33:04,196 - INFO - Training Hybrid: RandomForest-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:33:04,196 - INFO - Training Hybrid: RandomForest-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:33:04,196 - INFO - Training Hybrid: RandomForest-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:33:09,431 - INFO - [RandomForest-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6250
+2026-02-11 14:33:09,431 - INFO - [RandomForest-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6250
+2026-02-11 14:33:09,431 - INFO - [RandomForest-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6250
+2026-02-11 14:33:09,436 - INFO - --- Training Hybrid Model: RandomForest-CNN-LSTM-Squared ---
+2026-02-11 14:33:09,436 - INFO - --- Training Hybrid Model: RandomForest-CNN-LSTM-Squared ---
+2026-02-11 14:33:09,436 - INFO - --- Training Hybrid Model: RandomForest-CNN-LSTM-Squared ---
+2026-02-11 14:33:09,440 - INFO - Training Hybrid: RandomForest-CNN-LSTM-Squared (squared)
+2026-02-11 14:33:09,440 - INFO - Training Hybrid: RandomForest-CNN-LSTM-Squared (squared)
+2026-02-11 14:33:09,440 - INFO - Training Hybrid: RandomForest-CNN-LSTM-Squared (squared)
+2026-02-11 14:33:13,733 - INFO - [RandomForest-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6689
+2026-02-11 14:33:13,733 - INFO - [RandomForest-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6689
+2026-02-11 14:33:13,733 - INFO - [RandomForest-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6689
+2026-02-11 14:33:13,738 - INFO - --- Training Hybrid Model: RandomForest-CNN-LSTM-Log ---
+2026-02-11 14:33:13,738 - INFO - --- Training Hybrid Model: RandomForest-CNN-LSTM-Log ---
+2026-02-11 14:33:13,738 - INFO - --- Training Hybrid Model: RandomForest-CNN-LSTM-Log ---
+2026-02-11 14:33:13,744 - INFO - Training Hybrid: RandomForest-CNN-LSTM-Log (log)
+2026-02-11 14:33:13,744 - INFO - Training Hybrid: RandomForest-CNN-LSTM-Log (log)
+2026-02-11 14:33:13,744 - INFO - Training Hybrid: RandomForest-CNN-LSTM-Log (log)
+2026-02-11 14:33:19,373 - INFO - [RandomForest-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5899
+2026-02-11 14:33:19,373 - INFO - [RandomForest-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5899
+2026-02-11 14:33:19,373 - INFO - [RandomForest-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5899
+2026-02-11 14:33:19,376 - INFO - --- Training Hybrid Model: GradientBoosting-LSTM-Normal ---
+2026-02-11 14:33:19,376 - INFO - --- Training Hybrid Model: GradientBoosting-LSTM-Normal ---
+2026-02-11 14:33:19,376 - INFO - --- Training Hybrid Model: GradientBoosting-LSTM-Normal ---
+2026-02-11 14:33:19,379 - INFO - Training Hybrid: GradientBoosting-LSTM-Normal (normal)
+2026-02-11 14:33:19,379 - INFO - Training Hybrid: GradientBoosting-LSTM-Normal (normal)
+2026-02-11 14:33:19,379 - INFO - Training Hybrid: GradientBoosting-LSTM-Normal (normal)
+2026-02-11 14:33:24,961 - INFO - [GradientBoosting-LSTM-Normal] Test Metrics: Acc: 0.6058, F1: 0.6824, Prec: 0.6444, Rec: 0.7250, AUC: 0.6423
+2026-02-11 14:33:24,961 - INFO - [GradientBoosting-LSTM-Normal] Test Metrics: Acc: 0.6058, F1: 0.6824, Prec: 0.6444, Rec: 0.7250, AUC: 0.6423
+2026-02-11 14:33:24,961 - INFO - [GradientBoosting-LSTM-Normal] Test Metrics: Acc: 0.6058, F1: 0.6824, Prec: 0.6444, Rec: 0.7250, AUC: 0.6423
+2026-02-11 14:33:24,967 - INFO - --- Training Hybrid Model: GradientBoosting-LSTM-Absolute ---
+2026-02-11 14:33:24,967 - INFO - --- Training Hybrid Model: GradientBoosting-LSTM-Absolute ---
+2026-02-11 14:33:24,967 - INFO - --- Training Hybrid Model: GradientBoosting-LSTM-Absolute ---
+2026-02-11 14:33:24,973 - INFO - Training Hybrid: GradientBoosting-LSTM-Absolute (absolute)
+2026-02-11 14:33:24,973 - INFO - Training Hybrid: GradientBoosting-LSTM-Absolute (absolute)
+2026-02-11 14:33:24,973 - INFO - Training Hybrid: GradientBoosting-LSTM-Absolute (absolute)
+2026-02-11 14:33:30,797 - INFO - [GradientBoosting-LSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5933
+2026-02-11 14:33:30,797 - INFO - [GradientBoosting-LSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5933
+2026-02-11 14:33:30,797 - INFO - [GradientBoosting-LSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5933
+2026-02-11 14:33:30,800 - INFO - --- Training Hybrid Model: GradientBoosting-LSTM-Squared ---
+2026-02-11 14:33:30,800 - INFO - --- Training Hybrid Model: GradientBoosting-LSTM-Squared ---
+2026-02-11 14:33:30,800 - INFO - --- Training Hybrid Model: GradientBoosting-LSTM-Squared ---
+2026-02-11 14:33:30,803 - INFO - Training Hybrid: GradientBoosting-LSTM-Squared (squared)
+2026-02-11 14:33:30,803 - INFO - Training Hybrid: GradientBoosting-LSTM-Squared (squared)
+2026-02-11 14:33:30,803 - INFO - Training Hybrid: GradientBoosting-LSTM-Squared (squared)
+2026-02-11 14:33:37,595 - INFO - [GradientBoosting-LSTM-Squared] Test Metrics: Acc: 0.5985, F1: 0.7442, Prec: 0.5926, Rec: 1.0000, AUC: 0.5866
+2026-02-11 14:33:37,595 - INFO - [GradientBoosting-LSTM-Squared] Test Metrics: Acc: 0.5985, F1: 0.7442, Prec: 0.5926, Rec: 1.0000, AUC: 0.5866
+2026-02-11 14:33:37,595 - INFO - [GradientBoosting-LSTM-Squared] Test Metrics: Acc: 0.5985, F1: 0.7442, Prec: 0.5926, Rec: 1.0000, AUC: 0.5866
+2026-02-11 14:33:37,601 - INFO - --- Training Hybrid Model: GradientBoosting-LSTM-Log ---
+2026-02-11 14:33:37,601 - INFO - --- Training Hybrid Model: GradientBoosting-LSTM-Log ---
+2026-02-11 14:33:37,601 - INFO - --- Training Hybrid Model: GradientBoosting-LSTM-Log ---
+2026-02-11 14:33:37,607 - INFO - Training Hybrid: GradientBoosting-LSTM-Log (log)
+2026-02-11 14:33:37,607 - INFO - Training Hybrid: GradientBoosting-LSTM-Log (log)
+2026-02-11 14:33:37,607 - INFO - Training Hybrid: GradientBoosting-LSTM-Log (log)
+2026-02-11 14:33:43,761 - INFO - [GradientBoosting-LSTM-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5421
+2026-02-11 14:33:43,761 - INFO - [GradientBoosting-LSTM-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5421
+2026-02-11 14:33:43,761 - INFO - [GradientBoosting-LSTM-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5421
+2026-02-11 14:33:43,765 - INFO - --- Training Hybrid Model: GradientBoosting-BiLSTM-Normal ---
+2026-02-11 14:33:43,765 - INFO - --- Training Hybrid Model: GradientBoosting-BiLSTM-Normal ---
+2026-02-11 14:33:43,765 - INFO - --- Training Hybrid Model: GradientBoosting-BiLSTM-Normal ---
+2026-02-11 14:33:43,768 - INFO - Training Hybrid: GradientBoosting-BiLSTM-Normal (normal)
+2026-02-11 14:33:43,768 - INFO - Training Hybrid: GradientBoosting-BiLSTM-Normal (normal)
+2026-02-11 14:33:43,768 - INFO - Training Hybrid: GradientBoosting-BiLSTM-Normal (normal)
+2026-02-11 14:33:50,866 - INFO - [GradientBoosting-BiLSTM-Normal] Test Metrics: Acc: 0.5620, F1: 0.6629, Prec: 0.6020, Rec: 0.7375, AUC: 0.6147
+2026-02-11 14:33:50,866 - INFO - [GradientBoosting-BiLSTM-Normal] Test Metrics: Acc: 0.5620, F1: 0.6629, Prec: 0.6020, Rec: 0.7375, AUC: 0.6147
+2026-02-11 14:33:50,866 - INFO - [GradientBoosting-BiLSTM-Normal] Test Metrics: Acc: 0.5620, F1: 0.6629, Prec: 0.6020, Rec: 0.7375, AUC: 0.6147
+2026-02-11 14:33:50,869 - INFO - --- Training Hybrid Model: GradientBoosting-BiLSTM-Absolute ---
+2026-02-11 14:33:50,869 - INFO - --- Training Hybrid Model: GradientBoosting-BiLSTM-Absolute ---
+2026-02-11 14:33:50,869 - INFO - --- Training Hybrid Model: GradientBoosting-BiLSTM-Absolute ---
+2026-02-11 14:33:50,873 - INFO - Training Hybrid: GradientBoosting-BiLSTM-Absolute (absolute)
+2026-02-11 14:33:50,873 - INFO - Training Hybrid: GradientBoosting-BiLSTM-Absolute (absolute)
+2026-02-11 14:33:50,873 - INFO - Training Hybrid: GradientBoosting-BiLSTM-Absolute (absolute)
+2026-02-11 14:34:00,127 - INFO - [GradientBoosting-BiLSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5329
+2026-02-11 14:34:00,127 - INFO - [GradientBoosting-BiLSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5329
+2026-02-11 14:34:00,127 - INFO - [GradientBoosting-BiLSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5329
+2026-02-11 14:34:00,132 - INFO - --- Training Hybrid Model: GradientBoosting-BiLSTM-Squared ---
+2026-02-11 14:34:00,132 - INFO - --- Training Hybrid Model: GradientBoosting-BiLSTM-Squared ---
+2026-02-11 14:34:00,132 - INFO - --- Training Hybrid Model: GradientBoosting-BiLSTM-Squared ---
+2026-02-11 14:34:00,137 - INFO - Training Hybrid: GradientBoosting-BiLSTM-Squared (squared)
+2026-02-11 14:34:00,137 - INFO - Training Hybrid: GradientBoosting-BiLSTM-Squared (squared)
+2026-02-11 14:34:00,137 - INFO - Training Hybrid: GradientBoosting-BiLSTM-Squared (squared)
+2026-02-11 14:34:08,009 - INFO - [GradientBoosting-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7349, Prec: 0.5852, Rec: 0.9875, AUC: 0.5966
+2026-02-11 14:34:08,009 - INFO - [GradientBoosting-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7349, Prec: 0.5852, Rec: 0.9875, AUC: 0.5966
+2026-02-11 14:34:08,009 - INFO - [GradientBoosting-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7349, Prec: 0.5852, Rec: 0.9875, AUC: 0.5966
+2026-02-11 14:34:08,015 - INFO - --- Training Hybrid Model: GradientBoosting-BiLSTM-Log ---
+2026-02-11 14:34:08,015 - INFO - --- Training Hybrid Model: GradientBoosting-BiLSTM-Log ---
+2026-02-11 14:34:08,015 - INFO - --- Training Hybrid Model: GradientBoosting-BiLSTM-Log ---
+2026-02-11 14:34:08,020 - INFO - Training Hybrid: GradientBoosting-BiLSTM-Log (log)
+2026-02-11 14:34:08,020 - INFO - Training Hybrid: GradientBoosting-BiLSTM-Log (log)
+2026-02-11 14:34:08,020 - INFO - Training Hybrid: GradientBoosting-BiLSTM-Log (log)
+2026-02-11 14:34:15,378 - INFO - [GradientBoosting-BiLSTM-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5536
+2026-02-11 14:34:15,378 - INFO - [GradientBoosting-BiLSTM-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5536
+2026-02-11 14:34:15,378 - INFO - [GradientBoosting-BiLSTM-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5536
+2026-02-11 14:34:15,383 - INFO - --- Training Hybrid Model: GradientBoosting-GRU-Normal ---
+2026-02-11 14:34:15,383 - INFO - --- Training Hybrid Model: GradientBoosting-GRU-Normal ---
+2026-02-11 14:34:15,383 - INFO - --- Training Hybrid Model: GradientBoosting-GRU-Normal ---
+2026-02-11 14:34:15,388 - INFO - Training Hybrid: GradientBoosting-GRU-Normal (normal)
+2026-02-11 14:34:15,388 - INFO - Training Hybrid: GradientBoosting-GRU-Normal (normal)
+2026-02-11 14:34:15,388 - INFO - Training Hybrid: GradientBoosting-GRU-Normal (normal)
+2026-02-11 14:34:21,387 - INFO - [GradientBoosting-GRU-Normal] Test Metrics: Acc: 0.5985, F1: 0.6746, Prec: 0.6404, Rec: 0.7125, AUC: 0.6239
+2026-02-11 14:34:21,387 - INFO - [GradientBoosting-GRU-Normal] Test Metrics: Acc: 0.5985, F1: 0.6746, Prec: 0.6404, Rec: 0.7125, AUC: 0.6239
+2026-02-11 14:34:21,387 - INFO - [GradientBoosting-GRU-Normal] Test Metrics: Acc: 0.5985, F1: 0.6746, Prec: 0.6404, Rec: 0.7125, AUC: 0.6239
+2026-02-11 14:34:21,392 - INFO - --- Training Hybrid Model: GradientBoosting-GRU-Absolute ---
+2026-02-11 14:34:21,392 - INFO - --- Training Hybrid Model: GradientBoosting-GRU-Absolute ---
+2026-02-11 14:34:21,392 - INFO - --- Training Hybrid Model: GradientBoosting-GRU-Absolute ---
+2026-02-11 14:34:21,394 - INFO - Training Hybrid: GradientBoosting-GRU-Absolute (absolute)
+2026-02-11 14:34:21,394 - INFO - Training Hybrid: GradientBoosting-GRU-Absolute (absolute)
+2026-02-11 14:34:21,394 - INFO - Training Hybrid: GradientBoosting-GRU-Absolute (absolute)
+2026-02-11 14:34:26,249 - INFO - [GradientBoosting-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5606
+2026-02-11 14:34:26,249 - INFO - [GradientBoosting-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5606
+2026-02-11 14:34:26,249 - INFO - [GradientBoosting-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5606
+2026-02-11 14:34:26,254 - INFO - --- Training Hybrid Model: GradientBoosting-GRU-Squared ---
+2026-02-11 14:34:26,254 - INFO - --- Training Hybrid Model: GradientBoosting-GRU-Squared ---
+2026-02-11 14:34:26,254 - INFO - --- Training Hybrid Model: GradientBoosting-GRU-Squared ---
+2026-02-11 14:34:26,256 - INFO - Training Hybrid: GradientBoosting-GRU-Squared (squared)
+2026-02-11 14:34:26,256 - INFO - Training Hybrid: GradientBoosting-GRU-Squared (squared)
+2026-02-11 14:34:26,256 - INFO - Training Hybrid: GradientBoosting-GRU-Squared (squared)
+2026-02-11 14:34:33,170 - INFO - [GradientBoosting-GRU-Squared] Test Metrics: Acc: 0.6058, F1: 0.7453, Prec: 0.5985, Rec: 0.9875, AUC: 0.6007
+2026-02-11 14:34:33,170 - INFO - [GradientBoosting-GRU-Squared] Test Metrics: Acc: 0.6058, F1: 0.7453, Prec: 0.5985, Rec: 0.9875, AUC: 0.6007
+2026-02-11 14:34:33,170 - INFO - [GradientBoosting-GRU-Squared] Test Metrics: Acc: 0.6058, F1: 0.7453, Prec: 0.5985, Rec: 0.9875, AUC: 0.6007
+2026-02-11 14:34:33,174 - INFO - --- Training Hybrid Model: GradientBoosting-GRU-Log ---
+2026-02-11 14:34:33,174 - INFO - --- Training Hybrid Model: GradientBoosting-GRU-Log ---
+2026-02-11 14:34:33,174 - INFO - --- Training Hybrid Model: GradientBoosting-GRU-Log ---
+2026-02-11 14:34:33,178 - INFO - Training Hybrid: GradientBoosting-GRU-Log (log)
+2026-02-11 14:34:33,178 - INFO - Training Hybrid: GradientBoosting-GRU-Log (log)
+2026-02-11 14:34:33,178 - INFO - Training Hybrid: GradientBoosting-GRU-Log (log)
+2026-02-11 14:34:40,773 - INFO - [GradientBoosting-GRU-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5759
+2026-02-11 14:34:40,773 - INFO - [GradientBoosting-GRU-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5759
+2026-02-11 14:34:40,773 - INFO - [GradientBoosting-GRU-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5759
+2026-02-11 14:34:40,776 - INFO - --- Training Hybrid Model: GradientBoosting-CNN-LSTM-Normal ---
+2026-02-11 14:34:40,776 - INFO - --- Training Hybrid Model: GradientBoosting-CNN-LSTM-Normal ---
+2026-02-11 14:34:40,776 - INFO - --- Training Hybrid Model: GradientBoosting-CNN-LSTM-Normal ---
+2026-02-11 14:34:40,778 - INFO - Training Hybrid: GradientBoosting-CNN-LSTM-Normal (normal)
+2026-02-11 14:34:40,778 - INFO - Training Hybrid: GradientBoosting-CNN-LSTM-Normal (normal)
+2026-02-11 14:34:40,778 - INFO - Training Hybrid: GradientBoosting-CNN-LSTM-Normal (normal)
+2026-02-11 14:34:46,976 - INFO - [GradientBoosting-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6706, Prec: 0.6333, Rec: 0.7125, AUC: 0.6364
+2026-02-11 14:34:46,976 - INFO - [GradientBoosting-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6706, Prec: 0.6333, Rec: 0.7125, AUC: 0.6364
+2026-02-11 14:34:46,976 - INFO - [GradientBoosting-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6706, Prec: 0.6333, Rec: 0.7125, AUC: 0.6364
+2026-02-11 14:34:46,979 - INFO - --- Training Hybrid Model: GradientBoosting-CNN-LSTM-Absolute ---
+2026-02-11 14:34:46,979 - INFO - --- Training Hybrid Model: GradientBoosting-CNN-LSTM-Absolute ---
+2026-02-11 14:34:46,979 - INFO - --- Training Hybrid Model: GradientBoosting-CNN-LSTM-Absolute ---
+2026-02-11 14:34:46,980 - INFO - Training Hybrid: GradientBoosting-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:34:46,980 - INFO - Training Hybrid: GradientBoosting-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:34:46,980 - INFO - Training Hybrid: GradientBoosting-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:34:51,360 - INFO - [GradientBoosting-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7418, Prec: 0.5940, Rec: 0.9875, AUC: 0.5875
+2026-02-11 14:34:51,360 - INFO - [GradientBoosting-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7418, Prec: 0.5940, Rec: 0.9875, AUC: 0.5875
+2026-02-11 14:34:51,360 - INFO - [GradientBoosting-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7418, Prec: 0.5940, Rec: 0.9875, AUC: 0.5875
+2026-02-11 14:34:51,364 - INFO - --- Training Hybrid Model: GradientBoosting-CNN-LSTM-Squared ---
+2026-02-11 14:34:51,364 - INFO - --- Training Hybrid Model: GradientBoosting-CNN-LSTM-Squared ---
+2026-02-11 14:34:51,364 - INFO - --- Training Hybrid Model: GradientBoosting-CNN-LSTM-Squared ---
+2026-02-11 14:34:51,369 - INFO - Training Hybrid: GradientBoosting-CNN-LSTM-Squared (squared)
+2026-02-11 14:34:51,369 - INFO - Training Hybrid: GradientBoosting-CNN-LSTM-Squared (squared)
+2026-02-11 14:34:51,369 - INFO - Training Hybrid: GradientBoosting-CNN-LSTM-Squared (squared)
+2026-02-11 14:34:56,331 - INFO - [GradientBoosting-CNN-LSTM-Squared] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5904
+2026-02-11 14:34:56,331 - INFO - [GradientBoosting-CNN-LSTM-Squared] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5904
+2026-02-11 14:34:56,331 - INFO - [GradientBoosting-CNN-LSTM-Squared] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5904
+2026-02-11 14:34:56,336 - INFO - --- Training Hybrid Model: GradientBoosting-CNN-LSTM-Log ---
+2026-02-11 14:34:56,336 - INFO - --- Training Hybrid Model: GradientBoosting-CNN-LSTM-Log ---
+2026-02-11 14:34:56,336 - INFO - --- Training Hybrid Model: GradientBoosting-CNN-LSTM-Log ---
+2026-02-11 14:34:56,342 - INFO - Training Hybrid: GradientBoosting-CNN-LSTM-Log (log)
+2026-02-11 14:34:56,342 - INFO - Training Hybrid: GradientBoosting-CNN-LSTM-Log (log)
+2026-02-11 14:34:56,342 - INFO - Training Hybrid: GradientBoosting-CNN-LSTM-Log (log)
+2026-02-11 14:35:04,073 - INFO - [GradientBoosting-CNN-LSTM-Log] Test Metrics: Acc: 0.5985, F1: 0.7442, Prec: 0.5926, Rec: 1.0000, AUC: 0.5695
+2026-02-11 14:35:04,073 - INFO - [GradientBoosting-CNN-LSTM-Log] Test Metrics: Acc: 0.5985, F1: 0.7442, Prec: 0.5926, Rec: 1.0000, AUC: 0.5695
+2026-02-11 14:35:04,073 - INFO - [GradientBoosting-CNN-LSTM-Log] Test Metrics: Acc: 0.5985, F1: 0.7442, Prec: 0.5926, Rec: 1.0000, AUC: 0.5695
+2026-02-11 14:35:04,078 - INFO - --- Training Hybrid Model: SVM-LSTM-Normal ---
+2026-02-11 14:35:04,078 - INFO - --- Training Hybrid Model: SVM-LSTM-Normal ---
+2026-02-11 14:35:04,078 - INFO - --- Training Hybrid Model: SVM-LSTM-Normal ---
+2026-02-11 14:35:04,084 - INFO - Training Hybrid: SVM-LSTM-Normal (normal)
+2026-02-11 14:35:04,084 - INFO - Training Hybrid: SVM-LSTM-Normal (normal)
+2026-02-11 14:35:04,084 - INFO - Training Hybrid: SVM-LSTM-Normal (normal)
+2026-02-11 14:35:08,902 - INFO - [SVM-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6821, Prec: 0.6344, Rec: 0.7375, AUC: 0.6123
+2026-02-11 14:35:08,902 - INFO - [SVM-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6821, Prec: 0.6344, Rec: 0.7375, AUC: 0.6123
+2026-02-11 14:35:08,902 - INFO - [SVM-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6821, Prec: 0.6344, Rec: 0.7375, AUC: 0.6123
+2026-02-11 14:35:08,905 - INFO - --- Training Hybrid Model: SVM-LSTM-Absolute ---
+2026-02-11 14:35:08,905 - INFO - --- Training Hybrid Model: SVM-LSTM-Absolute ---
+2026-02-11 14:35:08,905 - INFO - --- Training Hybrid Model: SVM-LSTM-Absolute ---
+2026-02-11 14:35:08,907 - INFO - Training Hybrid: SVM-LSTM-Absolute (absolute)
+2026-02-11 14:35:08,907 - INFO - Training Hybrid: SVM-LSTM-Absolute (absolute)
+2026-02-11 14:35:08,907 - INFO - Training Hybrid: SVM-LSTM-Absolute (absolute)
+2026-02-11 14:35:14,245 - INFO - [SVM-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4594
+2026-02-11 14:35:14,245 - INFO - [SVM-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4594
+2026-02-11 14:35:14,245 - INFO - [SVM-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4594
+2026-02-11 14:35:14,248 - INFO - --- Training Hybrid Model: SVM-LSTM-Squared ---
+2026-02-11 14:35:14,248 - INFO - --- Training Hybrid Model: SVM-LSTM-Squared ---
+2026-02-11 14:35:14,248 - INFO - --- Training Hybrid Model: SVM-LSTM-Squared ---
+2026-02-11 14:35:14,250 - INFO - Training Hybrid: SVM-LSTM-Squared (squared)
+2026-02-11 14:35:14,250 - INFO - Training Hybrid: SVM-LSTM-Squared (squared)
+2026-02-11 14:35:14,250 - INFO - Training Hybrid: SVM-LSTM-Squared (squared)
+2026-02-11 14:35:22,183 - INFO - [SVM-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4250
+2026-02-11 14:35:22,183 - INFO - [SVM-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4250
+2026-02-11 14:35:22,183 - INFO - [SVM-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4250
+2026-02-11 14:35:22,187 - INFO - --- Training Hybrid Model: SVM-LSTM-Log ---
+2026-02-11 14:35:22,187 - INFO - --- Training Hybrid Model: SVM-LSTM-Log ---
+2026-02-11 14:35:22,187 - INFO - --- Training Hybrid Model: SVM-LSTM-Log ---
+2026-02-11 14:35:22,192 - INFO - Training Hybrid: SVM-LSTM-Log (log)
+2026-02-11 14:35:22,192 - INFO - Training Hybrid: SVM-LSTM-Log (log)
+2026-02-11 14:35:22,192 - INFO - Training Hybrid: SVM-LSTM-Log (log)
+2026-02-11 14:35:28,058 - INFO - [SVM-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4553
+2026-02-11 14:35:28,058 - INFO - [SVM-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4553
+2026-02-11 14:35:28,058 - INFO - [SVM-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4553
+2026-02-11 14:35:28,064 - INFO - --- Training Hybrid Model: SVM-BiLSTM-Normal ---
+2026-02-11 14:35:28,064 - INFO - --- Training Hybrid Model: SVM-BiLSTM-Normal ---
+2026-02-11 14:35:28,064 - INFO - --- Training Hybrid Model: SVM-BiLSTM-Normal ---
+2026-02-11 14:35:28,066 - INFO - Training Hybrid: SVM-BiLSTM-Normal (normal)
+2026-02-11 14:35:28,066 - INFO - Training Hybrid: SVM-BiLSTM-Normal (normal)
+2026-02-11 14:35:28,066 - INFO - Training Hybrid: SVM-BiLSTM-Normal (normal)
+2026-02-11 14:35:35,339 - INFO - [SVM-BiLSTM-Normal] Test Metrics: Acc: 0.5839, F1: 0.6415, Prec: 0.6456, Rec: 0.6375, AUC: 0.6445
+2026-02-11 14:35:35,339 - INFO - [SVM-BiLSTM-Normal] Test Metrics: Acc: 0.5839, F1: 0.6415, Prec: 0.6456, Rec: 0.6375, AUC: 0.6445
+2026-02-11 14:35:35,339 - INFO - [SVM-BiLSTM-Normal] Test Metrics: Acc: 0.5839, F1: 0.6415, Prec: 0.6456, Rec: 0.6375, AUC: 0.6445
+2026-02-11 14:35:35,342 - INFO - --- Training Hybrid Model: SVM-BiLSTM-Absolute ---
+2026-02-11 14:35:35,342 - INFO - --- Training Hybrid Model: SVM-BiLSTM-Absolute ---
+2026-02-11 14:35:35,342 - INFO - --- Training Hybrid Model: SVM-BiLSTM-Absolute ---
+2026-02-11 14:35:35,345 - INFO - Training Hybrid: SVM-BiLSTM-Absolute (absolute)
+2026-02-11 14:35:35,345 - INFO - Training Hybrid: SVM-BiLSTM-Absolute (absolute)
+2026-02-11 14:35:35,345 - INFO - Training Hybrid: SVM-BiLSTM-Absolute (absolute)
+2026-02-11 14:35:42,703 - INFO - [SVM-BiLSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4873
+2026-02-11 14:35:42,703 - INFO - [SVM-BiLSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4873
+2026-02-11 14:35:42,703 - INFO - [SVM-BiLSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4873
+2026-02-11 14:35:42,706 - INFO - --- Training Hybrid Model: SVM-BiLSTM-Squared ---
+2026-02-11 14:35:42,706 - INFO - --- Training Hybrid Model: SVM-BiLSTM-Squared ---
+2026-02-11 14:35:42,706 - INFO - --- Training Hybrid Model: SVM-BiLSTM-Squared ---
+2026-02-11 14:35:42,711 - INFO - Training Hybrid: SVM-BiLSTM-Squared (squared)
+2026-02-11 14:35:42,711 - INFO - Training Hybrid: SVM-BiLSTM-Squared (squared)
+2026-02-11 14:35:42,711 - INFO - Training Hybrid: SVM-BiLSTM-Squared (squared)
+2026-02-11 14:35:51,435 - INFO - [SVM-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4292
+2026-02-11 14:35:51,435 - INFO - [SVM-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4292
+2026-02-11 14:35:51,435 - INFO - [SVM-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4292
+2026-02-11 14:35:51,438 - INFO - --- Training Hybrid Model: SVM-BiLSTM-Log ---
+2026-02-11 14:35:51,438 - INFO - --- Training Hybrid Model: SVM-BiLSTM-Log ---
+2026-02-11 14:35:51,438 - INFO - --- Training Hybrid Model: SVM-BiLSTM-Log ---
+2026-02-11 14:35:51,440 - INFO - Training Hybrid: SVM-BiLSTM-Log (log)
+2026-02-11 14:35:51,440 - INFO - Training Hybrid: SVM-BiLSTM-Log (log)
+2026-02-11 14:35:51,440 - INFO - Training Hybrid: SVM-BiLSTM-Log (log)
+2026-02-11 14:35:59,689 - INFO - [SVM-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4978
+2026-02-11 14:35:59,689 - INFO - [SVM-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4978
+2026-02-11 14:35:59,689 - INFO - [SVM-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4978
+2026-02-11 14:35:59,692 - INFO - --- Training Hybrid Model: SVM-GRU-Normal ---
+2026-02-11 14:35:59,692 - INFO - --- Training Hybrid Model: SVM-GRU-Normal ---
+2026-02-11 14:35:59,692 - INFO - --- Training Hybrid Model: SVM-GRU-Normal ---
+2026-02-11 14:35:59,696 - INFO - Training Hybrid: SVM-GRU-Normal (normal)
+2026-02-11 14:35:59,696 - INFO - Training Hybrid: SVM-GRU-Normal (normal)
+2026-02-11 14:35:59,696 - INFO - Training Hybrid: SVM-GRU-Normal (normal)
+2026-02-11 14:36:04,247 - INFO - [SVM-GRU-Normal] Test Metrics: Acc: 0.5985, F1: 0.6961, Prec: 0.6238, Rec: 0.7875, AUC: 0.6140
+2026-02-11 14:36:04,247 - INFO - [SVM-GRU-Normal] Test Metrics: Acc: 0.5985, F1: 0.6961, Prec: 0.6238, Rec: 0.7875, AUC: 0.6140
+2026-02-11 14:36:04,247 - INFO - [SVM-GRU-Normal] Test Metrics: Acc: 0.5985, F1: 0.6961, Prec: 0.6238, Rec: 0.7875, AUC: 0.6140
+2026-02-11 14:36:04,250 - INFO - --- Training Hybrid Model: SVM-GRU-Absolute ---
+2026-02-11 14:36:04,250 - INFO - --- Training Hybrid Model: SVM-GRU-Absolute ---
+2026-02-11 14:36:04,250 - INFO - --- Training Hybrid Model: SVM-GRU-Absolute ---
+2026-02-11 14:36:04,252 - INFO - Training Hybrid: SVM-GRU-Absolute (absolute)
+2026-02-11 14:36:04,252 - INFO - Training Hybrid: SVM-GRU-Absolute (absolute)
+2026-02-11 14:36:04,252 - INFO - Training Hybrid: SVM-GRU-Absolute (absolute)
+2026-02-11 14:36:09,658 - INFO - [SVM-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5700
+2026-02-11 14:36:09,658 - INFO - [SVM-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5700
+2026-02-11 14:36:09,658 - INFO - [SVM-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5700
+2026-02-11 14:36:09,664 - INFO - --- Training Hybrid Model: SVM-GRU-Squared ---
+2026-02-11 14:36:09,664 - INFO - --- Training Hybrid Model: SVM-GRU-Squared ---
+2026-02-11 14:36:09,664 - INFO - --- Training Hybrid Model: SVM-GRU-Squared ---
+2026-02-11 14:36:09,670 - INFO - Training Hybrid: SVM-GRU-Squared (squared)
+2026-02-11 14:36:09,670 - INFO - Training Hybrid: SVM-GRU-Squared (squared)
+2026-02-11 14:36:09,670 - INFO - Training Hybrid: SVM-GRU-Squared (squared)
+2026-02-11 14:36:14,968 - INFO - [SVM-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5197
+2026-02-11 14:36:14,968 - INFO - [SVM-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5197
+2026-02-11 14:36:14,968 - INFO - [SVM-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5197
+2026-02-11 14:36:14,971 - INFO - --- Training Hybrid Model: SVM-GRU-Log ---
+2026-02-11 14:36:14,971 - INFO - --- Training Hybrid Model: SVM-GRU-Log ---
+2026-02-11 14:36:14,971 - INFO - --- Training Hybrid Model: SVM-GRU-Log ---
+2026-02-11 14:36:14,973 - INFO - Training Hybrid: SVM-GRU-Log (log)
+2026-02-11 14:36:14,973 - INFO - Training Hybrid: SVM-GRU-Log (log)
+2026-02-11 14:36:14,973 - INFO - Training Hybrid: SVM-GRU-Log (log)
+2026-02-11 14:36:21,581 - INFO - [SVM-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4799
+2026-02-11 14:36:21,581 - INFO - [SVM-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4799
+2026-02-11 14:36:21,581 - INFO - [SVM-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4799
+2026-02-11 14:36:21,586 - INFO - --- Training Hybrid Model: SVM-CNN-LSTM-Normal ---
+2026-02-11 14:36:21,586 - INFO - --- Training Hybrid Model: SVM-CNN-LSTM-Normal ---
+2026-02-11 14:36:21,586 - INFO - --- Training Hybrid Model: SVM-CNN-LSTM-Normal ---
+2026-02-11 14:36:21,591 - INFO - Training Hybrid: SVM-CNN-LSTM-Normal (normal)
+2026-02-11 14:36:21,591 - INFO - Training Hybrid: SVM-CNN-LSTM-Normal (normal)
+2026-02-11 14:36:21,591 - INFO - Training Hybrid: SVM-CNN-LSTM-Normal (normal)
+2026-02-11 14:36:27,288 - INFO - [SVM-CNN-LSTM-Normal] Test Metrics: Acc: 0.6058, F1: 0.6824, Prec: 0.6444, Rec: 0.7250, AUC: 0.6547
+2026-02-11 14:36:27,288 - INFO - [SVM-CNN-LSTM-Normal] Test Metrics: Acc: 0.6058, F1: 0.6824, Prec: 0.6444, Rec: 0.7250, AUC: 0.6547
+2026-02-11 14:36:27,288 - INFO - [SVM-CNN-LSTM-Normal] Test Metrics: Acc: 0.6058, F1: 0.6824, Prec: 0.6444, Rec: 0.7250, AUC: 0.6547
+2026-02-11 14:36:27,293 - INFO - --- Training Hybrid Model: SVM-CNN-LSTM-Absolute ---
+2026-02-11 14:36:27,293 - INFO - --- Training Hybrid Model: SVM-CNN-LSTM-Absolute ---
+2026-02-11 14:36:27,293 - INFO - --- Training Hybrid Model: SVM-CNN-LSTM-Absolute ---
+2026-02-11 14:36:27,296 - INFO - Training Hybrid: SVM-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:36:27,296 - INFO - Training Hybrid: SVM-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:36:27,296 - INFO - Training Hybrid: SVM-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:36:33,779 - INFO - [SVM-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5081
+2026-02-11 14:36:33,779 - INFO - [SVM-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5081
+2026-02-11 14:36:33,779 - INFO - [SVM-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5081
+2026-02-11 14:36:33,784 - INFO - --- Training Hybrid Model: SVM-CNN-LSTM-Squared ---
+2026-02-11 14:36:33,784 - INFO - --- Training Hybrid Model: SVM-CNN-LSTM-Squared ---
+2026-02-11 14:36:33,784 - INFO - --- Training Hybrid Model: SVM-CNN-LSTM-Squared ---
+2026-02-11 14:36:33,791 - INFO - Training Hybrid: SVM-CNN-LSTM-Squared (squared)
+2026-02-11 14:36:33,791 - INFO - Training Hybrid: SVM-CNN-LSTM-Squared (squared)
+2026-02-11 14:36:33,791 - INFO - Training Hybrid: SVM-CNN-LSTM-Squared (squared)
+2026-02-11 14:36:38,954 - INFO - [SVM-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5004
+2026-02-11 14:36:38,954 - INFO - [SVM-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5004
+2026-02-11 14:36:38,954 - INFO - [SVM-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5004
+2026-02-11 14:36:38,960 - INFO - --- Training Hybrid Model: SVM-CNN-LSTM-Log ---
+2026-02-11 14:36:38,960 - INFO - --- Training Hybrid Model: SVM-CNN-LSTM-Log ---
+2026-02-11 14:36:38,960 - INFO - --- Training Hybrid Model: SVM-CNN-LSTM-Log ---
+2026-02-11 14:36:38,967 - INFO - Training Hybrid: SVM-CNN-LSTM-Log (log)
+2026-02-11 14:36:38,967 - INFO - Training Hybrid: SVM-CNN-LSTM-Log (log)
+2026-02-11 14:36:38,967 - INFO - Training Hybrid: SVM-CNN-LSTM-Log (log)
+2026-02-11 14:36:45,169 - INFO - [SVM-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4743
+2026-02-11 14:36:45,169 - INFO - [SVM-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4743
+2026-02-11 14:36:45,169 - INFO - [SVM-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4743
+2026-02-11 14:36:45,173 - INFO - --- Training Hybrid Model: MLP-LSTM-Normal ---
+2026-02-11 14:36:45,173 - INFO - --- Training Hybrid Model: MLP-LSTM-Normal ---
+2026-02-11 14:36:45,173 - INFO - --- Training Hybrid Model: MLP-LSTM-Normal ---
+2026-02-11 14:36:45,178 - INFO - Training Hybrid: MLP-LSTM-Normal (normal)
+2026-02-11 14:36:45,178 - INFO - Training Hybrid: MLP-LSTM-Normal (normal)
+2026-02-11 14:36:45,178 - INFO - Training Hybrid: MLP-LSTM-Normal (normal)
+2026-02-11 14:36:53,166 - INFO - [MLP-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6667, Prec: 0.6471, Rec: 0.6875, AUC: 0.6452
+2026-02-11 14:36:53,166 - INFO - [MLP-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6667, Prec: 0.6471, Rec: 0.6875, AUC: 0.6452
+2026-02-11 14:36:53,166 - INFO - [MLP-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6667, Prec: 0.6471, Rec: 0.6875, AUC: 0.6452
+2026-02-11 14:36:53,171 - INFO - --- Training Hybrid Model: MLP-LSTM-Absolute ---
+2026-02-11 14:36:53,171 - INFO - --- Training Hybrid Model: MLP-LSTM-Absolute ---
+2026-02-11 14:36:53,171 - INFO - --- Training Hybrid Model: MLP-LSTM-Absolute ---
+2026-02-11 14:36:53,180 - INFO - Training Hybrid: MLP-LSTM-Absolute (absolute)
+2026-02-11 14:36:53,180 - INFO - Training Hybrid: MLP-LSTM-Absolute (absolute)
+2026-02-11 14:36:53,180 - INFO - Training Hybrid: MLP-LSTM-Absolute (absolute)
+2026-02-11 14:37:00,821 - INFO - [MLP-LSTM-Absolute] Test Metrics: Acc: 0.6058, F1: 0.7327, Prec: 0.6066, Rec: 0.9250, AUC: 0.5717
+2026-02-11 14:37:00,821 - INFO - [MLP-LSTM-Absolute] Test Metrics: Acc: 0.6058, F1: 0.7327, Prec: 0.6066, Rec: 0.9250, AUC: 0.5717
+2026-02-11 14:37:00,821 - INFO - [MLP-LSTM-Absolute] Test Metrics: Acc: 0.6058, F1: 0.7327, Prec: 0.6066, Rec: 0.9250, AUC: 0.5717
+2026-02-11 14:37:00,825 - INFO - --- Training Hybrid Model: MLP-LSTM-Squared ---
+2026-02-11 14:37:00,825 - INFO - --- Training Hybrid Model: MLP-LSTM-Squared ---
+2026-02-11 14:37:00,825 - INFO - --- Training Hybrid Model: MLP-LSTM-Squared ---
+2026-02-11 14:37:00,828 - INFO - Training Hybrid: MLP-LSTM-Squared (squared)
+2026-02-11 14:37:00,828 - INFO - Training Hybrid: MLP-LSTM-Squared (squared)
+2026-02-11 14:37:00,828 - INFO - Training Hybrid: MLP-LSTM-Squared (squared)
+2026-02-11 14:37:07,275 - INFO - [MLP-LSTM-Squared] Test Metrics: Acc: 0.5766, F1: 0.7238, Prec: 0.5846, Rec: 0.9500, AUC: 0.5931
+2026-02-11 14:37:07,275 - INFO - [MLP-LSTM-Squared] Test Metrics: Acc: 0.5766, F1: 0.7238, Prec: 0.5846, Rec: 0.9500, AUC: 0.5931
+2026-02-11 14:37:07,275 - INFO - [MLP-LSTM-Squared] Test Metrics: Acc: 0.5766, F1: 0.7238, Prec: 0.5846, Rec: 0.9500, AUC: 0.5931
+2026-02-11 14:37:07,280 - INFO - --- Training Hybrid Model: MLP-LSTM-Log ---
+2026-02-11 14:37:07,280 - INFO - --- Training Hybrid Model: MLP-LSTM-Log ---
+2026-02-11 14:37:07,280 - INFO - --- Training Hybrid Model: MLP-LSTM-Log ---
+2026-02-11 14:37:07,286 - INFO - Training Hybrid: MLP-LSTM-Log (log)
+2026-02-11 14:37:07,286 - INFO - Training Hybrid: MLP-LSTM-Log (log)
+2026-02-11 14:37:07,286 - INFO - Training Hybrid: MLP-LSTM-Log (log)
+2026-02-11 14:37:15,738 - INFO - [MLP-LSTM-Log] Test Metrics: Acc: 0.5766, F1: 0.7264, Prec: 0.5833, Rec: 0.9625, AUC: 0.6024
+2026-02-11 14:37:15,738 - INFO - [MLP-LSTM-Log] Test Metrics: Acc: 0.5766, F1: 0.7264, Prec: 0.5833, Rec: 0.9625, AUC: 0.6024
+2026-02-11 14:37:15,738 - INFO - [MLP-LSTM-Log] Test Metrics: Acc: 0.5766, F1: 0.7264, Prec: 0.5833, Rec: 0.9625, AUC: 0.6024
+2026-02-11 14:37:15,742 - INFO - --- Training Hybrid Model: MLP-BiLSTM-Normal ---
+2026-02-11 14:37:15,742 - INFO - --- Training Hybrid Model: MLP-BiLSTM-Normal ---
+2026-02-11 14:37:15,742 - INFO - --- Training Hybrid Model: MLP-BiLSTM-Normal ---
+2026-02-11 14:37:15,747 - INFO - Training Hybrid: MLP-BiLSTM-Normal (normal)
+2026-02-11 14:37:15,747 - INFO - Training Hybrid: MLP-BiLSTM-Normal (normal)
+2026-02-11 14:37:15,747 - INFO - Training Hybrid: MLP-BiLSTM-Normal (normal)
+2026-02-11 14:37:24,594 - INFO - [MLP-BiLSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6707, Prec: 0.6437, Rec: 0.7000, AUC: 0.6618
+2026-02-11 14:37:24,594 - INFO - [MLP-BiLSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6707, Prec: 0.6437, Rec: 0.7000, AUC: 0.6618
+2026-02-11 14:37:24,594 - INFO - [MLP-BiLSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6707, Prec: 0.6437, Rec: 0.7000, AUC: 0.6618
+2026-02-11 14:37:24,596 - INFO - --- Training Hybrid Model: MLP-BiLSTM-Absolute ---
+2026-02-11 14:37:24,596 - INFO - --- Training Hybrid Model: MLP-BiLSTM-Absolute ---
+2026-02-11 14:37:24,596 - INFO - --- Training Hybrid Model: MLP-BiLSTM-Absolute ---
+2026-02-11 14:37:24,599 - INFO - Training Hybrid: MLP-BiLSTM-Absolute (absolute)
+2026-02-11 14:37:24,599 - INFO - Training Hybrid: MLP-BiLSTM-Absolute (absolute)
+2026-02-11 14:37:24,599 - INFO - Training Hybrid: MLP-BiLSTM-Absolute (absolute)
+2026-02-11 14:37:32,922 - INFO - [MLP-BiLSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7317, Prec: 0.6000, Rec: 0.9375, AUC: 0.5614
+2026-02-11 14:37:32,922 - INFO - [MLP-BiLSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7317, Prec: 0.6000, Rec: 0.9375, AUC: 0.5614
+2026-02-11 14:37:32,922 - INFO - [MLP-BiLSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7317, Prec: 0.6000, Rec: 0.9375, AUC: 0.5614
+2026-02-11 14:37:32,930 - INFO - --- Training Hybrid Model: MLP-BiLSTM-Squared ---
+2026-02-11 14:37:32,930 - INFO - --- Training Hybrid Model: MLP-BiLSTM-Squared ---
+2026-02-11 14:37:32,930 - INFO - --- Training Hybrid Model: MLP-BiLSTM-Squared ---
+2026-02-11 14:37:32,936 - INFO - Training Hybrid: MLP-BiLSTM-Squared (squared)
+2026-02-11 14:37:32,936 - INFO - Training Hybrid: MLP-BiLSTM-Squared (squared)
+2026-02-11 14:37:32,936 - INFO - Training Hybrid: MLP-BiLSTM-Squared (squared)
+2026-02-11 14:37:41,514 - INFO - [MLP-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.5940
+2026-02-11 14:37:41,514 - INFO - [MLP-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.5940
+2026-02-11 14:37:41,514 - INFO - [MLP-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.5940
+2026-02-11 14:37:41,519 - INFO - --- Training Hybrid Model: MLP-BiLSTM-Log ---
+2026-02-11 14:37:41,519 - INFO - --- Training Hybrid Model: MLP-BiLSTM-Log ---
+2026-02-11 14:37:41,519 - INFO - --- Training Hybrid Model: MLP-BiLSTM-Log ---
+2026-02-11 14:37:41,525 - INFO - Training Hybrid: MLP-BiLSTM-Log (log)
+2026-02-11 14:37:41,525 - INFO - Training Hybrid: MLP-BiLSTM-Log (log)
+2026-02-11 14:37:41,525 - INFO - Training Hybrid: MLP-BiLSTM-Log (log)
+2026-02-11 14:37:51,987 - INFO - [MLP-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.6061
+2026-02-11 14:37:51,987 - INFO - [MLP-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.6061
+2026-02-11 14:37:51,987 - INFO - [MLP-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.6061
+2026-02-11 14:37:51,990 - INFO - --- Training Hybrid Model: MLP-GRU-Normal ---
+2026-02-11 14:37:51,990 - INFO - --- Training Hybrid Model: MLP-GRU-Normal ---
+2026-02-11 14:37:51,990 - INFO - --- Training Hybrid Model: MLP-GRU-Normal ---
+2026-02-11 14:37:51,992 - INFO - Training Hybrid: MLP-GRU-Normal (normal)
+2026-02-11 14:37:51,992 - INFO - Training Hybrid: MLP-GRU-Normal (normal)
+2026-02-11 14:37:51,992 - INFO - Training Hybrid: MLP-GRU-Normal (normal)
+2026-02-11 14:37:57,167 - INFO - [MLP-GRU-Normal] Test Metrics: Acc: 0.5912, F1: 0.6585, Prec: 0.6429, Rec: 0.6750, AUC: 0.6509
+2026-02-11 14:37:57,167 - INFO - [MLP-GRU-Normal] Test Metrics: Acc: 0.5912, F1: 0.6585, Prec: 0.6429, Rec: 0.6750, AUC: 0.6509
+2026-02-11 14:37:57,167 - INFO - [MLP-GRU-Normal] Test Metrics: Acc: 0.5912, F1: 0.6585, Prec: 0.6429, Rec: 0.6750, AUC: 0.6509
+2026-02-11 14:37:57,173 - INFO - --- Training Hybrid Model: MLP-GRU-Absolute ---
+2026-02-11 14:37:57,173 - INFO - --- Training Hybrid Model: MLP-GRU-Absolute ---
+2026-02-11 14:37:57,173 - INFO - --- Training Hybrid Model: MLP-GRU-Absolute ---
+2026-02-11 14:37:57,179 - INFO - Training Hybrid: MLP-GRU-Absolute (absolute)
+2026-02-11 14:37:57,179 - INFO - Training Hybrid: MLP-GRU-Absolute (absolute)
+2026-02-11 14:37:57,179 - INFO - Training Hybrid: MLP-GRU-Absolute (absolute)
+2026-02-11 14:38:05,278 - INFO - [MLP-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7192, Prec: 0.5935, Rec: 0.9125, AUC: 0.5738
+2026-02-11 14:38:05,278 - INFO - [MLP-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7192, Prec: 0.5935, Rec: 0.9125, AUC: 0.5738
+2026-02-11 14:38:05,278 - INFO - [MLP-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7192, Prec: 0.5935, Rec: 0.9125, AUC: 0.5738
+2026-02-11 14:38:05,283 - INFO - --- Training Hybrid Model: MLP-GRU-Squared ---
+2026-02-11 14:38:05,283 - INFO - --- Training Hybrid Model: MLP-GRU-Squared ---
+2026-02-11 14:38:05,283 - INFO - --- Training Hybrid Model: MLP-GRU-Squared ---
+2026-02-11 14:38:05,286 - INFO - Training Hybrid: MLP-GRU-Squared (squared)
+2026-02-11 14:38:05,286 - INFO - Training Hybrid: MLP-GRU-Squared (squared)
+2026-02-11 14:38:05,286 - INFO - Training Hybrid: MLP-GRU-Squared (squared)
+2026-02-11 14:38:10,524 - INFO - [MLP-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7324, Prec: 0.5865, Rec: 0.9750, AUC: 0.5976
+2026-02-11 14:38:10,524 - INFO - [MLP-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7324, Prec: 0.5865, Rec: 0.9750, AUC: 0.5976
+2026-02-11 14:38:10,524 - INFO - [MLP-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7324, Prec: 0.5865, Rec: 0.9750, AUC: 0.5976
+2026-02-11 14:38:10,527 - INFO - --- Training Hybrid Model: MLP-GRU-Log ---
+2026-02-11 14:38:10,527 - INFO - --- Training Hybrid Model: MLP-GRU-Log ---
+2026-02-11 14:38:10,527 - INFO - --- Training Hybrid Model: MLP-GRU-Log ---
+2026-02-11 14:38:10,530 - INFO - Training Hybrid: MLP-GRU-Log (log)
+2026-02-11 14:38:10,530 - INFO - Training Hybrid: MLP-GRU-Log (log)
+2026-02-11 14:38:10,530 - INFO - Training Hybrid: MLP-GRU-Log (log)
+2026-02-11 14:38:18,919 - INFO - [MLP-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7220, Prec: 0.5920, Rec: 0.9250, AUC: 0.6060
+2026-02-11 14:38:18,919 - INFO - [MLP-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7220, Prec: 0.5920, Rec: 0.9250, AUC: 0.6060
+2026-02-11 14:38:18,919 - INFO - [MLP-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7220, Prec: 0.5920, Rec: 0.9250, AUC: 0.6060
+2026-02-11 14:38:18,922 - INFO - --- Training Hybrid Model: MLP-CNN-LSTM-Normal ---
+2026-02-11 14:38:18,922 - INFO - --- Training Hybrid Model: MLP-CNN-LSTM-Normal ---
+2026-02-11 14:38:18,922 - INFO - --- Training Hybrid Model: MLP-CNN-LSTM-Normal ---
+2026-02-11 14:38:18,924 - INFO - Training Hybrid: MLP-CNN-LSTM-Normal (normal)
+2026-02-11 14:38:18,924 - INFO - Training Hybrid: MLP-CNN-LSTM-Normal (normal)
+2026-02-11 14:38:18,924 - INFO - Training Hybrid: MLP-CNN-LSTM-Normal (normal)
+2026-02-11 14:38:23,543 - INFO - [MLP-CNN-LSTM-Normal] Test Metrics: Acc: 0.6204, F1: 0.6867, Prec: 0.6628, Rec: 0.7125, AUC: 0.6430
+2026-02-11 14:38:23,543 - INFO - [MLP-CNN-LSTM-Normal] Test Metrics: Acc: 0.6204, F1: 0.6867, Prec: 0.6628, Rec: 0.7125, AUC: 0.6430
+2026-02-11 14:38:23,543 - INFO - [MLP-CNN-LSTM-Normal] Test Metrics: Acc: 0.6204, F1: 0.6867, Prec: 0.6628, Rec: 0.7125, AUC: 0.6430
+2026-02-11 14:38:23,548 - INFO - --- Training Hybrid Model: MLP-CNN-LSTM-Absolute ---
+2026-02-11 14:38:23,548 - INFO - --- Training Hybrid Model: MLP-CNN-LSTM-Absolute ---
+2026-02-11 14:38:23,548 - INFO - --- Training Hybrid Model: MLP-CNN-LSTM-Absolute ---
+2026-02-11 14:38:23,553 - INFO - Training Hybrid: MLP-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:38:23,553 - INFO - Training Hybrid: MLP-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:38:23,553 - INFO - Training Hybrid: MLP-CNN-LSTM-Absolute (absolute)
+2026-02-11 14:38:28,608 - INFO - [MLP-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7255, Prec: 0.5968, Rec: 0.9250, AUC: 0.5800
+2026-02-11 14:38:28,608 - INFO - [MLP-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7255, Prec: 0.5968, Rec: 0.9250, AUC: 0.5800
+2026-02-11 14:38:28,608 - INFO - [MLP-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7255, Prec: 0.5968, Rec: 0.9250, AUC: 0.5800
+2026-02-11 14:38:28,612 - INFO - --- Training Hybrid Model: MLP-CNN-LSTM-Squared ---
+2026-02-11 14:38:28,612 - INFO - --- Training Hybrid Model: MLP-CNN-LSTM-Squared ---
+2026-02-11 14:38:28,612 - INFO - --- Training Hybrid Model: MLP-CNN-LSTM-Squared ---
+2026-02-11 14:38:28,614 - INFO - Training Hybrid: MLP-CNN-LSTM-Squared (squared)
+2026-02-11 14:38:28,614 - INFO - Training Hybrid: MLP-CNN-LSTM-Squared (squared)
+2026-02-11 14:38:28,614 - INFO - Training Hybrid: MLP-CNN-LSTM-Squared (squared)
+2026-02-11 14:38:33,420 - INFO - [MLP-CNN-LSTM-Squared] Test Metrics: Acc: 0.5912, F1: 0.7358, Prec: 0.5909, Rec: 0.9750, AUC: 0.5942
+2026-02-11 14:38:33,420 - INFO - [MLP-CNN-LSTM-Squared] Test Metrics: Acc: 0.5912, F1: 0.7358, Prec: 0.5909, Rec: 0.9750, AUC: 0.5942
+2026-02-11 14:38:33,420 - INFO - [MLP-CNN-LSTM-Squared] Test Metrics: Acc: 0.5912, F1: 0.7358, Prec: 0.5909, Rec: 0.9750, AUC: 0.5942
+2026-02-11 14:38:33,425 - INFO - --- Training Hybrid Model: MLP-CNN-LSTM-Log ---
+2026-02-11 14:38:33,425 - INFO - --- Training Hybrid Model: MLP-CNN-LSTM-Log ---
+2026-02-11 14:38:33,425 - INFO - --- Training Hybrid Model: MLP-CNN-LSTM-Log ---
+2026-02-11 14:38:33,431 - INFO - Training Hybrid: MLP-CNN-LSTM-Log (log)
+2026-02-11 14:38:33,431 - INFO - Training Hybrid: MLP-CNN-LSTM-Log (log)
+2026-02-11 14:38:33,431 - INFO - Training Hybrid: MLP-CNN-LSTM-Log (log)
+2026-02-11 14:38:40,423 - INFO - [MLP-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.5939
+2026-02-11 14:38:40,423 - INFO - [MLP-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.5939
+2026-02-11 14:38:40,423 - INFO - [MLP-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.5939
+2026-02-11 14:38:40,428 - INFO - --- Creating Ensemble ---
+2026-02-11 14:38:40,428 - INFO - --- Creating Ensemble ---
+2026-02-11 14:38:40,428 - INFO - --- Creating Ensemble ---
+2026-02-11 14:38:47,190 - INFO - [ComprehensiveEnsemble] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.6384
+2026-02-11 14:38:47,190 - INFO - [ComprehensiveEnsemble] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.6384
+2026-02-11 14:38:47,190 - INFO - [ComprehensiveEnsemble] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.6384
+2026-02-11 14:38:47,194 - INFO - --- Generating Comprehensive Evaluation & Plots ---
+2026-02-11 14:38:47,194 - INFO - --- Generating Comprehensive Evaluation & Plots ---
+2026-02-11 14:38:47,194 - INFO - --- Generating Comprehensive Evaluation & Plots ---
+2026-02-11 14:38:47,212 - INFO - [XGBoost] Test Metrics: Acc: 0.5912, F1: 0.6585, Prec: 0.6429, Rec: 0.6750, AUC: 0.6329
+2026-02-11 14:38:47,212 - INFO - [XGBoost] Test Metrics: Acc: 0.5912, F1: 0.6585, Prec: 0.6429, Rec: 0.6750, AUC: 0.6329
+2026-02-11 14:38:47,212 - INFO - [XGBoost] Test Metrics: Acc: 0.5912, F1: 0.6585, Prec: 0.6429, Rec: 0.6750, AUC: 0.6329
+2026-02-11 14:38:47,215 - INFO - Plotting details for: XGBoost
+2026-02-11 14:38:47,215 - INFO - Plotting details for: XGBoost
+2026-02-11 14:38:47,215 - INFO - Plotting details for: XGBoost
+2026-02-11 14:38:48,664 - INFO - [RandomForest] Test Metrics: Acc: 0.5839, F1: 0.6816, Prec: 0.6162, Rec: 0.7625, AUC: 0.6476
+2026-02-11 14:38:48,664 - INFO - [RandomForest] Test Metrics: Acc: 0.5839, F1: 0.6816, Prec: 0.6162, Rec: 0.7625, AUC: 0.6476
+2026-02-11 14:38:48,664 - INFO - [RandomForest] Test Metrics: Acc: 0.5839, F1: 0.6816, Prec: 0.6162, Rec: 0.7625, AUC: 0.6476
+2026-02-11 14:38:48,670 - INFO - Plotting details for: RandomForest
+2026-02-11 14:38:48,670 - INFO - Plotting details for: RandomForest
+2026-02-11 14:38:48,670 - INFO - Plotting details for: RandomForest
+2026-02-11 14:38:50,181 - INFO - [GradientBoosting] Test Metrics: Acc: 0.6204, F1: 0.6941, Prec: 0.6556, Rec: 0.7375, AUC: 0.6322
+2026-02-11 14:38:50,181 - INFO - [GradientBoosting] Test Metrics: Acc: 0.6204, F1: 0.6941, Prec: 0.6556, Rec: 0.7375, AUC: 0.6322
+2026-02-11 14:38:50,181 - INFO - [GradientBoosting] Test Metrics: Acc: 0.6204, F1: 0.6941, Prec: 0.6556, Rec: 0.7375, AUC: 0.6322
+2026-02-11 14:38:50,186 - INFO - Plotting details for: GradientBoosting
+2026-02-11 14:38:50,186 - INFO - Plotting details for: GradientBoosting
+2026-02-11 14:38:50,186 - INFO - Plotting details for: GradientBoosting
+2026-02-11 14:38:51,324 - INFO - [SVM] Test Metrics: Acc: 0.5839, F1: 0.7077, Prec: 0.6000, Rec: 0.8625, AUC: 0.5857
+2026-02-11 14:38:51,324 - INFO - [SVM] Test Metrics: Acc: 0.5839, F1: 0.7077, Prec: 0.6000, Rec: 0.8625, AUC: 0.5857
+2026-02-11 14:38:51,324 - INFO - [SVM] Test Metrics: Acc: 0.5839, F1: 0.7077, Prec: 0.6000, Rec: 0.8625, AUC: 0.5857
+2026-02-11 14:38:51,329 - INFO - Plotting details for: SVM
+2026-02-11 14:38:51,329 - INFO - Plotting details for: SVM
+2026-02-11 14:38:51,329 - INFO - Plotting details for: SVM
+2026-02-11 14:38:52,132 - INFO - [MLP] Test Metrics: Acc: 0.5912, F1: 0.6543, Prec: 0.6463, Rec: 0.6625, AUC: 0.6421
+2026-02-11 14:38:52,132 - INFO - [MLP] Test Metrics: Acc: 0.5912, F1: 0.6543, Prec: 0.6463, Rec: 0.6625, AUC: 0.6421
+2026-02-11 14:38:52,132 - INFO - [MLP] Test Metrics: Acc: 0.5912, F1: 0.6543, Prec: 0.6463, Rec: 0.6625, AUC: 0.6421
+2026-02-11 14:38:52,136 - INFO - Plotting details for: MLP
+2026-02-11 14:38:52,136 - INFO - Plotting details for: MLP
+2026-02-11 14:38:52,136 - INFO - Plotting details for: MLP
+2026-02-11 14:38:55,087 - INFO - [LSTM] Test Metrics: Acc: 0.5839, F1: 0.6667, Prec: 0.6264, Rec: 0.7125, AUC: 0.6340
+2026-02-11 14:38:55,087 - INFO - [LSTM] Test Metrics: Acc: 0.5839, F1: 0.6667, Prec: 0.6264, Rec: 0.7125, AUC: 0.6340
+2026-02-11 14:38:55,087 - INFO - [LSTM] Test Metrics: Acc: 0.5839, F1: 0.6667, Prec: 0.6264, Rec: 0.7125, AUC: 0.6340
+2026-02-11 14:38:55,092 - INFO - Plotting details for: LSTM
+2026-02-11 14:38:55,092 - INFO - Plotting details for: LSTM
+2026-02-11 14:38:55,092 - INFO - Plotting details for: LSTM
+2026-02-11 14:38:56,498 - INFO - [BiLSTM] Test Metrics: Acc: 0.6204, F1: 0.7045, Prec: 0.6458, Rec: 0.7750, AUC: 0.6318
+2026-02-11 14:38:56,498 - INFO - [BiLSTM] Test Metrics: Acc: 0.6204, F1: 0.7045, Prec: 0.6458, Rec: 0.7750, AUC: 0.6318
+2026-02-11 14:38:56,498 - INFO - [BiLSTM] Test Metrics: Acc: 0.6204, F1: 0.7045, Prec: 0.6458, Rec: 0.7750, AUC: 0.6318
+2026-02-11 14:38:56,505 - INFO - Plotting details for: BiLSTM
+2026-02-11 14:38:56,505 - INFO - Plotting details for: BiLSTM
+2026-02-11 14:38:56,505 - INFO - Plotting details for: BiLSTM
+2026-02-11 14:38:57,775 - INFO - [GRU] Test Metrics: Acc: 0.5912, F1: 0.6818, Prec: 0.6250, Rec: 0.7500, AUC: 0.6366
+2026-02-11 14:38:57,775 - INFO - [GRU] Test Metrics: Acc: 0.5912, F1: 0.6818, Prec: 0.6250, Rec: 0.7500, AUC: 0.6366
+2026-02-11 14:38:57,775 - INFO - [GRU] Test Metrics: Acc: 0.5912, F1: 0.6818, Prec: 0.6250, Rec: 0.7500, AUC: 0.6366
+2026-02-11 14:38:57,778 - INFO - Plotting details for: GRU
+2026-02-11 14:38:57,778 - INFO - Plotting details for: GRU
+2026-02-11 14:38:57,778 - INFO - Plotting details for: GRU
+2026-02-11 14:38:59,077 - INFO - [CNN-LSTM] Test Metrics: Acc: 0.5401, F1: 0.6441, Prec: 0.5876, Rec: 0.7125, AUC: 0.6160
+2026-02-11 14:38:59,077 - INFO - [CNN-LSTM] Test Metrics: Acc: 0.5401, F1: 0.6441, Prec: 0.5876, Rec: 0.7125, AUC: 0.6160
+2026-02-11 14:38:59,077 - INFO - [CNN-LSTM] Test Metrics: Acc: 0.5401, F1: 0.6441, Prec: 0.5876, Rec: 0.7125, AUC: 0.6160
+2026-02-11 14:38:59,081 - INFO - Plotting details for: CNN-LSTM
+2026-02-11 14:38:59,081 - INFO - Plotting details for: CNN-LSTM
+2026-02-11 14:38:59,081 - INFO - Plotting details for: CNN-LSTM
+2026-02-11 14:39:00,354 - INFO - [XGBoost-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6584, Prec: 0.6543, Rec: 0.6625, AUC: 0.6366
+2026-02-11 14:39:00,354 - INFO - [XGBoost-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6584, Prec: 0.6543, Rec: 0.6625, AUC: 0.6366
+2026-02-11 14:39:00,354 - INFO - [XGBoost-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6584, Prec: 0.6543, Rec: 0.6625, AUC: 0.6366
+2026-02-11 14:39:00,357 - INFO - Plotting details for: XGBoost-LSTM-Normal
+2026-02-11 14:39:00,357 - INFO - Plotting details for: XGBoost-LSTM-Normal
+2026-02-11 14:39:00,357 - INFO - Plotting details for: XGBoost-LSTM-Normal
+2026-02-11 14:39:02,472 - INFO - [XGBoost-LSTM-Absolute] Test Metrics: Acc: 0.6131, F1: 0.7225, Prec: 0.6216, Rec: 0.8625, AUC: 0.6057
+2026-02-11 14:39:02,472 - INFO - [XGBoost-LSTM-Absolute] Test Metrics: Acc: 0.6131, F1: 0.7225, Prec: 0.6216, Rec: 0.8625, AUC: 0.6057
+2026-02-11 14:39:02,472 - INFO - [XGBoost-LSTM-Absolute] Test Metrics: Acc: 0.6131, F1: 0.7225, Prec: 0.6216, Rec: 0.8625, AUC: 0.6057
+2026-02-11 14:39:02,476 - INFO - Plotting details for: XGBoost-LSTM-Absolute
+2026-02-11 14:39:02,476 - INFO - Plotting details for: XGBoost-LSTM-Absolute
+2026-02-11 14:39:02,476 - INFO - Plotting details for: XGBoost-LSTM-Absolute
+2026-02-11 14:39:04,144 - INFO - [XGBoost-LSTM-Squared] Test Metrics: Acc: 0.6204, F1: 0.7292, Prec: 0.6250, Rec: 0.8750, AUC: 0.6257
+2026-02-11 14:39:04,144 - INFO - [XGBoost-LSTM-Squared] Test Metrics: Acc: 0.6204, F1: 0.7292, Prec: 0.6250, Rec: 0.8750, AUC: 0.6257
+2026-02-11 14:39:04,144 - INFO - [XGBoost-LSTM-Squared] Test Metrics: Acc: 0.6204, F1: 0.7292, Prec: 0.6250, Rec: 0.8750, AUC: 0.6257
+2026-02-11 14:39:04,149 - INFO - Plotting details for: XGBoost-LSTM-Squared
+2026-02-11 14:39:04,149 - INFO - Plotting details for: XGBoost-LSTM-Squared
+2026-02-11 14:39:04,149 - INFO - Plotting details for: XGBoost-LSTM-Squared
+2026-02-11 14:39:05,661 - INFO - [XGBoost-LSTM-Log] Test Metrics: Acc: 0.6131, F1: 0.7337, Prec: 0.6134, Rec: 0.9125, AUC: 0.6123
+2026-02-11 14:39:05,661 - INFO - [XGBoost-LSTM-Log] Test Metrics: Acc: 0.6131, F1: 0.7337, Prec: 0.6134, Rec: 0.9125, AUC: 0.6123
+2026-02-11 14:39:05,661 - INFO - [XGBoost-LSTM-Log] Test Metrics: Acc: 0.6131, F1: 0.7337, Prec: 0.6134, Rec: 0.9125, AUC: 0.6123
+2026-02-11 14:39:05,668 - INFO - Plotting details for: XGBoost-LSTM-Log
+2026-02-11 14:39:05,668 - INFO - Plotting details for: XGBoost-LSTM-Log
+2026-02-11 14:39:05,668 - INFO - Plotting details for: XGBoost-LSTM-Log
+2026-02-11 14:39:07,145 - INFO - [XGBoost-BiLSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6627, Prec: 0.6395, Rec: 0.6875, AUC: 0.6314
+2026-02-11 14:39:07,145 - INFO - [XGBoost-BiLSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6627, Prec: 0.6395, Rec: 0.6875, AUC: 0.6314
+2026-02-11 14:39:07,145 - INFO - [XGBoost-BiLSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6627, Prec: 0.6395, Rec: 0.6875, AUC: 0.6314
+2026-02-11 14:39:07,149 - INFO - Plotting details for: XGBoost-BiLSTM-Normal
+2026-02-11 14:39:07,149 - INFO - Plotting details for: XGBoost-BiLSTM-Normal
+2026-02-11 14:39:07,149 - INFO - Plotting details for: XGBoost-BiLSTM-Normal
+2026-02-11 14:39:08,605 - INFO - [XGBoost-BiLSTM-Absolute] Test Metrics: Acc: 0.6350, F1: 0.7340, Prec: 0.6389, Rec: 0.8625, AUC: 0.6270
+2026-02-11 14:39:08,605 - INFO - [XGBoost-BiLSTM-Absolute] Test Metrics: Acc: 0.6350, F1: 0.7340, Prec: 0.6389, Rec: 0.8625, AUC: 0.6270
+2026-02-11 14:39:08,605 - INFO - [XGBoost-BiLSTM-Absolute] Test Metrics: Acc: 0.6350, F1: 0.7340, Prec: 0.6389, Rec: 0.8625, AUC: 0.6270
+2026-02-11 14:39:08,610 - INFO - Plotting details for: XGBoost-BiLSTM-Absolute
+2026-02-11 14:39:08,610 - INFO - Plotting details for: XGBoost-BiLSTM-Absolute
+2026-02-11 14:39:08,610 - INFO - Plotting details for: XGBoost-BiLSTM-Absolute
+2026-02-11 14:39:10,063 - INFO - [XGBoost-BiLSTM-Squared] Test Metrics: Acc: 0.6131, F1: 0.7225, Prec: 0.6216, Rec: 0.8625, AUC: 0.6326
+2026-02-11 14:39:10,063 - INFO - [XGBoost-BiLSTM-Squared] Test Metrics: Acc: 0.6131, F1: 0.7225, Prec: 0.6216, Rec: 0.8625, AUC: 0.6326
+2026-02-11 14:39:10,063 - INFO - [XGBoost-BiLSTM-Squared] Test Metrics: Acc: 0.6131, F1: 0.7225, Prec: 0.6216, Rec: 0.8625, AUC: 0.6326
+2026-02-11 14:39:10,067 - INFO - Plotting details for: XGBoost-BiLSTM-Squared
+2026-02-11 14:39:10,067 - INFO - Plotting details for: XGBoost-BiLSTM-Squared
+2026-02-11 14:39:10,067 - INFO - Plotting details for: XGBoost-BiLSTM-Squared
+2026-02-11 14:39:11,538 - INFO - [XGBoost-BiLSTM-Log] Test Metrics: Acc: 0.6204, F1: 0.7292, Prec: 0.6250, Rec: 0.8750, AUC: 0.6230
+2026-02-11 14:39:11,538 - INFO - [XGBoost-BiLSTM-Log] Test Metrics: Acc: 0.6204, F1: 0.7292, Prec: 0.6250, Rec: 0.8750, AUC: 0.6230
+2026-02-11 14:39:11,538 - INFO - [XGBoost-BiLSTM-Log] Test Metrics: Acc: 0.6204, F1: 0.7292, Prec: 0.6250, Rec: 0.8750, AUC: 0.6230
+2026-02-11 14:39:11,542 - INFO - Plotting details for: XGBoost-BiLSTM-Log
+2026-02-11 14:39:11,542 - INFO - Plotting details for: XGBoost-BiLSTM-Log
+2026-02-11 14:39:11,542 - INFO - Plotting details for: XGBoost-BiLSTM-Log
+2026-02-11 14:39:13,110 - INFO - [XGBoost-GRU-Normal] Test Metrics: Acc: 0.5693, F1: 0.6667, Prec: 0.6082, Rec: 0.7375, AUC: 0.6123
+2026-02-11 14:39:13,110 - INFO - [XGBoost-GRU-Normal] Test Metrics: Acc: 0.5693, F1: 0.6667, Prec: 0.6082, Rec: 0.7375, AUC: 0.6123
+2026-02-11 14:39:13,110 - INFO - [XGBoost-GRU-Normal] Test Metrics: Acc: 0.5693, F1: 0.6667, Prec: 0.6082, Rec: 0.7375, AUC: 0.6123
+2026-02-11 14:39:13,113 - INFO - Plotting details for: XGBoost-GRU-Normal
+2026-02-11 14:39:13,113 - INFO - Plotting details for: XGBoost-GRU-Normal
+2026-02-11 14:39:13,113 - INFO - Plotting details for: XGBoost-GRU-Normal
+2026-02-11 14:39:15,280 - INFO - [XGBoost-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.6919, Prec: 0.6095, Rec: 0.8000, AUC: 0.6008
+2026-02-11 14:39:15,280 - INFO - [XGBoost-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.6919, Prec: 0.6095, Rec: 0.8000, AUC: 0.6008
+2026-02-11 14:39:15,280 - INFO - [XGBoost-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.6919, Prec: 0.6095, Rec: 0.8000, AUC: 0.6008
+2026-02-11 14:39:15,284 - INFO - Plotting details for: XGBoost-GRU-Absolute
+2026-02-11 14:39:15,284 - INFO - Plotting details for: XGBoost-GRU-Absolute
+2026-02-11 14:39:15,284 - INFO - Plotting details for: XGBoost-GRU-Absolute
+2026-02-11 14:39:16,770 - INFO - [XGBoost-GRU-Squared] Test Metrics: Acc: 0.5620, F1: 0.6939, Prec: 0.5862, Rec: 0.8500, AUC: 0.5925
+2026-02-11 14:39:16,770 - INFO - [XGBoost-GRU-Squared] Test Metrics: Acc: 0.5620, F1: 0.6939, Prec: 0.5862, Rec: 0.8500, AUC: 0.5925
+2026-02-11 14:39:16,770 - INFO - [XGBoost-GRU-Squared] Test Metrics: Acc: 0.5620, F1: 0.6939, Prec: 0.5862, Rec: 0.8500, AUC: 0.5925
+2026-02-11 14:39:16,774 - INFO - Plotting details for: XGBoost-GRU-Squared
+2026-02-11 14:39:16,774 - INFO - Plotting details for: XGBoost-GRU-Squared
+2026-02-11 14:39:16,774 - INFO - Plotting details for: XGBoost-GRU-Squared
+2026-02-11 14:39:18,265 - INFO - [XGBoost-GRU-Log] Test Metrics: Acc: 0.6423, F1: 0.7435, Prec: 0.6396, Rec: 0.8875, AUC: 0.6152
+2026-02-11 14:39:18,265 - INFO - [XGBoost-GRU-Log] Test Metrics: Acc: 0.6423, F1: 0.7435, Prec: 0.6396, Rec: 0.8875, AUC: 0.6152
+2026-02-11 14:39:18,265 - INFO - [XGBoost-GRU-Log] Test Metrics: Acc: 0.6423, F1: 0.7435, Prec: 0.6396, Rec: 0.8875, AUC: 0.6152
+2026-02-11 14:39:18,268 - INFO - Plotting details for: XGBoost-GRU-Log
+2026-02-11 14:39:18,268 - INFO - Plotting details for: XGBoost-GRU-Log
+2026-02-11 14:39:18,268 - INFO - Plotting details for: XGBoost-GRU-Log
+2026-02-11 14:39:19,704 - INFO - [XGBoost-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6627, Prec: 0.6395, Rec: 0.6875, AUC: 0.6118
+2026-02-11 14:39:19,704 - INFO - [XGBoost-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6627, Prec: 0.6395, Rec: 0.6875, AUC: 0.6118
+2026-02-11 14:39:19,704 - INFO - [XGBoost-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6627, Prec: 0.6395, Rec: 0.6875, AUC: 0.6118
+2026-02-11 14:39:19,706 - INFO - Plotting details for: XGBoost-CNN-LSTM-Normal
+2026-02-11 14:39:19,706 - INFO - Plotting details for: XGBoost-CNN-LSTM-Normal
+2026-02-11 14:39:19,706 - INFO - Plotting details for: XGBoost-CNN-LSTM-Normal
+2026-02-11 14:39:21,149 - INFO - [XGBoost-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7090, Prec: 0.6147, Rec: 0.8375, AUC: 0.6247
+2026-02-11 14:39:21,149 - INFO - [XGBoost-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7090, Prec: 0.6147, Rec: 0.8375, AUC: 0.6247
+2026-02-11 14:39:21,149 - INFO - [XGBoost-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7090, Prec: 0.6147, Rec: 0.8375, AUC: 0.6247
+2026-02-11 14:39:21,154 - INFO - Plotting details for: XGBoost-CNN-LSTM-Absolute
+2026-02-11 14:39:21,154 - INFO - Plotting details for: XGBoost-CNN-LSTM-Absolute
+2026-02-11 14:39:21,154 - INFO - Plotting details for: XGBoost-CNN-LSTM-Absolute
+2026-02-11 14:39:22,638 - INFO - [XGBoost-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7136, Prec: 0.5966, Rec: 0.8875, AUC: 0.5837
+2026-02-11 14:39:22,638 - INFO - [XGBoost-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7136, Prec: 0.5966, Rec: 0.8875, AUC: 0.5837
+2026-02-11 14:39:22,638 - INFO - [XGBoost-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7136, Prec: 0.5966, Rec: 0.8875, AUC: 0.5837
+2026-02-11 14:39:22,641 - INFO - Plotting details for: XGBoost-CNN-LSTM-Squared
+2026-02-11 14:39:22,641 - INFO - Plotting details for: XGBoost-CNN-LSTM-Squared
+2026-02-11 14:39:22,641 - INFO - Plotting details for: XGBoost-CNN-LSTM-Squared
+2026-02-11 14:39:24,117 - INFO - [XGBoost-CNN-LSTM-Log] Test Metrics: Acc: 0.6058, F1: 0.7273, Prec: 0.6102, Rec: 0.9000, AUC: 0.6227
+2026-02-11 14:39:24,117 - INFO - [XGBoost-CNN-LSTM-Log] Test Metrics: Acc: 0.6058, F1: 0.7273, Prec: 0.6102, Rec: 0.9000, AUC: 0.6227
+2026-02-11 14:39:24,117 - INFO - [XGBoost-CNN-LSTM-Log] Test Metrics: Acc: 0.6058, F1: 0.7273, Prec: 0.6102, Rec: 0.9000, AUC: 0.6227
+2026-02-11 14:39:24,122 - INFO - Plotting details for: XGBoost-CNN-LSTM-Log
+2026-02-11 14:39:24,122 - INFO - Plotting details for: XGBoost-CNN-LSTM-Log
+2026-02-11 14:39:24,122 - INFO - Plotting details for: XGBoost-CNN-LSTM-Log
+2026-02-11 14:39:25,771 - INFO - [RandomForest-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6818, Prec: 0.6250, Rec: 0.7500, AUC: 0.6643
+2026-02-11 14:39:25,771 - INFO - [RandomForest-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6818, Prec: 0.6250, Rec: 0.7500, AUC: 0.6643
+2026-02-11 14:39:25,771 - INFO - [RandomForest-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6818, Prec: 0.6250, Rec: 0.7500, AUC: 0.6643
+2026-02-11 14:39:25,774 - INFO - Plotting details for: RandomForest-LSTM-Normal
+2026-02-11 14:39:25,774 - INFO - Plotting details for: RandomForest-LSTM-Normal
+2026-02-11 14:39:25,774 - INFO - Plotting details for: RandomForest-LSTM-Normal
+2026-02-11 14:39:27,856 - INFO - [RandomForest-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6250
+2026-02-11 14:39:27,856 - INFO - [RandomForest-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6250
+2026-02-11 14:39:27,856 - INFO - [RandomForest-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6250
+2026-02-11 14:39:27,859 - INFO - Plotting details for: RandomForest-LSTM-Absolute
+2026-02-11 14:39:27,859 - INFO - Plotting details for: RandomForest-LSTM-Absolute
+2026-02-11 14:39:27,859 - INFO - Plotting details for: RandomForest-LSTM-Absolute
+2026-02-11 14:39:29,327 - INFO - [RandomForest-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6077
+2026-02-11 14:39:29,327 - INFO - [RandomForest-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6077
+2026-02-11 14:39:29,327 - INFO - [RandomForest-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6077
+2026-02-11 14:39:29,332 - INFO - Plotting details for: RandomForest-LSTM-Squared
+2026-02-11 14:39:29,332 - INFO - Plotting details for: RandomForest-LSTM-Squared
+2026-02-11 14:39:29,332 - INFO - Plotting details for: RandomForest-LSTM-Squared
+2026-02-11 14:39:30,801 - INFO - [RandomForest-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5932
+2026-02-11 14:39:30,801 - INFO - [RandomForest-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5932
+2026-02-11 14:39:30,801 - INFO - [RandomForest-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5932
+2026-02-11 14:39:30,805 - INFO - Plotting details for: RandomForest-LSTM-Log
+2026-02-11 14:39:30,805 - INFO - Plotting details for: RandomForest-LSTM-Log
+2026-02-11 14:39:30,805 - INFO - Plotting details for: RandomForest-LSTM-Log
+2026-02-11 14:39:32,303 - INFO - [RandomForest-BiLSTM-Normal] Test Metrics: Acc: 0.5839, F1: 0.6587, Prec: 0.6322, Rec: 0.6875, AUC: 0.6579
+2026-02-11 14:39:32,303 - INFO - [RandomForest-BiLSTM-Normal] Test Metrics: Acc: 0.5839, F1: 0.6587, Prec: 0.6322, Rec: 0.6875, AUC: 0.6579
+2026-02-11 14:39:32,303 - INFO - [RandomForest-BiLSTM-Normal] Test Metrics: Acc: 0.5839, F1: 0.6587, Prec: 0.6322, Rec: 0.6875, AUC: 0.6579
+2026-02-11 14:39:32,307 - INFO - Plotting details for: RandomForest-BiLSTM-Normal
+2026-02-11 14:39:32,307 - INFO - Plotting details for: RandomForest-BiLSTM-Normal
+2026-02-11 14:39:32,307 - INFO - Plotting details for: RandomForest-BiLSTM-Normal
+2026-02-11 14:39:33,751 - INFO - [RandomForest-BiLSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6638
+2026-02-11 14:39:33,751 - INFO - [RandomForest-BiLSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6638
+2026-02-11 14:39:33,751 - INFO - [RandomForest-BiLSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6638
+2026-02-11 14:39:33,754 - INFO - Plotting details for: RandomForest-BiLSTM-Absolute
+2026-02-11 14:39:33,754 - INFO - Plotting details for: RandomForest-BiLSTM-Absolute
+2026-02-11 14:39:33,754 - INFO - Plotting details for: RandomForest-BiLSTM-Absolute
+2026-02-11 14:39:35,257 - INFO - [RandomForest-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6340
+2026-02-11 14:39:35,257 - INFO - [RandomForest-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6340
+2026-02-11 14:39:35,257 - INFO - [RandomForest-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6340
+2026-02-11 14:39:35,262 - INFO - Plotting details for: RandomForest-BiLSTM-Squared
+2026-02-11 14:39:35,262 - INFO - Plotting details for: RandomForest-BiLSTM-Squared
+2026-02-11 14:39:35,262 - INFO - Plotting details for: RandomForest-BiLSTM-Squared
+2026-02-11 14:39:36,753 - INFO - [RandomForest-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5996
+2026-02-11 14:39:36,753 - INFO - [RandomForest-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5996
+2026-02-11 14:39:36,753 - INFO - [RandomForest-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5996
+2026-02-11 14:39:36,759 - INFO - Plotting details for: RandomForest-BiLSTM-Log
+2026-02-11 14:39:36,759 - INFO - Plotting details for: RandomForest-BiLSTM-Log
+2026-02-11 14:39:36,759 - INFO - Plotting details for: RandomForest-BiLSTM-Log
+2026-02-11 14:39:38,646 - INFO - [RandomForest-GRU-Normal] Test Metrics: Acc: 0.5839, F1: 0.6885, Prec: 0.6117, Rec: 0.7875, AUC: 0.6507
+2026-02-11 14:39:38,646 - INFO - [RandomForest-GRU-Normal] Test Metrics: Acc: 0.5839, F1: 0.6885, Prec: 0.6117, Rec: 0.7875, AUC: 0.6507
+2026-02-11 14:39:38,646 - INFO - [RandomForest-GRU-Normal] Test Metrics: Acc: 0.5839, F1: 0.6885, Prec: 0.6117, Rec: 0.7875, AUC: 0.6507
+2026-02-11 14:39:38,648 - INFO - Plotting details for: RandomForest-GRU-Normal
+2026-02-11 14:39:38,648 - INFO - Plotting details for: RandomForest-GRU-Normal
+2026-02-11 14:39:38,648 - INFO - Plotting details for: RandomForest-GRU-Normal
+2026-02-11 14:39:40,586 - INFO - [RandomForest-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6368
+2026-02-11 14:39:40,586 - INFO - [RandomForest-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6368
+2026-02-11 14:39:40,586 - INFO - [RandomForest-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6368
+2026-02-11 14:39:40,590 - INFO - Plotting details for: RandomForest-GRU-Absolute
+2026-02-11 14:39:40,590 - INFO - Plotting details for: RandomForest-GRU-Absolute
+2026-02-11 14:39:40,590 - INFO - Plotting details for: RandomForest-GRU-Absolute
+2026-02-11 14:39:42,071 - INFO - [RandomForest-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6020
+2026-02-11 14:39:42,071 - INFO - [RandomForest-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6020
+2026-02-11 14:39:42,071 - INFO - [RandomForest-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6020
+2026-02-11 14:39:42,075 - INFO - Plotting details for: RandomForest-GRU-Squared
+2026-02-11 14:39:42,075 - INFO - Plotting details for: RandomForest-GRU-Squared
+2026-02-11 14:39:42,075 - INFO - Plotting details for: RandomForest-GRU-Squared
+2026-02-11 14:39:43,553 - INFO - [RandomForest-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6276
+2026-02-11 14:39:43,553 - INFO - [RandomForest-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6276
+2026-02-11 14:39:43,553 - INFO - [RandomForest-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6276
+2026-02-11 14:39:43,555 - INFO - Plotting details for: RandomForest-GRU-Log
+2026-02-11 14:39:43,555 - INFO - Plotting details for: RandomForest-GRU-Log
+2026-02-11 14:39:43,555 - INFO - Plotting details for: RandomForest-GRU-Log
+2026-02-11 14:39:45,028 - INFO - [RandomForest-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6706, Prec: 0.6333, Rec: 0.7125, AUC: 0.6684
+2026-02-11 14:39:45,028 - INFO - [RandomForest-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6706, Prec: 0.6333, Rec: 0.7125, AUC: 0.6684
+2026-02-11 14:39:45,028 - INFO - [RandomForest-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6706, Prec: 0.6333, Rec: 0.7125, AUC: 0.6684
+2026-02-11 14:39:45,033 - INFO - Plotting details for: RandomForest-CNN-LSTM-Normal
+2026-02-11 14:39:45,033 - INFO - Plotting details for: RandomForest-CNN-LSTM-Normal
+2026-02-11 14:39:45,033 - INFO - Plotting details for: RandomForest-CNN-LSTM-Normal
+2026-02-11 14:39:46,565 - INFO - [RandomForest-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6250
+2026-02-11 14:39:46,565 - INFO - [RandomForest-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6250
+2026-02-11 14:39:46,565 - INFO - [RandomForest-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6250
+2026-02-11 14:39:46,569 - INFO - Plotting details for: RandomForest-CNN-LSTM-Absolute
+2026-02-11 14:39:46,569 - INFO - Plotting details for: RandomForest-CNN-LSTM-Absolute
+2026-02-11 14:39:46,569 - INFO - Plotting details for: RandomForest-CNN-LSTM-Absolute
+2026-02-11 14:39:51,236 - INFO - [RandomForest-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6689
+2026-02-11 14:39:51,236 - INFO - [RandomForest-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6689
+2026-02-11 14:39:51,236 - INFO - [RandomForest-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.6689
+2026-02-11 14:39:51,241 - INFO - Plotting details for: RandomForest-CNN-LSTM-Squared
+2026-02-11 14:39:51,241 - INFO - Plotting details for: RandomForest-CNN-LSTM-Squared
+2026-02-11 14:39:51,241 - INFO - Plotting details for: RandomForest-CNN-LSTM-Squared
+2026-02-11 14:39:53,102 - INFO - [RandomForest-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5899
+2026-02-11 14:39:53,102 - INFO - [RandomForest-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5899
+2026-02-11 14:39:53,102 - INFO - [RandomForest-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5899
+2026-02-11 14:39:53,105 - INFO - Plotting details for: RandomForest-CNN-LSTM-Log
+2026-02-11 14:39:53,105 - INFO - Plotting details for: RandomForest-CNN-LSTM-Log
+2026-02-11 14:39:53,105 - INFO - Plotting details for: RandomForest-CNN-LSTM-Log
+2026-02-11 14:39:54,595 - INFO - [GradientBoosting-LSTM-Normal] Test Metrics: Acc: 0.6058, F1: 0.6824, Prec: 0.6444, Rec: 0.7250, AUC: 0.6423
+2026-02-11 14:39:54,595 - INFO - [GradientBoosting-LSTM-Normal] Test Metrics: Acc: 0.6058, F1: 0.6824, Prec: 0.6444, Rec: 0.7250, AUC: 0.6423
+2026-02-11 14:39:54,595 - INFO - [GradientBoosting-LSTM-Normal] Test Metrics: Acc: 0.6058, F1: 0.6824, Prec: 0.6444, Rec: 0.7250, AUC: 0.6423
+2026-02-11 14:39:54,598 - INFO - Plotting details for: GradientBoosting-LSTM-Normal
+2026-02-11 14:39:54,598 - INFO - Plotting details for: GradientBoosting-LSTM-Normal
+2026-02-11 14:39:54,598 - INFO - Plotting details for: GradientBoosting-LSTM-Normal
+2026-02-11 14:39:56,115 - INFO - [GradientBoosting-LSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5933
+2026-02-11 14:39:56,115 - INFO - [GradientBoosting-LSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5933
+2026-02-11 14:39:56,115 - INFO - [GradientBoosting-LSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5933
+2026-02-11 14:39:56,120 - INFO - Plotting details for: GradientBoosting-LSTM-Absolute
+2026-02-11 14:39:56,120 - INFO - Plotting details for: GradientBoosting-LSTM-Absolute
+2026-02-11 14:39:56,120 - INFO - Plotting details for: GradientBoosting-LSTM-Absolute
+2026-02-11 14:39:57,635 - INFO - [GradientBoosting-LSTM-Squared] Test Metrics: Acc: 0.5985, F1: 0.7442, Prec: 0.5926, Rec: 1.0000, AUC: 0.5866
+2026-02-11 14:39:57,635 - INFO - [GradientBoosting-LSTM-Squared] Test Metrics: Acc: 0.5985, F1: 0.7442, Prec: 0.5926, Rec: 1.0000, AUC: 0.5866
+2026-02-11 14:39:57,635 - INFO - [GradientBoosting-LSTM-Squared] Test Metrics: Acc: 0.5985, F1: 0.7442, Prec: 0.5926, Rec: 1.0000, AUC: 0.5866
+2026-02-11 14:39:57,640 - INFO - Plotting details for: GradientBoosting-LSTM-Squared
+2026-02-11 14:39:57,640 - INFO - Plotting details for: GradientBoosting-LSTM-Squared
+2026-02-11 14:39:57,640 - INFO - Plotting details for: GradientBoosting-LSTM-Squared
+2026-02-11 14:39:59,152 - INFO - [GradientBoosting-LSTM-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5421
+2026-02-11 14:39:59,152 - INFO - [GradientBoosting-LSTM-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5421
+2026-02-11 14:39:59,152 - INFO - [GradientBoosting-LSTM-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5421
+2026-02-11 14:39:59,157 - INFO - Plotting details for: GradientBoosting-LSTM-Log
+2026-02-11 14:39:59,157 - INFO - Plotting details for: GradientBoosting-LSTM-Log
+2026-02-11 14:39:59,157 - INFO - Plotting details for: GradientBoosting-LSTM-Log
+2026-02-11 14:40:00,641 - INFO - [GradientBoosting-BiLSTM-Normal] Test Metrics: Acc: 0.5620, F1: 0.6629, Prec: 0.6020, Rec: 0.7375, AUC: 0.6147
+2026-02-11 14:40:00,641 - INFO - [GradientBoosting-BiLSTM-Normal] Test Metrics: Acc: 0.5620, F1: 0.6629, Prec: 0.6020, Rec: 0.7375, AUC: 0.6147
+2026-02-11 14:40:00,641 - INFO - [GradientBoosting-BiLSTM-Normal] Test Metrics: Acc: 0.5620, F1: 0.6629, Prec: 0.6020, Rec: 0.7375, AUC: 0.6147
+2026-02-11 14:40:00,645 - INFO - Plotting details for: GradientBoosting-BiLSTM-Normal
+2026-02-11 14:40:00,645 - INFO - Plotting details for: GradientBoosting-BiLSTM-Normal
+2026-02-11 14:40:00,645 - INFO - Plotting details for: GradientBoosting-BiLSTM-Normal
+2026-02-11 14:40:02,121 - INFO - [GradientBoosting-BiLSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5329
+2026-02-11 14:40:02,121 - INFO - [GradientBoosting-BiLSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5329
+2026-02-11 14:40:02,121 - INFO - [GradientBoosting-BiLSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5329
+2026-02-11 14:40:02,124 - INFO - Plotting details for: GradientBoosting-BiLSTM-Absolute
+2026-02-11 14:40:02,124 - INFO - Plotting details for: GradientBoosting-BiLSTM-Absolute
+2026-02-11 14:40:02,124 - INFO - Plotting details for: GradientBoosting-BiLSTM-Absolute
+2026-02-11 14:40:04,326 - INFO - [GradientBoosting-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7349, Prec: 0.5852, Rec: 0.9875, AUC: 0.5966
+2026-02-11 14:40:04,326 - INFO - [GradientBoosting-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7349, Prec: 0.5852, Rec: 0.9875, AUC: 0.5966
+2026-02-11 14:40:04,326 - INFO - [GradientBoosting-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7349, Prec: 0.5852, Rec: 0.9875, AUC: 0.5966
+2026-02-11 14:40:04,328 - INFO - Plotting details for: GradientBoosting-BiLSTM-Squared
+2026-02-11 14:40:04,328 - INFO - Plotting details for: GradientBoosting-BiLSTM-Squared
+2026-02-11 14:40:04,328 - INFO - Plotting details for: GradientBoosting-BiLSTM-Squared
+2026-02-11 14:40:05,858 - INFO - [GradientBoosting-BiLSTM-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5536
+2026-02-11 14:40:05,858 - INFO - [GradientBoosting-BiLSTM-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5536
+2026-02-11 14:40:05,858 - INFO - [GradientBoosting-BiLSTM-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5536
+2026-02-11 14:40:05,864 - INFO - Plotting details for: GradientBoosting-BiLSTM-Log
+2026-02-11 14:40:05,864 - INFO - Plotting details for: GradientBoosting-BiLSTM-Log
+2026-02-11 14:40:05,864 - INFO - Plotting details for: GradientBoosting-BiLSTM-Log
+2026-02-11 14:40:07,320 - INFO - [GradientBoosting-GRU-Normal] Test Metrics: Acc: 0.5985, F1: 0.6746, Prec: 0.6404, Rec: 0.7125, AUC: 0.6239
+2026-02-11 14:40:07,320 - INFO - [GradientBoosting-GRU-Normal] Test Metrics: Acc: 0.5985, F1: 0.6746, Prec: 0.6404, Rec: 0.7125, AUC: 0.6239
+2026-02-11 14:40:07,320 - INFO - [GradientBoosting-GRU-Normal] Test Metrics: Acc: 0.5985, F1: 0.6746, Prec: 0.6404, Rec: 0.7125, AUC: 0.6239
+2026-02-11 14:40:07,323 - INFO - Plotting details for: GradientBoosting-GRU-Normal
+2026-02-11 14:40:07,323 - INFO - Plotting details for: GradientBoosting-GRU-Normal
+2026-02-11 14:40:07,323 - INFO - Plotting details for: GradientBoosting-GRU-Normal
+2026-02-11 14:40:08,856 - INFO - [GradientBoosting-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5606
+2026-02-11 14:40:08,856 - INFO - [GradientBoosting-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5606
+2026-02-11 14:40:08,856 - INFO - [GradientBoosting-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5606
+2026-02-11 14:40:08,862 - INFO - Plotting details for: GradientBoosting-GRU-Absolute
+2026-02-11 14:40:08,862 - INFO - Plotting details for: GradientBoosting-GRU-Absolute
+2026-02-11 14:40:08,862 - INFO - Plotting details for: GradientBoosting-GRU-Absolute
+2026-02-11 14:40:10,369 - INFO - [GradientBoosting-GRU-Squared] Test Metrics: Acc: 0.6058, F1: 0.7453, Prec: 0.5985, Rec: 0.9875, AUC: 0.6007
+2026-02-11 14:40:10,369 - INFO - [GradientBoosting-GRU-Squared] Test Metrics: Acc: 0.6058, F1: 0.7453, Prec: 0.5985, Rec: 0.9875, AUC: 0.6007
+2026-02-11 14:40:10,369 - INFO - [GradientBoosting-GRU-Squared] Test Metrics: Acc: 0.6058, F1: 0.7453, Prec: 0.5985, Rec: 0.9875, AUC: 0.6007
+2026-02-11 14:40:10,373 - INFO - Plotting details for: GradientBoosting-GRU-Squared
+2026-02-11 14:40:10,373 - INFO - Plotting details for: GradientBoosting-GRU-Squared
+2026-02-11 14:40:10,373 - INFO - Plotting details for: GradientBoosting-GRU-Squared
+2026-02-11 14:40:11,867 - INFO - [GradientBoosting-GRU-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5759
+2026-02-11 14:40:11,867 - INFO - [GradientBoosting-GRU-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5759
+2026-02-11 14:40:11,867 - INFO - [GradientBoosting-GRU-Log] Test Metrics: Acc: 0.5912, F1: 0.7407, Prec: 0.5882, Rec: 1.0000, AUC: 0.5759
+2026-02-11 14:40:11,870 - INFO - Plotting details for: GradientBoosting-GRU-Log
+2026-02-11 14:40:11,870 - INFO - Plotting details for: GradientBoosting-GRU-Log
+2026-02-11 14:40:11,870 - INFO - Plotting details for: GradientBoosting-GRU-Log
+2026-02-11 14:40:13,343 - INFO - [GradientBoosting-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6706, Prec: 0.6333, Rec: 0.7125, AUC: 0.6364
+2026-02-11 14:40:13,343 - INFO - [GradientBoosting-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6706, Prec: 0.6333, Rec: 0.7125, AUC: 0.6364
+2026-02-11 14:40:13,343 - INFO - [GradientBoosting-CNN-LSTM-Normal] Test Metrics: Acc: 0.5912, F1: 0.6706, Prec: 0.6333, Rec: 0.7125, AUC: 0.6364
+2026-02-11 14:40:13,345 - INFO - Plotting details for: GradientBoosting-CNN-LSTM-Normal
+2026-02-11 14:40:13,345 - INFO - Plotting details for: GradientBoosting-CNN-LSTM-Normal
+2026-02-11 14:40:13,345 - INFO - Plotting details for: GradientBoosting-CNN-LSTM-Normal
+2026-02-11 14:40:15,052 - INFO - [GradientBoosting-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7418, Prec: 0.5940, Rec: 0.9875, AUC: 0.5875
+2026-02-11 14:40:15,052 - INFO - [GradientBoosting-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7418, Prec: 0.5940, Rec: 0.9875, AUC: 0.5875
+2026-02-11 14:40:15,052 - INFO - [GradientBoosting-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7418, Prec: 0.5940, Rec: 0.9875, AUC: 0.5875
+2026-02-11 14:40:15,054 - INFO - Plotting details for: GradientBoosting-CNN-LSTM-Absolute
+2026-02-11 14:40:15,054 - INFO - Plotting details for: GradientBoosting-CNN-LSTM-Absolute
+2026-02-11 14:40:15,054 - INFO - Plotting details for: GradientBoosting-CNN-LSTM-Absolute
+2026-02-11 14:40:17,173 - INFO - [GradientBoosting-CNN-LSTM-Squared] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5904
+2026-02-11 14:40:17,173 - INFO - [GradientBoosting-CNN-LSTM-Squared] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5904
+2026-02-11 14:40:17,173 - INFO - [GradientBoosting-CNN-LSTM-Squared] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.5904
+2026-02-11 14:40:17,176 - INFO - Plotting details for: GradientBoosting-CNN-LSTM-Squared
+2026-02-11 14:40:17,176 - INFO - Plotting details for: GradientBoosting-CNN-LSTM-Squared
+2026-02-11 14:40:17,176 - INFO - Plotting details for: GradientBoosting-CNN-LSTM-Squared
+2026-02-11 14:40:18,684 - INFO - [GradientBoosting-CNN-LSTM-Log] Test Metrics: Acc: 0.5985, F1: 0.7442, Prec: 0.5926, Rec: 1.0000, AUC: 0.5695
+2026-02-11 14:40:18,684 - INFO - [GradientBoosting-CNN-LSTM-Log] Test Metrics: Acc: 0.5985, F1: 0.7442, Prec: 0.5926, Rec: 1.0000, AUC: 0.5695
+2026-02-11 14:40:18,684 - INFO - [GradientBoosting-CNN-LSTM-Log] Test Metrics: Acc: 0.5985, F1: 0.7442, Prec: 0.5926, Rec: 1.0000, AUC: 0.5695
+2026-02-11 14:40:18,689 - INFO - Plotting details for: GradientBoosting-CNN-LSTM-Log
+2026-02-11 14:40:18,689 - INFO - Plotting details for: GradientBoosting-CNN-LSTM-Log
+2026-02-11 14:40:18,689 - INFO - Plotting details for: GradientBoosting-CNN-LSTM-Log
+2026-02-11 14:40:20,196 - INFO - [SVM-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6821, Prec: 0.6344, Rec: 0.7375, AUC: 0.6123
+2026-02-11 14:40:20,196 - INFO - [SVM-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6821, Prec: 0.6344, Rec: 0.7375, AUC: 0.6123
+2026-02-11 14:40:20,196 - INFO - [SVM-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6821, Prec: 0.6344, Rec: 0.7375, AUC: 0.6123
+2026-02-11 14:40:20,199 - INFO - Plotting details for: SVM-LSTM-Normal
+2026-02-11 14:40:20,199 - INFO - Plotting details for: SVM-LSTM-Normal
+2026-02-11 14:40:20,199 - INFO - Plotting details for: SVM-LSTM-Normal
+2026-02-11 14:40:21,523 - INFO - [SVM-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4594
+2026-02-11 14:40:21,523 - INFO - [SVM-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4594
+2026-02-11 14:40:21,523 - INFO - [SVM-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4594
+2026-02-11 14:40:21,526 - INFO - Plotting details for: SVM-LSTM-Absolute
+2026-02-11 14:40:21,526 - INFO - Plotting details for: SVM-LSTM-Absolute
+2026-02-11 14:40:21,526 - INFO - Plotting details for: SVM-LSTM-Absolute
+2026-02-11 14:40:22,790 - INFO - [SVM-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4250
+2026-02-11 14:40:22,790 - INFO - [SVM-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4250
+2026-02-11 14:40:22,790 - INFO - [SVM-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4250
+2026-02-11 14:40:22,794 - INFO - Plotting details for: SVM-LSTM-Squared
+2026-02-11 14:40:22,794 - INFO - Plotting details for: SVM-LSTM-Squared
+2026-02-11 14:40:22,794 - INFO - Plotting details for: SVM-LSTM-Squared
+2026-02-11 14:40:24,110 - INFO - [SVM-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4553
+2026-02-11 14:40:24,110 - INFO - [SVM-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4553
+2026-02-11 14:40:24,110 - INFO - [SVM-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4553
+2026-02-11 14:40:24,117 - INFO - Plotting details for: SVM-LSTM-Log
+2026-02-11 14:40:24,117 - INFO - Plotting details for: SVM-LSTM-Log
+2026-02-11 14:40:24,117 - INFO - Plotting details for: SVM-LSTM-Log
+2026-02-11 14:40:25,419 - INFO - [SVM-BiLSTM-Normal] Test Metrics: Acc: 0.5839, F1: 0.6415, Prec: 0.6456, Rec: 0.6375, AUC: 0.6445
+2026-02-11 14:40:25,419 - INFO - [SVM-BiLSTM-Normal] Test Metrics: Acc: 0.5839, F1: 0.6415, Prec: 0.6456, Rec: 0.6375, AUC: 0.6445
+2026-02-11 14:40:25,419 - INFO - [SVM-BiLSTM-Normal] Test Metrics: Acc: 0.5839, F1: 0.6415, Prec: 0.6456, Rec: 0.6375, AUC: 0.6445
+2026-02-11 14:40:25,422 - INFO - Plotting details for: SVM-BiLSTM-Normal
+2026-02-11 14:40:25,422 - INFO - Plotting details for: SVM-BiLSTM-Normal
+2026-02-11 14:40:25,422 - INFO - Plotting details for: SVM-BiLSTM-Normal
+2026-02-11 14:40:26,669 - INFO - [SVM-BiLSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4873
+2026-02-11 14:40:26,669 - INFO - [SVM-BiLSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4873
+2026-02-11 14:40:26,669 - INFO - [SVM-BiLSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4873
+2026-02-11 14:40:26,675 - INFO - Plotting details for: SVM-BiLSTM-Absolute
+2026-02-11 14:40:26,675 - INFO - Plotting details for: SVM-BiLSTM-Absolute
+2026-02-11 14:40:26,675 - INFO - Plotting details for: SVM-BiLSTM-Absolute
+2026-02-11 14:40:28,549 - INFO - [SVM-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4292
+2026-02-11 14:40:28,549 - INFO - [SVM-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4292
+2026-02-11 14:40:28,549 - INFO - [SVM-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4292
+2026-02-11 14:40:28,555 - INFO - Plotting details for: SVM-BiLSTM-Squared
+2026-02-11 14:40:28,555 - INFO - Plotting details for: SVM-BiLSTM-Squared
+2026-02-11 14:40:28,555 - INFO - Plotting details for: SVM-BiLSTM-Squared
+2026-02-11 14:40:30,051 - INFO - [SVM-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4978
+2026-02-11 14:40:30,051 - INFO - [SVM-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4978
+2026-02-11 14:40:30,051 - INFO - [SVM-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4978
+2026-02-11 14:40:30,056 - INFO - Plotting details for: SVM-BiLSTM-Log
+2026-02-11 14:40:30,056 - INFO - Plotting details for: SVM-BiLSTM-Log
+2026-02-11 14:40:30,056 - INFO - Plotting details for: SVM-BiLSTM-Log
+2026-02-11 14:40:31,378 - INFO - [SVM-GRU-Normal] Test Metrics: Acc: 0.5985, F1: 0.6961, Prec: 0.6238, Rec: 0.7875, AUC: 0.6140
+2026-02-11 14:40:31,378 - INFO - [SVM-GRU-Normal] Test Metrics: Acc: 0.5985, F1: 0.6961, Prec: 0.6238, Rec: 0.7875, AUC: 0.6140
+2026-02-11 14:40:31,378 - INFO - [SVM-GRU-Normal] Test Metrics: Acc: 0.5985, F1: 0.6961, Prec: 0.6238, Rec: 0.7875, AUC: 0.6140
+2026-02-11 14:40:31,383 - INFO - Plotting details for: SVM-GRU-Normal
+2026-02-11 14:40:31,383 - INFO - Plotting details for: SVM-GRU-Normal
+2026-02-11 14:40:31,383 - INFO - Plotting details for: SVM-GRU-Normal
+2026-02-11 14:40:32,717 - INFO - [SVM-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5700
+2026-02-11 14:40:32,717 - INFO - [SVM-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5700
+2026-02-11 14:40:32,717 - INFO - [SVM-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5700
+2026-02-11 14:40:32,722 - INFO - Plotting details for: SVM-GRU-Absolute
+2026-02-11 14:40:32,722 - INFO - Plotting details for: SVM-GRU-Absolute
+2026-02-11 14:40:32,722 - INFO - Plotting details for: SVM-GRU-Absolute
+2026-02-11 14:40:33,992 - INFO - [SVM-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5197
+2026-02-11 14:40:33,992 - INFO - [SVM-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5197
+2026-02-11 14:40:33,992 - INFO - [SVM-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5197
+2026-02-11 14:40:33,995 - INFO - Plotting details for: SVM-GRU-Squared
+2026-02-11 14:40:33,995 - INFO - Plotting details for: SVM-GRU-Squared
+2026-02-11 14:40:33,995 - INFO - Plotting details for: SVM-GRU-Squared
+2026-02-11 14:40:35,272 - INFO - [SVM-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4799
+2026-02-11 14:40:35,272 - INFO - [SVM-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4799
+2026-02-11 14:40:35,272 - INFO - [SVM-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4799
+2026-02-11 14:40:35,278 - INFO - Plotting details for: SVM-GRU-Log
+2026-02-11 14:40:35,278 - INFO - Plotting details for: SVM-GRU-Log
+2026-02-11 14:40:35,278 - INFO - Plotting details for: SVM-GRU-Log
+2026-02-11 14:40:36,550 - INFO - [SVM-CNN-LSTM-Normal] Test Metrics: Acc: 0.6058, F1: 0.6824, Prec: 0.6444, Rec: 0.7250, AUC: 0.6547
+2026-02-11 14:40:36,550 - INFO - [SVM-CNN-LSTM-Normal] Test Metrics: Acc: 0.6058, F1: 0.6824, Prec: 0.6444, Rec: 0.7250, AUC: 0.6547
+2026-02-11 14:40:36,550 - INFO - [SVM-CNN-LSTM-Normal] Test Metrics: Acc: 0.6058, F1: 0.6824, Prec: 0.6444, Rec: 0.7250, AUC: 0.6547
+2026-02-11 14:40:36,555 - INFO - Plotting details for: SVM-CNN-LSTM-Normal
+2026-02-11 14:40:36,555 - INFO - Plotting details for: SVM-CNN-LSTM-Normal
+2026-02-11 14:40:36,555 - INFO - Plotting details for: SVM-CNN-LSTM-Normal
+2026-02-11 14:40:37,850 - INFO - [SVM-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5081
+2026-02-11 14:40:37,850 - INFO - [SVM-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5081
+2026-02-11 14:40:37,850 - INFO - [SVM-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5081
+2026-02-11 14:40:37,854 - INFO - Plotting details for: SVM-CNN-LSTM-Absolute
+2026-02-11 14:40:37,854 - INFO - Plotting details for: SVM-CNN-LSTM-Absolute
+2026-02-11 14:40:37,854 - INFO - Plotting details for: SVM-CNN-LSTM-Absolute
+2026-02-11 14:40:39,145 - INFO - [SVM-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5004
+2026-02-11 14:40:39,145 - INFO - [SVM-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5004
+2026-02-11 14:40:39,145 - INFO - [SVM-CNN-LSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.5004
+2026-02-11 14:40:39,149 - INFO - Plotting details for: SVM-CNN-LSTM-Squared
+2026-02-11 14:40:39,149 - INFO - Plotting details for: SVM-CNN-LSTM-Squared
+2026-02-11 14:40:39,149 - INFO - Plotting details for: SVM-CNN-LSTM-Squared
+2026-02-11 14:40:41,113 - INFO - [SVM-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4743
+2026-02-11 14:40:41,113 - INFO - [SVM-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4743
+2026-02-11 14:40:41,113 - INFO - [SVM-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7373, Prec: 0.5839, Rec: 1.0000, AUC: 0.4743
+2026-02-11 14:40:41,119 - INFO - Plotting details for: SVM-CNN-LSTM-Log
+2026-02-11 14:40:41,119 - INFO - Plotting details for: SVM-CNN-LSTM-Log
+2026-02-11 14:40:41,119 - INFO - Plotting details for: SVM-CNN-LSTM-Log
+2026-02-11 14:40:42,588 - INFO - [MLP-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6667, Prec: 0.6471, Rec: 0.6875, AUC: 0.6452
+2026-02-11 14:40:42,588 - INFO - [MLP-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6667, Prec: 0.6471, Rec: 0.6875, AUC: 0.6452
+2026-02-11 14:40:42,588 - INFO - [MLP-LSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6667, Prec: 0.6471, Rec: 0.6875, AUC: 0.6452
+2026-02-11 14:40:42,593 - INFO - Plotting details for: MLP-LSTM-Normal
+2026-02-11 14:40:42,593 - INFO - Plotting details for: MLP-LSTM-Normal
+2026-02-11 14:40:42,593 - INFO - Plotting details for: MLP-LSTM-Normal
+2026-02-11 14:40:43,920 - INFO - [MLP-LSTM-Absolute] Test Metrics: Acc: 0.6058, F1: 0.7327, Prec: 0.6066, Rec: 0.9250, AUC: 0.5717
+2026-02-11 14:40:43,920 - INFO - [MLP-LSTM-Absolute] Test Metrics: Acc: 0.6058, F1: 0.7327, Prec: 0.6066, Rec: 0.9250, AUC: 0.5717
+2026-02-11 14:40:43,920 - INFO - [MLP-LSTM-Absolute] Test Metrics: Acc: 0.6058, F1: 0.7327, Prec: 0.6066, Rec: 0.9250, AUC: 0.5717
+2026-02-11 14:40:43,923 - INFO - Plotting details for: MLP-LSTM-Absolute
+2026-02-11 14:40:43,923 - INFO - Plotting details for: MLP-LSTM-Absolute
+2026-02-11 14:40:43,923 - INFO - Plotting details for: MLP-LSTM-Absolute
+2026-02-11 14:40:45,223 - INFO - [MLP-LSTM-Squared] Test Metrics: Acc: 0.5766, F1: 0.7238, Prec: 0.5846, Rec: 0.9500, AUC: 0.5931
+2026-02-11 14:40:45,223 - INFO - [MLP-LSTM-Squared] Test Metrics: Acc: 0.5766, F1: 0.7238, Prec: 0.5846, Rec: 0.9500, AUC: 0.5931
+2026-02-11 14:40:45,223 - INFO - [MLP-LSTM-Squared] Test Metrics: Acc: 0.5766, F1: 0.7238, Prec: 0.5846, Rec: 0.9500, AUC: 0.5931
+2026-02-11 14:40:45,229 - INFO - Plotting details for: MLP-LSTM-Squared
+2026-02-11 14:40:45,229 - INFO - Plotting details for: MLP-LSTM-Squared
+2026-02-11 14:40:45,229 - INFO - Plotting details for: MLP-LSTM-Squared
+2026-02-11 14:40:46,556 - INFO - [MLP-LSTM-Log] Test Metrics: Acc: 0.5766, F1: 0.7264, Prec: 0.5833, Rec: 0.9625, AUC: 0.6024
+2026-02-11 14:40:46,556 - INFO - [MLP-LSTM-Log] Test Metrics: Acc: 0.5766, F1: 0.7264, Prec: 0.5833, Rec: 0.9625, AUC: 0.6024
+2026-02-11 14:40:46,556 - INFO - [MLP-LSTM-Log] Test Metrics: Acc: 0.5766, F1: 0.7264, Prec: 0.5833, Rec: 0.9625, AUC: 0.6024
+2026-02-11 14:40:46,559 - INFO - Plotting details for: MLP-LSTM-Log
+2026-02-11 14:40:46,559 - INFO - Plotting details for: MLP-LSTM-Log
+2026-02-11 14:40:46,559 - INFO - Plotting details for: MLP-LSTM-Log
+2026-02-11 14:40:47,854 - INFO - [MLP-BiLSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6707, Prec: 0.6437, Rec: 0.7000, AUC: 0.6618
+2026-02-11 14:40:47,854 - INFO - [MLP-BiLSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6707, Prec: 0.6437, Rec: 0.7000, AUC: 0.6618
+2026-02-11 14:40:47,854 - INFO - [MLP-BiLSTM-Normal] Test Metrics: Acc: 0.5985, F1: 0.6707, Prec: 0.6437, Rec: 0.7000, AUC: 0.6618
+2026-02-11 14:40:47,858 - INFO - Plotting details for: MLP-BiLSTM-Normal
+2026-02-11 14:40:47,858 - INFO - Plotting details for: MLP-BiLSTM-Normal
+2026-02-11 14:40:47,858 - INFO - Plotting details for: MLP-BiLSTM-Normal
+2026-02-11 14:40:49,188 - INFO - [MLP-BiLSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7317, Prec: 0.6000, Rec: 0.9375, AUC: 0.5614
+2026-02-11 14:40:49,188 - INFO - [MLP-BiLSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7317, Prec: 0.6000, Rec: 0.9375, AUC: 0.5614
+2026-02-11 14:40:49,188 - INFO - [MLP-BiLSTM-Absolute] Test Metrics: Acc: 0.5985, F1: 0.7317, Prec: 0.6000, Rec: 0.9375, AUC: 0.5614
+2026-02-11 14:40:49,192 - INFO - Plotting details for: MLP-BiLSTM-Absolute
+2026-02-11 14:40:49,192 - INFO - Plotting details for: MLP-BiLSTM-Absolute
+2026-02-11 14:40:49,192 - INFO - Plotting details for: MLP-BiLSTM-Absolute
+2026-02-11 14:40:50,445 - INFO - [MLP-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.5940
+2026-02-11 14:40:50,445 - INFO - [MLP-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.5940
+2026-02-11 14:40:50,445 - INFO - [MLP-BiLSTM-Squared] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.5940
+2026-02-11 14:40:50,450 - INFO - Plotting details for: MLP-BiLSTM-Squared
+2026-02-11 14:40:50,450 - INFO - Plotting details for: MLP-BiLSTM-Squared
+2026-02-11 14:40:50,450 - INFO - Plotting details for: MLP-BiLSTM-Squared
+2026-02-11 14:40:51,765 - INFO - [MLP-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.6061
+2026-02-11 14:40:51,765 - INFO - [MLP-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.6061
+2026-02-11 14:40:51,765 - INFO - [MLP-BiLSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.6061
+2026-02-11 14:40:51,772 - INFO - Plotting details for: MLP-BiLSTM-Log
+2026-02-11 14:40:51,772 - INFO - Plotting details for: MLP-BiLSTM-Log
+2026-02-11 14:40:51,772 - INFO - Plotting details for: MLP-BiLSTM-Log
+2026-02-11 14:40:53,617 - INFO - [MLP-GRU-Normal] Test Metrics: Acc: 0.5912, F1: 0.6585, Prec: 0.6429, Rec: 0.6750, AUC: 0.6509
+2026-02-11 14:40:53,617 - INFO - [MLP-GRU-Normal] Test Metrics: Acc: 0.5912, F1: 0.6585, Prec: 0.6429, Rec: 0.6750, AUC: 0.6509
+2026-02-11 14:40:53,617 - INFO - [MLP-GRU-Normal] Test Metrics: Acc: 0.5912, F1: 0.6585, Prec: 0.6429, Rec: 0.6750, AUC: 0.6509
+2026-02-11 14:40:53,619 - INFO - Plotting details for: MLP-GRU-Normal
+2026-02-11 14:40:53,619 - INFO - Plotting details for: MLP-GRU-Normal
+2026-02-11 14:40:53,619 - INFO - Plotting details for: MLP-GRU-Normal
+2026-02-11 14:40:54,985 - INFO - [MLP-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7192, Prec: 0.5935, Rec: 0.9125, AUC: 0.5738
+2026-02-11 14:40:54,985 - INFO - [MLP-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7192, Prec: 0.5935, Rec: 0.9125, AUC: 0.5738
+2026-02-11 14:40:54,985 - INFO - [MLP-GRU-Absolute] Test Metrics: Acc: 0.5839, F1: 0.7192, Prec: 0.5935, Rec: 0.9125, AUC: 0.5738
+2026-02-11 14:40:54,989 - INFO - Plotting details for: MLP-GRU-Absolute
+2026-02-11 14:40:54,989 - INFO - Plotting details for: MLP-GRU-Absolute
+2026-02-11 14:40:54,989 - INFO - Plotting details for: MLP-GRU-Absolute
+2026-02-11 14:40:56,268 - INFO - [MLP-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7324, Prec: 0.5865, Rec: 0.9750, AUC: 0.5976
+2026-02-11 14:40:56,268 - INFO - [MLP-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7324, Prec: 0.5865, Rec: 0.9750, AUC: 0.5976
+2026-02-11 14:40:56,268 - INFO - [MLP-GRU-Squared] Test Metrics: Acc: 0.5839, F1: 0.7324, Prec: 0.5865, Rec: 0.9750, AUC: 0.5976
+2026-02-11 14:40:56,273 - INFO - Plotting details for: MLP-GRU-Squared
+2026-02-11 14:40:56,273 - INFO - Plotting details for: MLP-GRU-Squared
+2026-02-11 14:40:56,273 - INFO - Plotting details for: MLP-GRU-Squared
+2026-02-11 14:41:00,804 - INFO - [MLP-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7220, Prec: 0.5920, Rec: 0.9250, AUC: 0.6060
+2026-02-11 14:41:00,804 - INFO - [MLP-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7220, Prec: 0.5920, Rec: 0.9250, AUC: 0.6060
+2026-02-11 14:41:00,804 - INFO - [MLP-GRU-Log] Test Metrics: Acc: 0.5839, F1: 0.7220, Prec: 0.5920, Rec: 0.9250, AUC: 0.6060
+2026-02-11 14:41:00,809 - INFO - Plotting details for: MLP-GRU-Log
+2026-02-11 14:41:00,809 - INFO - Plotting details for: MLP-GRU-Log
+2026-02-11 14:41:00,809 - INFO - Plotting details for: MLP-GRU-Log
+2026-02-11 14:41:02,155 - INFO - [MLP-CNN-LSTM-Normal] Test Metrics: Acc: 0.6204, F1: 0.6867, Prec: 0.6628, Rec: 0.7125, AUC: 0.6430
+2026-02-11 14:41:02,155 - INFO - [MLP-CNN-LSTM-Normal] Test Metrics: Acc: 0.6204, F1: 0.6867, Prec: 0.6628, Rec: 0.7125, AUC: 0.6430
+2026-02-11 14:41:02,155 - INFO - [MLP-CNN-LSTM-Normal] Test Metrics: Acc: 0.6204, F1: 0.6867, Prec: 0.6628, Rec: 0.7125, AUC: 0.6430
+2026-02-11 14:41:02,161 - INFO - Plotting details for: MLP-CNN-LSTM-Normal
+2026-02-11 14:41:02,161 - INFO - Plotting details for: MLP-CNN-LSTM-Normal
+2026-02-11 14:41:02,161 - INFO - Plotting details for: MLP-CNN-LSTM-Normal
+2026-02-11 14:41:03,535 - INFO - [MLP-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7255, Prec: 0.5968, Rec: 0.9250, AUC: 0.5800
+2026-02-11 14:41:03,535 - INFO - [MLP-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7255, Prec: 0.5968, Rec: 0.9250, AUC: 0.5800
+2026-02-11 14:41:03,535 - INFO - [MLP-CNN-LSTM-Absolute] Test Metrics: Acc: 0.5912, F1: 0.7255, Prec: 0.5968, Rec: 0.9250, AUC: 0.5800
+2026-02-11 14:41:03,539 - INFO - Plotting details for: MLP-CNN-LSTM-Absolute
+2026-02-11 14:41:03,539 - INFO - Plotting details for: MLP-CNN-LSTM-Absolute
+2026-02-11 14:41:03,539 - INFO - Plotting details for: MLP-CNN-LSTM-Absolute
+2026-02-11 14:41:05,326 - INFO - [MLP-CNN-LSTM-Squared] Test Metrics: Acc: 0.5912, F1: 0.7358, Prec: 0.5909, Rec: 0.9750, AUC: 0.5942
+2026-02-11 14:41:05,326 - INFO - [MLP-CNN-LSTM-Squared] Test Metrics: Acc: 0.5912, F1: 0.7358, Prec: 0.5909, Rec: 0.9750, AUC: 0.5942
+2026-02-11 14:41:05,326 - INFO - [MLP-CNN-LSTM-Squared] Test Metrics: Acc: 0.5912, F1: 0.7358, Prec: 0.5909, Rec: 0.9750, AUC: 0.5942
+2026-02-11 14:41:05,331 - INFO - Plotting details for: MLP-CNN-LSTM-Squared
+2026-02-11 14:41:05,331 - INFO - Plotting details for: MLP-CNN-LSTM-Squared
+2026-02-11 14:41:05,331 - INFO - Plotting details for: MLP-CNN-LSTM-Squared
+2026-02-11 14:41:06,997 - INFO - [MLP-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.5939
+2026-02-11 14:41:06,997 - INFO - [MLP-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.5939
+2026-02-11 14:41:06,997 - INFO - [MLP-CNN-LSTM-Log] Test Metrics: Acc: 0.5839, F1: 0.7246, Prec: 0.5906, Rec: 0.9375, AUC: 0.5939
+2026-02-11 14:41:07,001 - INFO - Plotting details for: MLP-CNN-LSTM-Log
+2026-02-11 14:41:07,001 - INFO - Plotting details for: MLP-CNN-LSTM-Log
+2026-02-11 14:41:07,001 - INFO - Plotting details for: MLP-CNN-LSTM-Log
+2026-02-11 14:41:08,399 - INFO - [ComprehensiveEnsemble] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.6384
+2026-02-11 14:41:08,399 - INFO - [ComprehensiveEnsemble] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.6384
+2026-02-11 14:41:08,399 - INFO - [ComprehensiveEnsemble] Test Metrics: Acc: 0.5912, F1: 0.7383, Prec: 0.5896, Rec: 0.9875, AUC: 0.6384
+2026-02-11 14:41:08,407 - INFO - Plotting details for: Ensemble
+2026-02-11 14:41:08,407 - INFO - Plotting details for: Ensemble
+2026-02-11 14:41:08,407 - INFO - Plotting details for: Ensemble
+2026-02-11 14:41:09,186 - INFO - --- Final Comparison Summary ---
+2026-02-11 14:41:09,186 - INFO - --- Final Comparison Summary ---
+2026-02-11 14:41:09,186 - INFO - --- Final Comparison Summary ---
+2026-02-11 14:41:14,350 - INFO - Exported global metrics to global_metrics.csv
+2026-02-11 14:41:14,350 - INFO - Exported global metrics to global_metrics.csv
+2026-02-11 14:41:14,350 - INFO - Exported global metrics to global_metrics.csv
+2026-02-11 14:41:14,355 - INFO - ================================================================================
+2026-02-11 14:41:14,355 - INFO - ================================================================================
+2026-02-11 14:41:14,355 - INFO - ================================================================================
+2026-02-11 14:41:14,363 - INFO - FINAL RANKINGS (by F1 Score):
+2026-02-11 14:41:14,363 - INFO - FINAL RANKINGS (by F1 Score):
+2026-02-11 14:41:14,363 - INFO - FINAL RANKINGS (by F1 Score):
+2026-02-11 14:41:14,368 - INFO - 1. GradientBoosting-GRU-Squared: F1=0.7453, Acc=0.6058, AUC=0.6007, MSE=0.3201
+2026-02-11 14:41:14,368 - INFO - 1. GradientBoosting-GRU-Squared: F1=0.7453, Acc=0.6058, AUC=0.6007, MSE=0.3201
+2026-02-11 14:41:14,368 - INFO - 1. GradientBoosting-GRU-Squared: F1=0.7453, Acc=0.6058, AUC=0.6007, MSE=0.3201
+2026-02-11 14:41:14,373 - INFO - 2. GradientBoosting-LSTM-Squared: F1=0.7442, Acc=0.5985, AUC=0.5866, MSE=0.3245
+2026-02-11 14:41:14,373 - INFO - 2. GradientBoosting-LSTM-Squared: F1=0.7442, Acc=0.5985, AUC=0.5866, MSE=0.3245
+2026-02-11 14:41:14,373 - INFO - 2. GradientBoosting-LSTM-Squared: F1=0.7442, Acc=0.5985, AUC=0.5866, MSE=0.3245
+2026-02-11 14:41:14,380 - INFO - 3. GradientBoosting-CNN-LSTM-Log: F1=0.7442, Acc=0.5985, AUC=0.5695, MSE=0.3326
+2026-02-11 14:41:14,380 - INFO - 3. GradientBoosting-CNN-LSTM-Log: F1=0.7442, Acc=0.5985, AUC=0.5695, MSE=0.3326
+2026-02-11 14:41:14,380 - INFO - 3. GradientBoosting-CNN-LSTM-Log: F1=0.7442, Acc=0.5985, AUC=0.5695, MSE=0.3326
+2026-02-11 14:41:14,386 - INFO - 4. XGBoost-GRU-Log: F1=0.7435, Acc=0.6423, AUC=0.6152, MSE=0.2768
+2026-02-11 14:41:14,386 - INFO - 4. XGBoost-GRU-Log: F1=0.7435, Acc=0.6423, AUC=0.6152, MSE=0.2768
+2026-02-11 14:41:14,386 - INFO - 4. XGBoost-GRU-Log: F1=0.7435, Acc=0.6423, AUC=0.6152, MSE=0.2768
+2026-02-11 14:41:14,391 - INFO - 5. GradientBoosting-CNN-LSTM-Absolute: F1=0.7418, Acc=0.5985, AUC=0.5875, MSE=0.3080
+2026-02-11 14:41:14,391 - INFO - 5. GradientBoosting-CNN-LSTM-Absolute: F1=0.7418, Acc=0.5985, AUC=0.5875, MSE=0.3080
+2026-02-11 14:41:14,391 - INFO - 5. GradientBoosting-CNN-LSTM-Absolute: F1=0.7418, Acc=0.5985, AUC=0.5875, MSE=0.3080
+2026-02-11 14:41:14,393 - INFO - 6. GradientBoosting-LSTM-Log: F1=0.7407, Acc=0.5912, AUC=0.5421, MSE=0.3444
+2026-02-11 14:41:14,393 - INFO - 6. GradientBoosting-LSTM-Log: F1=0.7407, Acc=0.5912, AUC=0.5421, MSE=0.3444
+2026-02-11 14:41:14,393 - INFO - 6. GradientBoosting-LSTM-Log: F1=0.7407, Acc=0.5912, AUC=0.5421, MSE=0.3444
+2026-02-11 14:41:14,396 - INFO - 7. GradientBoosting-BiLSTM-Log: F1=0.7407, Acc=0.5912, AUC=0.5536, MSE=0.3315
+2026-02-11 14:41:14,396 - INFO - 7. GradientBoosting-BiLSTM-Log: F1=0.7407, Acc=0.5912, AUC=0.5536, MSE=0.3315
+2026-02-11 14:41:14,396 - INFO - 7. GradientBoosting-BiLSTM-Log: F1=0.7407, Acc=0.5912, AUC=0.5536, MSE=0.3315
+2026-02-11 14:41:14,401 - INFO - 8. GradientBoosting-GRU-Log: F1=0.7407, Acc=0.5912, AUC=0.5759, MSE=0.3264
+2026-02-11 14:41:14,401 - INFO - 8. GradientBoosting-GRU-Log: F1=0.7407, Acc=0.5912, AUC=0.5759, MSE=0.3264
+2026-02-11 14:41:14,401 - INFO - 8. GradientBoosting-GRU-Log: F1=0.7407, Acc=0.5912, AUC=0.5759, MSE=0.3264
+2026-02-11 14:41:14,405 - INFO - 9. GradientBoosting-LSTM-Absolute: F1=0.7383, Acc=0.5912, AUC=0.5933, MSE=0.3044
+2026-02-11 14:41:14,405 - INFO - 9. GradientBoosting-LSTM-Absolute: F1=0.7383, Acc=0.5912, AUC=0.5933, MSE=0.3044
+2026-02-11 14:41:14,405 - INFO - 9. GradientBoosting-LSTM-Absolute: F1=0.7383, Acc=0.5912, AUC=0.5933, MSE=0.3044
+2026-02-11 14:41:14,409 - INFO - 10. GradientBoosting-BiLSTM-Absolute: F1=0.7383, Acc=0.5912, AUC=0.5329, MSE=0.3284
+2026-02-11 14:41:14,409 - INFO - 10. GradientBoosting-BiLSTM-Absolute: F1=0.7383, Acc=0.5912, AUC=0.5329, MSE=0.3284
+2026-02-11 14:41:14,409 - INFO - 10. GradientBoosting-BiLSTM-Absolute: F1=0.7383, Acc=0.5912, AUC=0.5329, MSE=0.3284
+2026-02-11 14:41:14,410 - INFO - 11. GradientBoosting-CNN-LSTM-Squared: F1=0.7383, Acc=0.5912, AUC=0.5904, MSE=0.3248
+2026-02-11 14:41:14,410 - INFO - 11. GradientBoosting-CNN-LSTM-Squared: F1=0.7383, Acc=0.5912, AUC=0.5904, MSE=0.3248
+2026-02-11 14:41:14,410 - INFO - 11. GradientBoosting-CNN-LSTM-Squared: F1=0.7383, Acc=0.5912, AUC=0.5904, MSE=0.3248
+2026-02-11 14:41:14,413 - INFO - 12. Ensemble: F1=0.7383, Acc=0.5912, AUC=0.6384, MSE=0.2672
+2026-02-11 14:41:14,413 - INFO - 12. Ensemble: F1=0.7383, Acc=0.5912, AUC=0.6384, MSE=0.2672
+2026-02-11 14:41:14,413 - INFO - 12. Ensemble: F1=0.7383, Acc=0.5912, AUC=0.6384, MSE=0.2672
+2026-02-11 14:41:14,415 - INFO - 13. RandomForest-LSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.6250, MSE=0.2818
+2026-02-11 14:41:14,415 - INFO - 13. RandomForest-LSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.6250, MSE=0.2818
+2026-02-11 14:41:14,415 - INFO - 13. RandomForest-LSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.6250, MSE=0.2818
+2026-02-11 14:41:14,417 - INFO - 14. RandomForest-LSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.6077, MSE=0.2822
+2026-02-11 14:41:14,417 - INFO - 14. RandomForest-LSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.6077, MSE=0.2822
+2026-02-11 14:41:14,417 - INFO - 14. RandomForest-LSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.6077, MSE=0.2822
+2026-02-11 14:41:14,421 - INFO - 15. RandomForest-LSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.5932, MSE=0.3458
+2026-02-11 14:41:14,421 - INFO - 15. RandomForest-LSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.5932, MSE=0.3458
+2026-02-11 14:41:14,421 - INFO - 15. RandomForest-LSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.5932, MSE=0.3458
+2026-02-11 14:41:14,423 - INFO - 16. RandomForest-BiLSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.6638, MSE=0.2988
+2026-02-11 14:41:14,423 - INFO - 16. RandomForest-BiLSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.6638, MSE=0.2988
+2026-02-11 14:41:14,423 - INFO - 16. RandomForest-BiLSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.6638, MSE=0.2988
+2026-02-11 14:41:14,425 - INFO - 17. RandomForest-BiLSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.6340, MSE=0.2926
+2026-02-11 14:41:14,425 - INFO - 17. RandomForest-BiLSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.6340, MSE=0.2926
+2026-02-11 14:41:14,425 - INFO - 17. RandomForest-BiLSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.6340, MSE=0.2926
+2026-02-11 14:41:14,429 - INFO - 18. RandomForest-BiLSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.5996, MSE=0.3181
+2026-02-11 14:41:14,429 - INFO - 18. RandomForest-BiLSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.5996, MSE=0.3181
+2026-02-11 14:41:14,429 - INFO - 18. RandomForest-BiLSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.5996, MSE=0.3181
+2026-02-11 14:41:14,433 - INFO - 19. RandomForest-GRU-Absolute: F1=0.7373, Acc=0.5839, AUC=0.6368, MSE=0.2862
+2026-02-11 14:41:14,433 - INFO - 19. RandomForest-GRU-Absolute: F1=0.7373, Acc=0.5839, AUC=0.6368, MSE=0.2862
+2026-02-11 14:41:14,433 - INFO - 19. RandomForest-GRU-Absolute: F1=0.7373, Acc=0.5839, AUC=0.6368, MSE=0.2862
+2026-02-11 14:41:14,435 - INFO - 20. RandomForest-GRU-Squared: F1=0.7373, Acc=0.5839, AUC=0.6020, MSE=0.3422
+2026-02-11 14:41:14,435 - INFO - 20. RandomForest-GRU-Squared: F1=0.7373, Acc=0.5839, AUC=0.6020, MSE=0.3422
+2026-02-11 14:41:14,435 - INFO - 20. RandomForest-GRU-Squared: F1=0.7373, Acc=0.5839, AUC=0.6020, MSE=0.3422
+2026-02-11 14:41:14,438 - INFO - 21. RandomForest-GRU-Log: F1=0.7373, Acc=0.5839, AUC=0.6276, MSE=0.3086
+2026-02-11 14:41:14,438 - INFO - 21. RandomForest-GRU-Log: F1=0.7373, Acc=0.5839, AUC=0.6276, MSE=0.3086
+2026-02-11 14:41:14,438 - INFO - 21. RandomForest-GRU-Log: F1=0.7373, Acc=0.5839, AUC=0.6276, MSE=0.3086
+2026-02-11 14:41:14,440 - INFO - 22. RandomForest-CNN-LSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.6250, MSE=0.2911
+2026-02-11 14:41:14,440 - INFO - 22. RandomForest-CNN-LSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.6250, MSE=0.2911
+2026-02-11 14:41:14,440 - INFO - 22. RandomForest-CNN-LSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.6250, MSE=0.2911
+2026-02-11 14:41:14,442 - INFO - 23. RandomForest-CNN-LSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.6689, MSE=0.3002
+2026-02-11 14:41:14,442 - INFO - 23. RandomForest-CNN-LSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.6689, MSE=0.3002
+2026-02-11 14:41:14,442 - INFO - 23. RandomForest-CNN-LSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.6689, MSE=0.3002
+2026-02-11 14:41:14,445 - INFO - 24. RandomForest-CNN-LSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.5899, MSE=0.3119
+2026-02-11 14:41:14,445 - INFO - 24. RandomForest-CNN-LSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.5899, MSE=0.3119
+2026-02-11 14:41:14,445 - INFO - 24. RandomForest-CNN-LSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.5899, MSE=0.3119
+2026-02-11 14:41:14,448 - INFO - 25. GradientBoosting-GRU-Absolute: F1=0.7373, Acc=0.5839, AUC=0.5606, MSE=0.3477
+2026-02-11 14:41:14,448 - INFO - 25. GradientBoosting-GRU-Absolute: F1=0.7373, Acc=0.5839, AUC=0.5606, MSE=0.3477
+2026-02-11 14:41:14,448 - INFO - 25. GradientBoosting-GRU-Absolute: F1=0.7373, Acc=0.5839, AUC=0.5606, MSE=0.3477
+2026-02-11 14:41:14,451 - INFO - 26. SVM-LSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.4594, MSE=0.3947
+2026-02-11 14:41:14,451 - INFO - 26. SVM-LSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.4594, MSE=0.3947
+2026-02-11 14:41:14,451 - INFO - 26. SVM-LSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.4594, MSE=0.3947
+2026-02-11 14:41:14,452 - INFO - 27. SVM-LSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.4250, MSE=0.4005
+2026-02-11 14:41:14,452 - INFO - 27. SVM-LSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.4250, MSE=0.4005
+2026-02-11 14:41:14,452 - INFO - 27. SVM-LSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.4250, MSE=0.4005
+2026-02-11 14:41:14,455 - INFO - 28. SVM-LSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.4553, MSE=0.4151
+2026-02-11 14:41:14,455 - INFO - 28. SVM-LSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.4553, MSE=0.4151
+2026-02-11 14:41:14,455 - INFO - 28. SVM-LSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.4553, MSE=0.4151
+2026-02-11 14:41:14,458 - INFO - 29. SVM-BiLSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.4873, MSE=0.3943
+2026-02-11 14:41:14,458 - INFO - 29. SVM-BiLSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.4873, MSE=0.3943
+2026-02-11 14:41:14,458 - INFO - 29. SVM-BiLSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.4873, MSE=0.3943
+2026-02-11 14:41:14,460 - INFO - 30. SVM-BiLSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.4292, MSE=0.3937
+2026-02-11 14:41:14,460 - INFO - 30. SVM-BiLSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.4292, MSE=0.3937
+2026-02-11 14:41:14,460 - INFO - 30. SVM-BiLSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.4292, MSE=0.3937
+2026-02-11 14:41:14,464 - INFO - 31. SVM-BiLSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.4978, MSE=0.4092
+2026-02-11 14:41:14,464 - INFO - 31. SVM-BiLSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.4978, MSE=0.4092
+2026-02-11 14:41:14,464 - INFO - 31. SVM-BiLSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.4978, MSE=0.4092
+2026-02-11 14:41:14,466 - INFO - 32. SVM-GRU-Absolute: F1=0.7373, Acc=0.5839, AUC=0.5700, MSE=0.4014
+2026-02-11 14:41:14,466 - INFO - 32. SVM-GRU-Absolute: F1=0.7373, Acc=0.5839, AUC=0.5700, MSE=0.4014
+2026-02-11 14:41:14,466 - INFO - 32. SVM-GRU-Absolute: F1=0.7373, Acc=0.5839, AUC=0.5700, MSE=0.4014
+2026-02-11 14:41:14,468 - INFO - 33. SVM-GRU-Squared: F1=0.7373, Acc=0.5839, AUC=0.5197, MSE=0.3700
+2026-02-11 14:41:14,468 - INFO - 33. SVM-GRU-Squared: F1=0.7373, Acc=0.5839, AUC=0.5197, MSE=0.3700
+2026-02-11 14:41:14,468 - INFO - 33. SVM-GRU-Squared: F1=0.7373, Acc=0.5839, AUC=0.5197, MSE=0.3700
+2026-02-11 14:41:14,471 - INFO - 34. SVM-GRU-Log: F1=0.7373, Acc=0.5839, AUC=0.4799, MSE=0.4139
+2026-02-11 14:41:14,471 - INFO - 34. SVM-GRU-Log: F1=0.7373, Acc=0.5839, AUC=0.4799, MSE=0.4139
+2026-02-11 14:41:14,471 - INFO - 34. SVM-GRU-Log: F1=0.7373, Acc=0.5839, AUC=0.4799, MSE=0.4139
+2026-02-11 14:41:14,474 - INFO - 35. SVM-CNN-LSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.5081, MSE=0.4034
+2026-02-11 14:41:14,474 - INFO - 35. SVM-CNN-LSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.5081, MSE=0.4034
+2026-02-11 14:41:14,474 - INFO - 35. SVM-CNN-LSTM-Absolute: F1=0.7373, Acc=0.5839, AUC=0.5081, MSE=0.4034
+2026-02-11 14:41:14,477 - INFO - 36. SVM-CNN-LSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.5004, MSE=0.4087
+2026-02-11 14:41:14,477 - INFO - 36. SVM-CNN-LSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.5004, MSE=0.4087
+2026-02-11 14:41:14,477 - INFO - 36. SVM-CNN-LSTM-Squared: F1=0.7373, Acc=0.5839, AUC=0.5004, MSE=0.4087
+2026-02-11 14:41:14,481 - INFO - 37. SVM-CNN-LSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.4743, MSE=0.4092
+2026-02-11 14:41:14,481 - INFO - 37. SVM-CNN-LSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.4743, MSE=0.4092
+2026-02-11 14:41:14,481 - INFO - 37. SVM-CNN-LSTM-Log: F1=0.7373, Acc=0.5839, AUC=0.4743, MSE=0.4092
+2026-02-11 14:41:14,483 - INFO - 38. MLP-CNN-LSTM-Squared: F1=0.7358, Acc=0.5912, AUC=0.5942, MSE=0.3186
+2026-02-11 14:41:14,483 - INFO - 38. MLP-CNN-LSTM-Squared: F1=0.7358, Acc=0.5912, AUC=0.5942, MSE=0.3186
+2026-02-11 14:41:14,483 - INFO - 38. MLP-CNN-LSTM-Squared: F1=0.7358, Acc=0.5912, AUC=0.5942, MSE=0.3186
+2026-02-11 14:41:14,486 - INFO - 39. GradientBoosting-BiLSTM-Squared: F1=0.7349, Acc=0.5839, AUC=0.5966, MSE=0.3254
+2026-02-11 14:41:14,486 - INFO - 39. GradientBoosting-BiLSTM-Squared: F1=0.7349, Acc=0.5839, AUC=0.5966, MSE=0.3254
+2026-02-11 14:41:14,486 - INFO - 39. GradientBoosting-BiLSTM-Squared: F1=0.7349, Acc=0.5839, AUC=0.5966, MSE=0.3254
+2026-02-11 14:41:14,488 - INFO - 40. XGBoost-BiLSTM-Absolute: F1=0.7340, Acc=0.6350, AUC=0.6270, MSE=0.2747
+2026-02-11 14:41:14,488 - INFO - 40. XGBoost-BiLSTM-Absolute: F1=0.7340, Acc=0.6350, AUC=0.6270, MSE=0.2747
+2026-02-11 14:41:14,488 - INFO - 40. XGBoost-BiLSTM-Absolute: F1=0.7340, Acc=0.6350, AUC=0.6270, MSE=0.2747
+2026-02-11 14:41:14,491 - INFO - 41. XGBoost-LSTM-Log: F1=0.7337, Acc=0.6131, AUC=0.6123, MSE=0.2869
+2026-02-11 14:41:14,491 - INFO - 41. XGBoost-LSTM-Log: F1=0.7337, Acc=0.6131, AUC=0.6123, MSE=0.2869
+2026-02-11 14:41:14,491 - INFO - 41. XGBoost-LSTM-Log: F1=0.7337, Acc=0.6131, AUC=0.6123, MSE=0.2869
+2026-02-11 14:41:14,495 - INFO - 42. MLP-LSTM-Absolute: F1=0.7327, Acc=0.6058, AUC=0.5717, MSE=0.2915
+2026-02-11 14:41:14,495 - INFO - 42. MLP-LSTM-Absolute: F1=0.7327, Acc=0.6058, AUC=0.5717, MSE=0.2915
+2026-02-11 14:41:14,495 - INFO - 42. MLP-LSTM-Absolute: F1=0.7327, Acc=0.6058, AUC=0.5717, MSE=0.2915
+2026-02-11 14:41:14,498 - INFO - 43. MLP-GRU-Squared: F1=0.7324, Acc=0.5839, AUC=0.5976, MSE=0.3261
+2026-02-11 14:41:14,498 - INFO - 43. MLP-GRU-Squared: F1=0.7324, Acc=0.5839, AUC=0.5976, MSE=0.3261
+2026-02-11 14:41:14,498 - INFO - 43. MLP-GRU-Squared: F1=0.7324, Acc=0.5839, AUC=0.5976, MSE=0.3261
+2026-02-11 14:41:14,500 - INFO - 44. MLP-BiLSTM-Absolute: F1=0.7317, Acc=0.5985, AUC=0.5614, MSE=0.3138
+2026-02-11 14:41:14,500 - INFO - 44. MLP-BiLSTM-Absolute: F1=0.7317, Acc=0.5985, AUC=0.5614, MSE=0.3138
+2026-02-11 14:41:14,500 - INFO - 44. MLP-BiLSTM-Absolute: F1=0.7317, Acc=0.5985, AUC=0.5614, MSE=0.3138
+2026-02-11 14:41:14,504 - INFO - 45. XGBoost-LSTM-Squared: F1=0.7292, Acc=0.6204, AUC=0.6257, MSE=0.2752
+2026-02-11 14:41:14,504 - INFO - 45. XGBoost-LSTM-Squared: F1=0.7292, Acc=0.6204, AUC=0.6257, MSE=0.2752
+2026-02-11 14:41:14,504 - INFO - 45. XGBoost-LSTM-Squared: F1=0.7292, Acc=0.6204, AUC=0.6257, MSE=0.2752
+2026-02-11 14:41:14,507 - INFO - 46. XGBoost-BiLSTM-Log: F1=0.7292, Acc=0.6204, AUC=0.6230, MSE=0.2781
+2026-02-11 14:41:14,507 - INFO - 46. XGBoost-BiLSTM-Log: F1=0.7292, Acc=0.6204, AUC=0.6230, MSE=0.2781
+2026-02-11 14:41:14,507 - INFO - 46. XGBoost-BiLSTM-Log: F1=0.7292, Acc=0.6204, AUC=0.6230, MSE=0.2781
+2026-02-11 14:41:14,510 - INFO - 47. XGBoost-CNN-LSTM-Log: F1=0.7273, Acc=0.6058, AUC=0.6227, MSE=0.2787
+2026-02-11 14:41:14,510 - INFO - 47. XGBoost-CNN-LSTM-Log: F1=0.7273, Acc=0.6058, AUC=0.6227, MSE=0.2787
+2026-02-11 14:41:14,510 - INFO - 47. XGBoost-CNN-LSTM-Log: F1=0.7273, Acc=0.6058, AUC=0.6227, MSE=0.2787
+2026-02-11 14:41:14,512 - INFO - 48. MLP-LSTM-Log: F1=0.7264, Acc=0.5766, AUC=0.6024, MSE=0.3145
+2026-02-11 14:41:14,512 - INFO - 48. MLP-LSTM-Log: F1=0.7264, Acc=0.5766, AUC=0.6024, MSE=0.3145
+2026-02-11 14:41:14,512 - INFO - 48. MLP-LSTM-Log: F1=0.7264, Acc=0.5766, AUC=0.6024, MSE=0.3145
+2026-02-11 14:41:14,514 - INFO - 49. MLP-CNN-LSTM-Absolute: F1=0.7255, Acc=0.5912, AUC=0.5800, MSE=0.3037
+2026-02-11 14:41:14,514 - INFO - 49. MLP-CNN-LSTM-Absolute: F1=0.7255, Acc=0.5912, AUC=0.5800, MSE=0.3037
+2026-02-11 14:41:14,514 - INFO - 49. MLP-CNN-LSTM-Absolute: F1=0.7255, Acc=0.5912, AUC=0.5800, MSE=0.3037
+2026-02-11 14:41:14,519 - INFO - 50. MLP-BiLSTM-Squared: F1=0.7246, Acc=0.5839, AUC=0.5940, MSE=0.3076
+2026-02-11 14:41:14,519 - INFO - 50. MLP-BiLSTM-Squared: F1=0.7246, Acc=0.5839, AUC=0.5940, MSE=0.3076
+2026-02-11 14:41:14,519 - INFO - 50. MLP-BiLSTM-Squared: F1=0.7246, Acc=0.5839, AUC=0.5940, MSE=0.3076
+2026-02-11 14:41:14,522 - INFO - 51. MLP-BiLSTM-Log: F1=0.7246, Acc=0.5839, AUC=0.6061, MSE=0.3082
+2026-02-11 14:41:14,522 - INFO - 51. MLP-BiLSTM-Log: F1=0.7246, Acc=0.5839, AUC=0.6061, MSE=0.3082
+2026-02-11 14:41:14,522 - INFO - 51. MLP-BiLSTM-Log: F1=0.7246, Acc=0.5839, AUC=0.6061, MSE=0.3082
+2026-02-11 14:41:14,525 - INFO - 52. MLP-CNN-LSTM-Log: F1=0.7246, Acc=0.5839, AUC=0.5939, MSE=0.3052
+2026-02-11 14:41:14,525 - INFO - 52. MLP-CNN-LSTM-Log: F1=0.7246, Acc=0.5839, AUC=0.5939, MSE=0.3052
+2026-02-11 14:41:14,525 - INFO - 52. MLP-CNN-LSTM-Log: F1=0.7246, Acc=0.5839, AUC=0.5939, MSE=0.3052
+2026-02-11 14:41:14,527 - INFO - 53. MLP-LSTM-Squared: F1=0.7238, Acc=0.5766, AUC=0.5931, MSE=0.3149
+2026-02-11 14:41:14,527 - INFO - 53. MLP-LSTM-Squared: F1=0.7238, Acc=0.5766, AUC=0.5931, MSE=0.3149
+2026-02-11 14:41:14,527 - INFO - 53. MLP-LSTM-Squared: F1=0.7238, Acc=0.5766, AUC=0.5931, MSE=0.3149
+2026-02-11 14:41:14,531 - INFO - 54. XGBoost-LSTM-Absolute: F1=0.7225, Acc=0.6131, AUC=0.6057, MSE=0.2801
+2026-02-11 14:41:14,531 - INFO - 54. XGBoost-LSTM-Absolute: F1=0.7225, Acc=0.6131, AUC=0.6057, MSE=0.2801
+2026-02-11 14:41:14,531 - INFO - 54. XGBoost-LSTM-Absolute: F1=0.7225, Acc=0.6131, AUC=0.6057, MSE=0.2801
+2026-02-11 14:41:14,533 - INFO - 55. XGBoost-BiLSTM-Squared: F1=0.7225, Acc=0.6131, AUC=0.6326, MSE=0.2780
+2026-02-11 14:41:14,533 - INFO - 55. XGBoost-BiLSTM-Squared: F1=0.7225, Acc=0.6131, AUC=0.6326, MSE=0.2780
+2026-02-11 14:41:14,533 - INFO - 55. XGBoost-BiLSTM-Squared: F1=0.7225, Acc=0.6131, AUC=0.6326, MSE=0.2780
+2026-02-11 14:41:14,535 - INFO - 56. MLP-GRU-Log: F1=0.7220, Acc=0.5839, AUC=0.6060, MSE=0.3106
+2026-02-11 14:41:14,535 - INFO - 56. MLP-GRU-Log: F1=0.7220, Acc=0.5839, AUC=0.6060, MSE=0.3106
+2026-02-11 14:41:14,535 - INFO - 56. MLP-GRU-Log: F1=0.7220, Acc=0.5839, AUC=0.6060, MSE=0.3106
+2026-02-11 14:41:14,537 - INFO - 57. MLP-GRU-Absolute: F1=0.7192, Acc=0.5839, AUC=0.5738, MSE=0.2935
+2026-02-11 14:41:14,537 - INFO - 57. MLP-GRU-Absolute: F1=0.7192, Acc=0.5839, AUC=0.5738, MSE=0.2935
+2026-02-11 14:41:14,537 - INFO - 57. MLP-GRU-Absolute: F1=0.7192, Acc=0.5839, AUC=0.5738, MSE=0.2935
+2026-02-11 14:41:14,540 - INFO - 58. XGBoost-CNN-LSTM-Squared: F1=0.7136, Acc=0.5839, AUC=0.5837, MSE=0.2946
+2026-02-11 14:41:14,540 - INFO - 58. XGBoost-CNN-LSTM-Squared: F1=0.7136, Acc=0.5839, AUC=0.5837, MSE=0.2946
+2026-02-11 14:41:14,540 - INFO - 58. XGBoost-CNN-LSTM-Squared: F1=0.7136, Acc=0.5839, AUC=0.5837, MSE=0.2946
+2026-02-11 14:41:14,543 - INFO - 59. XGBoost-CNN-LSTM-Absolute: F1=0.7090, Acc=0.5985, AUC=0.6247, MSE=0.2726
+2026-02-11 14:41:14,543 - INFO - 59. XGBoost-CNN-LSTM-Absolute: F1=0.7090, Acc=0.5985, AUC=0.6247, MSE=0.2726
+2026-02-11 14:41:14,543 - INFO - 59. XGBoost-CNN-LSTM-Absolute: F1=0.7090, Acc=0.5985, AUC=0.6247, MSE=0.2726
+2026-02-11 14:41:14,545 - INFO - 60. SVM: F1=0.7077, Acc=0.5839, AUC=0.5857, MSE=0.2390
+2026-02-11 14:41:14,545 - INFO - 60. SVM: F1=0.7077, Acc=0.5839, AUC=0.5857, MSE=0.2390
+2026-02-11 14:41:14,545 - INFO - 60. SVM: F1=0.7077, Acc=0.5839, AUC=0.5857, MSE=0.2390
+2026-02-11 14:41:14,548 - INFO - 61. BiLSTM: F1=0.7045, Acc=0.6204, AUC=0.6318, MSE=0.2417
+2026-02-11 14:41:14,548 - INFO - 61. BiLSTM: F1=0.7045, Acc=0.6204, AUC=0.6318, MSE=0.2417
+2026-02-11 14:41:14,548 - INFO - 61. BiLSTM: F1=0.7045, Acc=0.6204, AUC=0.6318, MSE=0.2417
+2026-02-11 14:41:14,551 - INFO - 62. SVM-GRU-Normal: F1=0.6961, Acc=0.5985, AUC=0.6140, MSE=0.2494
+2026-02-11 14:41:14,551 - INFO - 62. SVM-GRU-Normal: F1=0.6961, Acc=0.5985, AUC=0.6140, MSE=0.2494
+2026-02-11 14:41:14,551 - INFO - 62. SVM-GRU-Normal: F1=0.6961, Acc=0.5985, AUC=0.6140, MSE=0.2494
+2026-02-11 14:41:14,553 - INFO - 63. GradientBoosting: F1=0.6941, Acc=0.6204, AUC=0.6322, MSE=0.2373
+2026-02-11 14:41:14,553 - INFO - 63. GradientBoosting: F1=0.6941, Acc=0.6204, AUC=0.6322, MSE=0.2373
+2026-02-11 14:41:14,553 - INFO - 63. GradientBoosting: F1=0.6941, Acc=0.6204, AUC=0.6322, MSE=0.2373
+2026-02-11 14:41:14,556 - INFO - 64. XGBoost-GRU-Squared: F1=0.6939, Acc=0.5620, AUC=0.5925, MSE=0.2884
+2026-02-11 14:41:14,556 - INFO - 64. XGBoost-GRU-Squared: F1=0.6939, Acc=0.5620, AUC=0.5925, MSE=0.2884
+2026-02-11 14:41:14,556 - INFO - 64. XGBoost-GRU-Squared: F1=0.6939, Acc=0.5620, AUC=0.5925, MSE=0.2884
+2026-02-11 14:41:14,558 - INFO - 65. XGBoost-GRU-Absolute: F1=0.6919, Acc=0.5839, AUC=0.6008, MSE=0.2740
+2026-02-11 14:41:14,558 - INFO - 65. XGBoost-GRU-Absolute: F1=0.6919, Acc=0.5839, AUC=0.6008, MSE=0.2740
+2026-02-11 14:41:14,558 - INFO - 65. XGBoost-GRU-Absolute: F1=0.6919, Acc=0.5839, AUC=0.6008, MSE=0.2740
+2026-02-11 14:41:14,561 - INFO - 66. RandomForest-GRU-Normal: F1=0.6885, Acc=0.5839, AUC=0.6507, MSE=0.2355
+2026-02-11 14:41:14,561 - INFO - 66. RandomForest-GRU-Normal: F1=0.6885, Acc=0.5839, AUC=0.6507, MSE=0.2355
+2026-02-11 14:41:14,561 - INFO - 66. RandomForest-GRU-Normal: F1=0.6885, Acc=0.5839, AUC=0.6507, MSE=0.2355
+2026-02-11 14:41:14,564 - INFO - 67. MLP-CNN-LSTM-Normal: F1=0.6867, Acc=0.6204, AUC=0.6430, MSE=0.2534
+2026-02-11 14:41:14,564 - INFO - 67. MLP-CNN-LSTM-Normal: F1=0.6867, Acc=0.6204, AUC=0.6430, MSE=0.2534
+2026-02-11 14:41:14,564 - INFO - 67. MLP-CNN-LSTM-Normal: F1=0.6867, Acc=0.6204, AUC=0.6430, MSE=0.2534
+2026-02-11 14:41:14,567 - INFO - 68. GradientBoosting-LSTM-Normal: F1=0.6824, Acc=0.6058, AUC=0.6423, MSE=0.2445
+2026-02-11 14:41:14,567 - INFO - 68. GradientBoosting-LSTM-Normal: F1=0.6824, Acc=0.6058, AUC=0.6423, MSE=0.2445
+2026-02-11 14:41:14,567 - INFO - 68. GradientBoosting-LSTM-Normal: F1=0.6824, Acc=0.6058, AUC=0.6423, MSE=0.2445
+2026-02-11 14:41:14,569 - INFO - 69. SVM-CNN-LSTM-Normal: F1=0.6824, Acc=0.6058, AUC=0.6547, MSE=0.2377
+2026-02-11 14:41:14,569 - INFO - 69. SVM-CNN-LSTM-Normal: F1=0.6824, Acc=0.6058, AUC=0.6547, MSE=0.2377
+2026-02-11 14:41:14,569 - INFO - 69. SVM-CNN-LSTM-Normal: F1=0.6824, Acc=0.6058, AUC=0.6547, MSE=0.2377
+2026-02-11 14:41:14,573 - INFO - 70. SVM-LSTM-Normal: F1=0.6821, Acc=0.5985, AUC=0.6123, MSE=0.2412
+2026-02-11 14:41:14,573 - INFO - 70. SVM-LSTM-Normal: F1=0.6821, Acc=0.5985, AUC=0.6123, MSE=0.2412
+2026-02-11 14:41:14,573 - INFO - 70. SVM-LSTM-Normal: F1=0.6821, Acc=0.5985, AUC=0.6123, MSE=0.2412
+2026-02-11 14:41:14,576 - INFO - 71. GRU: F1=0.6818, Acc=0.5912, AUC=0.6366, MSE=0.2378
+2026-02-11 14:41:14,576 - INFO - 71. GRU: F1=0.6818, Acc=0.5912, AUC=0.6366, MSE=0.2378
+2026-02-11 14:41:14,576 - INFO - 71. GRU: F1=0.6818, Acc=0.5912, AUC=0.6366, MSE=0.2378
+2026-02-11 14:41:14,578 - INFO - 72. RandomForest-LSTM-Normal: F1=0.6818, Acc=0.5912, AUC=0.6643, MSE=0.2211
+2026-02-11 14:41:14,578 - INFO - 72. RandomForest-LSTM-Normal: F1=0.6818, Acc=0.5912, AUC=0.6643, MSE=0.2211
+2026-02-11 14:41:14,578 - INFO - 72. RandomForest-LSTM-Normal: F1=0.6818, Acc=0.5912, AUC=0.6643, MSE=0.2211
+2026-02-11 14:41:14,581 - INFO - 73. RandomForest: F1=0.6816, Acc=0.5839, AUC=0.6476, MSE=0.2216
+2026-02-11 14:41:14,581 - INFO - 73. RandomForest: F1=0.6816, Acc=0.5839, AUC=0.6476, MSE=0.2216
+2026-02-11 14:41:14,581 - INFO - 73. RandomForest: F1=0.6816, Acc=0.5839, AUC=0.6476, MSE=0.2216
+2026-02-11 14:41:14,582 - INFO - 74. GradientBoosting-GRU-Normal: F1=0.6746, Acc=0.5985, AUC=0.6239, MSE=0.2505
+2026-02-11 14:41:14,582 - INFO - 74. GradientBoosting-GRU-Normal: F1=0.6746, Acc=0.5985, AUC=0.6239, MSE=0.2505
+2026-02-11 14:41:14,582 - INFO - 74. GradientBoosting-GRU-Normal: F1=0.6746, Acc=0.5985, AUC=0.6239, MSE=0.2505
+2026-02-11 14:41:14,586 - INFO - 75. MLP-BiLSTM-Normal: F1=0.6707, Acc=0.5985, AUC=0.6618, MSE=0.2475
+2026-02-11 14:41:14,586 - INFO - 75. MLP-BiLSTM-Normal: F1=0.6707, Acc=0.5985, AUC=0.6618, MSE=0.2475
+2026-02-11 14:41:14,586 - INFO - 75. MLP-BiLSTM-Normal: F1=0.6707, Acc=0.5985, AUC=0.6618, MSE=0.2475
+2026-02-11 14:41:14,588 - INFO - 76. RandomForest-CNN-LSTM-Normal: F1=0.6706, Acc=0.5912, AUC=0.6684, MSE=0.2211
+2026-02-11 14:41:14,588 - INFO - 76. RandomForest-CNN-LSTM-Normal: F1=0.6706, Acc=0.5912, AUC=0.6684, MSE=0.2211
+2026-02-11 14:41:14,588 - INFO - 76. RandomForest-CNN-LSTM-Normal: F1=0.6706, Acc=0.5912, AUC=0.6684, MSE=0.2211
+2026-02-11 14:41:14,591 - INFO - 77. GradientBoosting-CNN-LSTM-Normal: F1=0.6706, Acc=0.5912, AUC=0.6364, MSE=0.2458
+2026-02-11 14:41:14,591 - INFO - 77. GradientBoosting-CNN-LSTM-Normal: F1=0.6706, Acc=0.5912, AUC=0.6364, MSE=0.2458
+2026-02-11 14:41:14,591 - INFO - 77. GradientBoosting-CNN-LSTM-Normal: F1=0.6706, Acc=0.5912, AUC=0.6364, MSE=0.2458
+2026-02-11 14:41:14,594 - INFO - 78. LSTM: F1=0.6667, Acc=0.5839, AUC=0.6340, MSE=0.2348
+2026-02-11 14:41:14,594 - INFO - 78. LSTM: F1=0.6667, Acc=0.5839, AUC=0.6340, MSE=0.2348
+2026-02-11 14:41:14,594 - INFO - 78. LSTM: F1=0.6667, Acc=0.5839, AUC=0.6340, MSE=0.2348
+2026-02-11 14:41:14,596 - INFO - 79. XGBoost-GRU-Normal: F1=0.6667, Acc=0.5693, AUC=0.6123, MSE=0.2736
+2026-02-11 14:41:14,596 - INFO - 79. XGBoost-GRU-Normal: F1=0.6667, Acc=0.5693, AUC=0.6123, MSE=0.2736
+2026-02-11 14:41:14,596 - INFO - 79. XGBoost-GRU-Normal: F1=0.6667, Acc=0.5693, AUC=0.6123, MSE=0.2736
+2026-02-11 14:41:14,599 - INFO - 80. MLP-LSTM-Normal: F1=0.6667, Acc=0.5985, AUC=0.6452, MSE=0.2532
+2026-02-11 14:41:14,599 - INFO - 80. MLP-LSTM-Normal: F1=0.6667, Acc=0.5985, AUC=0.6452, MSE=0.2532
+2026-02-11 14:41:14,599 - INFO - 80. MLP-LSTM-Normal: F1=0.6667, Acc=0.5985, AUC=0.6452, MSE=0.2532
+2026-02-11 14:41:14,601 - INFO - 81. GradientBoosting-BiLSTM-Normal: F1=0.6629, Acc=0.5620, AUC=0.6147, MSE=0.2572
+2026-02-11 14:41:14,601 - INFO - 81. GradientBoosting-BiLSTM-Normal: F1=0.6629, Acc=0.5620, AUC=0.6147, MSE=0.2572
+2026-02-11 14:41:14,601 - INFO - 81. GradientBoosting-BiLSTM-Normal: F1=0.6629, Acc=0.5620, AUC=0.6147, MSE=0.2572
+2026-02-11 14:41:14,604 - INFO - 82. XGBoost-BiLSTM-Normal: F1=0.6627, Acc=0.5912, AUC=0.6314, MSE=0.2576
+2026-02-11 14:41:14,604 - INFO - 82. XGBoost-BiLSTM-Normal: F1=0.6627, Acc=0.5912, AUC=0.6314, MSE=0.2576
+2026-02-11 14:41:14,604 - INFO - 82. XGBoost-BiLSTM-Normal: F1=0.6627, Acc=0.5912, AUC=0.6314, MSE=0.2576
+2026-02-11 14:41:14,608 - INFO - 83. XGBoost-CNN-LSTM-Normal: F1=0.6627, Acc=0.5912, AUC=0.6118, MSE=0.2672
+2026-02-11 14:41:14,608 - INFO - 83. XGBoost-CNN-LSTM-Normal: F1=0.6627, Acc=0.5912, AUC=0.6118, MSE=0.2672
+2026-02-11 14:41:14,608 - INFO - 83. XGBoost-CNN-LSTM-Normal: F1=0.6627, Acc=0.5912, AUC=0.6118, MSE=0.2672
+2026-02-11 14:41:14,611 - INFO - 84. RandomForest-BiLSTM-Normal: F1=0.6587, Acc=0.5839, AUC=0.6579, MSE=0.2260
+2026-02-11 14:41:14,611 - INFO - 84. RandomForest-BiLSTM-Normal: F1=0.6587, Acc=0.5839, AUC=0.6579, MSE=0.2260
+2026-02-11 14:41:14,611 - INFO - 84. RandomForest-BiLSTM-Normal: F1=0.6587, Acc=0.5839, AUC=0.6579, MSE=0.2260
+2026-02-11 14:41:14,613 - INFO - 85. XGBoost: F1=0.6585, Acc=0.5912, AUC=0.6329, MSE=0.2552
+2026-02-11 14:41:14,613 - INFO - 85. XGBoost: F1=0.6585, Acc=0.5912, AUC=0.6329, MSE=0.2552
+2026-02-11 14:41:14,613 - INFO - 85. XGBoost: F1=0.6585, Acc=0.5912, AUC=0.6329, MSE=0.2552
+2026-02-11 14:41:14,616 - INFO - 86. MLP-GRU-Normal: F1=0.6585, Acc=0.5912, AUC=0.6509, MSE=0.2514
+2026-02-11 14:41:14,616 - INFO - 86. MLP-GRU-Normal: F1=0.6585, Acc=0.5912, AUC=0.6509, MSE=0.2514
+2026-02-11 14:41:14,616 - INFO - 86. MLP-GRU-Normal: F1=0.6585, Acc=0.5912, AUC=0.6509, MSE=0.2514
+2026-02-11 14:41:14,618 - INFO - 87. XGBoost-LSTM-Normal: F1=0.6584, Acc=0.5985, AUC=0.6366, MSE=0.2561
+2026-02-11 14:41:14,618 - INFO - 87. XGBoost-LSTM-Normal: F1=0.6584, Acc=0.5985, AUC=0.6366, MSE=0.2561
+2026-02-11 14:41:14,618 - INFO - 87. XGBoost-LSTM-Normal: F1=0.6584, Acc=0.5985, AUC=0.6366, MSE=0.2561
+2026-02-11 14:41:14,620 - INFO - 88. MLP: F1=0.6543, Acc=0.5912, AUC=0.6421, MSE=0.2535
+2026-02-11 14:41:14,620 - INFO - 88. MLP: F1=0.6543, Acc=0.5912, AUC=0.6421, MSE=0.2535
+2026-02-11 14:41:14,620 - INFO - 88. MLP: F1=0.6543, Acc=0.5912, AUC=0.6421, MSE=0.2535
+2026-02-11 14:41:14,624 - INFO - 89. CNN-LSTM: F1=0.6441, Acc=0.5401, AUC=0.6160, MSE=0.2394
+2026-02-11 14:41:14,624 - INFO - 89. CNN-LSTM: F1=0.6441, Acc=0.5401, AUC=0.6160, MSE=0.2394
+2026-02-11 14:41:14,624 - INFO - 89. CNN-LSTM: F1=0.6441, Acc=0.5401, AUC=0.6160, MSE=0.2394
+2026-02-11 14:41:14,626 - INFO - 90. SVM-BiLSTM-Normal: F1=0.6415, Acc=0.5839, AUC=0.6445, MSE=0.2373
+2026-02-11 14:41:14,626 - INFO - 90. SVM-BiLSTM-Normal: F1=0.6415, Acc=0.5839, AUC=0.6445, MSE=0.2373
+2026-02-11 14:41:14,626 - INFO - 90. SVM-BiLSTM-Normal: F1=0.6415, Acc=0.5839, AUC=0.6445, MSE=0.2373
+2026-02-11 14:41:14,628 - INFO - ================================================================================
+2026-02-11 14:41:14,628 - INFO - ================================================================================
+2026-02-11 14:41:14,628 - INFO - ================================================================================
+2026-02-11 14:41:14,630 - INFO - BEST MODEL: GradientBoosting-GRU-Squared
+2026-02-11 14:41:14,630 - INFO - BEST MODEL: GradientBoosting-GRU-Squared
+2026-02-11 14:41:14,630 - INFO - BEST MODEL: GradientBoosting-GRU-Squared
+2026-02-11 14:41:14,633 - INFO - ================================================================================
+2026-02-11 14:41:14,633 - INFO - ================================================================================
+2026-02-11 14:41:14,633 - INFO - ================================================================================
+2026-02-11 14:41:14,636 - INFO - --- Running Future Classification Forecast: GradientBoosting-GRU-Squared ---
+2026-02-11 14:41:14,636 - INFO - --- Running Future Classification Forecast: GradientBoosting-GRU-Squared ---
+2026-02-11 14:41:14,636 - INFO - --- Running Future Classification Forecast: GradientBoosting-GRU-Squared ---
+2026-02-11 14:41:14,639 - INFO - Preprocessing data. Target: HPI_Reported
+2026-02-11 14:41:14,639 - INFO - Preprocessing data. Target: HPI_Reported
+2026-02-11 14:41:14,639 - INFO - Preprocessing data. Target: HPI_Reported
+2026-02-11 14:41:15,110 - INFO - Forecasting expects 15 features. Preprocessed DF unique columns: 16
+2026-02-11 14:41:15,110 - INFO - Forecasting expects 15 features. Preprocessed DF unique columns: 16
+2026-02-11 14:41:15,110 - INFO - Forecasting expects 15 features. Preprocessed DF unique columns: 16
+2026-02-11 14:41:15,116 - INFO - Final input features shape for prediction: (1, 15)
+2026-02-11 14:41:15,116 - INFO - Final input features shape for prediction: (1, 15)
+2026-02-11 14:41:15,116 - INFO - Final input features shape for prediction: (1, 15)
+2026-02-11 14:41:18,691 - INFO - Saved future classification forecast to future_forecast_gradientboosting-gru-squared.csv
+2026-02-11 14:41:18,691 - INFO - Saved future classification forecast to future_forecast_gradientboosting-gru-squared.csv
+2026-02-11 14:41:18,691 - INFO - Saved future classification forecast to future_forecast_gradientboosting-gru-squared.csv
+2026-02-11 14:41:18,900 - INFO - Generating HTML report: analysis_report.html
+2026-02-11 14:41:18,900 - INFO - Generating HTML report: analysis_report.html
+2026-02-11 14:41:18,900 - INFO - Generating HTML report: analysis_report.html
+2026-02-11 14:41:18,919 - INFO - HTML Report successfully written to analysis_report.html
+2026-02-11 14:41:18,919 - INFO - HTML Report successfully written to analysis_report.html
+2026-02-11 14:41:18,919 - INFO - HTML Report successfully written to analysis_report.html
+2026-02-11 14:41:18,923 - INFO - ================================================================================
+2026-02-11 14:41:18,923 - INFO - ================================================================================
+2026-02-11 14:41:18,923 - INFO - ================================================================================
+2026-02-11 14:41:18,926 - INFO - PIPELINE COMPLETE - Open 'analysis_report.html' to view results.
+2026-02-11 14:41:18,926 - INFO - PIPELINE COMPLETE - Open 'analysis_report.html' to view results.
+2026-02-11 14:41:18,926 - INFO - PIPELINE COMPLETE - Open 'analysis_report.html' to view results.
+2026-02-11 14:41:18,929 - INFO - ================================================================================
+2026-02-11 14:41:18,929 - INFO - ================================================================================
+2026-02-11 14:41:18,929 - INFO - ================================================================================
